@@ -40,6 +40,7 @@ Ofrece productos similares. En cuanto a la estética, la página principal tiene
 
 ### 3) https://www.digitalsport.com.ar/sport78/
 De este sitio tomamos la estética en cuanto a que, depende de la marca que selecciones mirar, cambia el color principal del sitio.
+
 *Paleta de colores*:
 - <input type="color" value="#d27b00"> #d27b00 -> marca 1
 - <input type="color" value="#00acdd"> #00acdd -> marca 2
@@ -71,7 +72,7 @@ Estructura de la página principal: al ir bajando se muestran las secciones de f
 ### 6) https://www.soflow.com/
 Ofrece productos similares (bicicletas, monopatines y skateboards eléctricos), tiene un video en el header de la página principal. Es el mismo público al que apuntamos. Estética sencilla, elegante. 
 
-Paleta de colores:*
+*Paleta de colores:*
 - <input type="color" value="#313131"> #313131
 - <input type="color" value="#10707F"> #10707F
 - <input type="color" value="#FF8000"> #FF8000
