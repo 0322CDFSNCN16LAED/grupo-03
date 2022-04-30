@@ -7,7 +7,9 @@
 - Accesorios para cada producto
 
 ## **Público al que apuntamos:**
-xx
+- Publico que necesitan una rapida y tranquila movilidad a cualquier lugar relativamente cerca; evitando el trafico y el transporte publico.
+- Publico con espirito joven que quiera transladarse en su zona urbana 
+- Publico que respetando las reglas del transito pero odia las colas de vehiculos
 
 
 ## **Integrantes del equipo:**
