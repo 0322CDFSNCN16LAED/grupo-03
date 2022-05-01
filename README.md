@@ -7,11 +7,11 @@
 - Accesorios para cada producto
 
 ## **Público al que apuntamos:**
--Nuestros productos están destinados a un público con un rango de edad ente 20 a 40 años, interesados en el deporte y en la movimildad sustentable, evitando así generar emisiones contaminantes de forma accesible, eficiente, segura y equitativa.
--Creado para personas que necesitan un rápido y tranquilo translado a cualquier lugar relativamente cerca; evitando el tráfico y el transporte público.
--Destinado a un público con espíritu joven que quiera transladarse en la zona urbana a la que pertenezca. 
--Ideal para las personas que desean evitar demoras debido a embotellamientos de tráfico vehicular.
--Destinado al público amante del deporte al aire libre.
+- Nuestros productos están destinados a un público con un rango de edad ente 20 a 40 años, interesados en el deporte y en la movimildad sustentable, evitando así generar emisiones contaminantes de forma accesible, eficiente, segura y equitativa.
+- Creado para personas que necesitan un rápido y tranquilo translado a cualquier lugar relativamente cerca; evitando el tráfico y el transporte público.
+- Destinado a un público con espíritu joven que quiera transladarse en la zona urbana a la que pertenezca. 
+- Ideal para las personas que desean evitar demoras debido a embotellamientos de tráfico vehicular.
+- Destinado al público amante del deporte al aire libre.
 
 
 ## **Integrantes del equipo:**
