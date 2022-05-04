@@ -28,60 +28,57 @@ Tomamos de este sitio los productos que ofrece (bicicletas, monopatines y sus re
 
 *Paleta de colores*:
 
-- <i style="color:#00e8a7">&#9632;</i> #00e8a7
-- <i style="color:#141414">&#9632;</i> #141414
-- <i style="color:#c0c0c0">&#9632;</i> #c0c0c0
+- ![#00e8a7](https://via.placeholder.com/15/00e8a7/000000?text=+) `#00e8a7`
+- ![#141414](https://via.placeholder.com/15/141414/000000?text=+) `#141414`
+- ![#c0c0c0](https://via.placeholder.com/15/c0c0c0/000000?text=+) `#c0c0c0`
 
 ### 2) https://www.labskateboarding.com/
 Ofrece productos similares. En cuanto a la estética, la página principal tiene demasiada información. Tomamos la organización de las secciones para los distintos productos. Las secciones para los distintos accesorios están dentro de las secciones de cada producto, en vez de estar en una diferente. 
 
 *Paleta de colores*:
-- <i style="color:#FAFAFA">&#9632;</i> #FAFAFA
-- <i style="color:#6440A4">&#9632;</i> #6440A4 -> en la sección "skates"
-- <i style="color:#C856AF">&#9632;</i> #C856AF
-- <i style="color:#CC4B37">&#9632;</i> #CC4B37 -> en la sección "longboards"
-- <i style="color:#7C1212">&#9632;</i> #7C1212
+- ![#FAFAFA](https://via.placeholder.com/15/FAFAFA/000000?text=+) `#FAFAFA`
+- ![#6440A4](https://via.placeholder.com/15/6440A4/000000?text=+) `#6440A4`
+- ![#C856AF](https://via.placeholder.com/15/C856AF/000000?text=+) `#C856AF`
+- ![#CC4B37](https://via.placeholder.com/15/CC4B37/000000?text=+) `#CC4B37`
+- ![#7C1212](https://via.placeholder.com/15/7C1212/000000?text=+) `#7C1212`
 
 
 ### 3) https://www.digitalsport.com.ar/sport78/
 De este sitio tomamos la estética en cuanto a que, depende de la marca que selecciones mirar, cambia el color principal del sitio.
 
 *Paleta de colores*:
-- <i style="color:#d27b00">&#9632;</i> #d27b00 -> marca 1
-- <i style="color:#00acdd">&#9632;</i> #00acdd -> marca 2
-- <i style="color:#b31dbf">&#9632;</i> #b31dbf -> marca 3
-- <i style="color:#000000">&#9632;</i> #000000 -> marca 4
-- <i style="color:#e42219">&#9632;</i> #e42219 -> marca 5
-- <i style="color:#6fc341">&#9632;</i> #6fc341 -> marca 6
-
+- ![#d27b00](https://via.placeholder.com/15/d27b00/000000?text=+) `#d27b00` -> marca 1
+- ![#00acdd](https://via.placeholder.com/15/00acdd/000000?text=+) `#00acdd` -> marca 2
+- ![#b31dbf](https://via.placeholder.com/15/b31dbf/000000?text=+) `#b31dbf` -> marca 3
+- ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `#000000` -> marca 4
+- ![#e42219](https://via.placeholder.com/15/e42219/000000?text=+) `#e42219` -> marca 5
+- ![#6fc341](https://via.placeholder.com/15/6fc341/000000?text=+) `#6fc341` -> marca 6
 
 ### 4) https://ecomotors.com.ar/
 Ofrece productos similares. Tiene una estética sencilla, el header de la página principal es un video, y tiene una sección de consejos de manejo. Ofrece test drive de sus productos. Tiene una barra para filtrar por precio.
 
 *Paleta de colores:*
-- <i style="color:#E50034">&#9632;</i> #E50034
-- <i style="color:#B8B8B8">&#9632;</i> #B8B8B8
-- <i style="color:#3b3b3b">&#9632;</i> #3b3b3b
-
+- ![#E50034](https://via.placeholder.com/15/E50034/000000?text=+) `#E50034` 
+- ![#B8B8B8](https://via.placeholder.com/15/B8B8B8/000000?text=+) `#B8B8B8` 
+- ![#3b3b3b](https://via.placeholder.com/15/3b3b3b/000000?text=+) `#3b3b3b` 
 
 ### 5) https://www.skullcandy.com/
 Estructura de la página principal: al ir bajando se muestran las secciones de forma fácil y visualmente elegante.
 
 *Paleta de colores:*
-- <i style="color:#1A1A1A">&#9632;</i> #1A1A1A
-- <i style="color:#E43D30">&#9632;</i> #E43D30
-- <i style="color:#F7A800">&#9632;</i> #F7A800
-- <i style="color:#2AAC24">&#9632;</i> #2AAC24
-- <i style="color:#593086">&#9632;</i> #593086
-- <i style="color:#273A8A">&#9632;</i> #273A8A
-
+- ![#1A1A1A](https://via.placeholder.com/15/1A1A1A/000000?text=+) `#1A1A1A` 
+- ![#E43D30](https://via.placeholder.com/15/E43D30/000000?text=+) `#E43D30` 
+- ![#F7A800](https://via.placeholder.com/15/F7A800/000000?text=+) `#F7A800` 
+- ![#2AAC24](https://via.placeholder.com/15/2AAC24/000000?text=+) `#2AAC24` 
+- ![#593086](https://via.placeholder.com/15/593086/000000?text=+) `#593086` 
+- ![#273A8A](https://via.placeholder.com/15/273A8A/000000?text=+) `#273A8A` 
 
 ### 6) https://www.soflow.com/
 Ofrece productos similares (bicicletas, monopatines y skateboards eléctricos), tiene un video en el header de la página principal. Es el mismo público al que apuntamos. Estética sencilla, elegante. 
 
 *Paleta de colores:*
-- <i style="color:#313131">&#9632;</i> #313131
-- <i style="color:#10707F">&#9632;</i> #10707F
-- <i style="color:#FF8000">&#9632;</i> #FF8000
-- <i style="color:#771A09">&#9632;</i> #771A09
-- <i style="color:#382110">&#9632;</i> #382110
+- ![#313131](https://via.placeholder.com/15/313131/000000?text=+) `#313131` 
+- ![#10707F](https://via.placeholder.com/15/10707F/000000?text=+) `#10707F` 
+- ![#FF8000](https://via.placeholder.com/15/FF8000/000000?text=+) `#FF8000` 
+- ![#771A09](https://via.placeholder.com/15/771A09/000000?text=+) `#771A09` 
+- ![#382110](https://via.placeholder.com/15/382110/000000?text=+) `#382110` 
