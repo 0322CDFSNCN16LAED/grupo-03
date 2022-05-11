@@ -1,4 +1,6 @@
-## **Productos que ofrecemos:**
+## **Descripción**
+Nombre de la empresa: Teme
+Productos que ofrecemos: 
 - Bicicletas comunes
 - Bicicletas eléctricas
 - Monopatines
