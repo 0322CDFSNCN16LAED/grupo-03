@@ -85,6 +85,17 @@ Ofrece productos similares (bicicletas, monopatines y skateboards eléctricos), 
 - ![#771A09](https://via.placeholder.com/15/771A09/000000?text=+) `#771A09` 
 - ![#382110](https://via.placeholder.com/15/382110/000000?text=+) `#382110` 
 
+*nuestros colores*
+- ![#141414](https://via.placeholder.com/15/141414/000000?text=+) `#141414` -- header & footer
+- ![#f5f5dc](https://via.placeholder.com/15/f5f5dc/000000?text=+) `#f5f5dc` -- body background
+- ![#FDFD96](https://via.placeholder.com/15/FDFD96/000000?text=+) `#FDFD96`
+- ![#10707F](https://via.placeholder.com/15/10707F/000000?text=+) `#10707F` 
+- ![#FF8000](https://via.placeholder.com/15/FF8000/000000?text=+) `#FF8000`
+
+ 
+ *por las dudas*
+- ![#E5BE01](https://via.placeholder.com/15/E5BE01/000000?text=+) `#E5BE01`
+
 
 Link al tablero de trabajo:
 https://trello.com/b/NxT6MifY/trabajo-integrador 
