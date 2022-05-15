@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login de Usuario</title>
+    
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+
 </head>
-<body>    
-    <main>
-        <form action="/" method="get">
-            <h3>Login de Usuario</h3>
-            <div>
-                <button type="submit">Enviar</button>
-            </div>                
-            <br><br>
+<body> 
+    <header>
+    </header> 
+
+    <main class="bg-cream">
+        <section class="fx fx-wrap justify-center">
+            <a href="/login" class="links">
+                <h3 class="text-center p-20 font-black">Iniciar sesión</h3>
+            </a>
+            <p class="text-center align-self-center b-20">/</p>
+            <a href="/register" class="links">
+                <h3 class="text-center p-20 font-grey" id="link">Registrarse</h3>
+            </a>
+        </section>
+
+        <form class="fx fx-wrap justify-center" action="/" method="GET">            
+           <input class="login-forms m-8" type="text" name="username" placeholder="Nombre de usuario">
+           <input class="login-forms m-8" type="password" name="contraseña" placeholder="Contraseña">
+
+           <div class="align-self-center text-center w-60 p-20">
+                <button class="login-buttons bg-blue" type="submit">Enviar</button>
+            </div>      
         </form>
+
     </main>
 </body>
+
+<footer>
+</footer>
 </html>

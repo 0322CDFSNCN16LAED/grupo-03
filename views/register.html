@@ -4,17 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuarios</title>
+    
+    <title>Register</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+
 </head>
-<body>
-    <main>
-        <form action="/" method="get">
-            <h3>Registro de usuario</h3>
-            <div>
-                <button type="submit">Enviar</button>
-            </div>                
-            <br><br>
+<body> 
+    <header>
+    </header> 
+
+    <main class="bg-cream">
+        <section class="fx fx-wrap justify-center">
+            <a href="/register" class="links">
+                <h3 class="text-center p-20 font-black">Registrarse</h3>
+            </a>
+            <p class="text-center align-self-center b-20 font-bold">/</p>
+            <a href="/login" class="links">
+                <h3 class="text-center p-20 font-grey" id="link">Iniciar sesión</h3>
+            </a>
+        </section>
+
+        <form class="fx fx-wrap justify-center" action="/" method="GET">            
+            <input class="login-forms m-8" type="text" name="nombre" placeholder="Nombre y apellido" required>   
+            <input class="login-forms m-8" type="text" name="usuario" placeholder="Nombre de usuario" required>   
+            <input class="login-forms m-8" type="email" name="mail" placeholder="E-mail" required>   
+            <input class="login-forms m-8" type="text" name="domicilio" placeholder="Domicilio">   
+            <input class="login-forms m-8" type="password" name="contraseña" placeholder="Contraseña" required>   
+            <input class="login-forms m-8" type="password" name="confirmar-contraseña" placeholder="Confirmar contraseña" required>   
+
+            
+           <div class="align-self-center text-center w-60 p-20">
+                <button class="login-buttons bg-blue" type="submit">Enviar</button>
+                <button class="login-buttons bg-blue" type="reset">Borrar</button>
+
+            </div>      
         </form>
-    </main>    
+
+    </main>
 </body>
+
+<footer>
+</footer>
 </html>
