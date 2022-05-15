@@ -24,7 +24,9 @@ body {
 .font-bold {font-weight: bold}
 
 .w-100 {width:100%}
-.w-60 {width: 60%}
+.w-45 {width:45%}
+.w-60 {width:60%}
+.w-70 {width: 70%}
 
 .p-20 {padding: 20px}
 
@@ -55,17 +57,16 @@ body {
 
 /*REGISTRO Y LOGIN*/
 .login-forms {
-    width: 60%;
-    padding:5px;
+    width: 70%;
+    padding:10px;
     font-size: 16px;
     border: 1px;
     border-radius: 7px;
 }
 
 .login-buttons {
-    width: 45%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #10707F;
     color: white ;
     border: 1px;

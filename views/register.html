@@ -21,7 +21,7 @@
     </header> 
 
     <main>
-        <section class="fx fx-wrap justify-center">
+        <nav class="fx fx-wrap justify-center p-20">
             <a href="/register" class="links">
                 <h3 class="text-center p-20 font-black">Registrarse</h3>
             </a>
@@ -29,21 +29,24 @@
             <a href="/login" class="links">
                 <h3 class="text-center p-20 font-grey" id="link">Iniciar sesión</h3>
             </a>
-        </section>
+        </nav>
 
-        <form class="fx fx-wrap justify-center" action="/" method="GET">            
-            <input class="login-forms m-8" type="text" name="nombre" placeholder="Nombre y apellido" required>   
-            <input class="login-forms m-8" type="text" name="usuario" placeholder="Nombre de usuario" required>   
-            <input class="login-forms m-8" type="email" name="mail" placeholder="E-mail" required>   
-            <input class="login-forms m-8" type="text" name="domicilio" placeholder="Domicilio">   
-            <input class="login-forms m-8" type="password" name="contraseña" placeholder="Contraseña" required>   
-            <input class="login-forms m-8" type="password" name="confirmar-contraseña" placeholder="Confirmar contraseña" required>   
+        <form class="fx fx-wrap justify-center" action="/" method="GET">  
+            <p class="font-bold m-8 w-70">Nombre y apellido:</p>   
+            <input class="login-forms m-8" type="text" name="nombre-completo" placeholder="Escriba su nombre" required>   
+            <p class="font-bold m-8 w-70">Nombre de usuario:</p>   
+            <input class="login-forms m-8" type="text" name="nombre-usuario" placeholder="Escriba un nomrbre de usuario" required>   
+            <p class="font-bold m-8 w-70">Mail:</p>   
+            <input class="login-forms m-8" type="email" name="mail" placeholder="Escriba su mail" required>    
+            <p class="font-bold m-8 w-70">Contraseña:</p>    
+            <input class="login-forms m-8" type="password" name="contraseña" placeholder="Escriba una contraseña" required>   
+            <p class="font-bold m-8 w-70">Confirmar contraseña:</p>   
+            <input class="login-forms m-8" type="password" name="confirmar-contraseña" placeholder="Repita la contraseña" required>   
 
             
-           <div class="align-self-center text-center w-60 p-20">
-                <button class="login-buttons" id=color type="submit">Enviar</button>
-                <button class="login-buttons" id=color type="reset">Borrar</button>
-
+           <div class="align-self-center text-center w-70 p-20">
+                <button class="login-buttons m-8 w-45" id=color type="submit">Registrarse</button>
+                <button class="login-buttons m-8 w-45" id=color type="reset">Borrar</button>
             </div>      
         </form>
 
