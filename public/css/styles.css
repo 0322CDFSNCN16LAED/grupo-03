@@ -34,9 +34,6 @@
     text-decoration: none;
 }
 
-#link:hover {
-    color: #10707F;
-}
 
 /*FLEX*/
 .fx {display: flex}
@@ -61,6 +58,6 @@
     font-size: 16px;
     color: white ;
     border: 1px;
-    border-radius: 7px;
+    border-radius: 10px;
 }
 
