@@ -33,6 +33,9 @@
     list-style:none;
     text-decoration: none;
 }
+#link:hover {
+    color: #10707F;
+}
 
 
 /*FLEX*/
@@ -56,8 +59,13 @@
     width: 45%;
     padding: 10px;
     font-size: 16px;
+    background-color: #10707F;
     color: white ;
     border: 1px;
     border-radius: 10px;
+    cursor: pointer
 }
 
+#color:hover {
+    background-color: #45828c;
+}
