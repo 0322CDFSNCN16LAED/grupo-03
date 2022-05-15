@@ -5,6 +5,11 @@
     
 }
 
+body {
+    font-family: roboto;
+    background-color: #f5f5dc;
+}
+
 .bg-black { background-color: black}
 .font-black {color:black}
 .font-grey {color:gray}
@@ -35,7 +40,9 @@
 }
 #link:hover {
     color: #10707F;
+    text-decoration: underline
 }
+
 
 
 /*FLEX*/
@@ -67,5 +74,6 @@
 }
 
 #color:hover {
-    background-color: #45828c;
+    background-color: #FF8000;
+    transition: all 0.5s
 }
