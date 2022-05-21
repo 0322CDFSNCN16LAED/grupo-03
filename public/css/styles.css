@@ -10,8 +10,12 @@ body {
     background-color: #f5f5dc;
 }
 
-.bg-black { background-color: black}
-.font-black {color:black}
+.logo {
+    width:20%
+}
+
+.bg-black { background-color: #100f0f}
+.font-black {color:#100f0f}
 .font-grey {color:gray}
 .bg-cream { background-color: #f5f5dc;}
 .font-cream {color:#f5f5dc}
@@ -23,28 +27,35 @@ body {
 .text-center {text-align: center}
 .font-bold {font-weight: bold}
 
-.w-100 {width:100%}
+.w-20 {width: 20%}
 .w-45 {width:45%}
+.w-50 {width: 50%}
 .w-60 {width:60%}
 .w-70 {width: 70%}
+.w-75 {width: 75%}
+.w-100 {width:100%}
 
+.p-8 {padding:13px}
+.p-10 {padding: 10px}
 .p-20 {padding: 20px}
 
 .b-20 {border-top: 20px; border-bottom: 20px}
 
 .m-8 {margin-top: 8px; margin-bottom: 8px}
+.mt-8 {margin-top: 8px}
+.mr-10 {margin-left: 10px;}
 
 
 /*LINKS*/
 .links {
     list-style:none;
     text-decoration: none;
+    color:#f5f5dc
 }
 #link:hover {
     color: #10707F;
     text-decoration: underline
 }
-
 
 
 /*FLEX*/
@@ -53,7 +64,27 @@ body {
 .justify-center {justify-content: center}
 .align-center {align-items: center}
 .align-self-center {align-self: center}
+.fx-space-between {justify-content: space-between;}
 
+/*HEADER*/
+.menu-hamburguesa { text-align: center }
+.menu-hamburguesa i {
+    padding: 10px;
+    color: #f5f5dc;
+    cursor: pointer;
+    font-size:20px
+}
+
+.icon-header {
+    font-size: 22px;
+    padding: 12px
+}
+
+.categories {
+    padding: 8px;
+    font-weight: bold;
+    font-family: poppins, roboto;
+}
 
 /*REGISTRO Y LOGIN*/
 .login-forms {
@@ -110,3 +141,7 @@ body {
    
   }
 
+/*MOBILE Y TABLET: ESCONDER CATEGORÍAS DEL HEADER*/
+@media (max-width:769px){
+    .hide-tab-mobile {display:none}
+    }

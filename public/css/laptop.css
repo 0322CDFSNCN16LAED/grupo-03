@@ -1,3 +1,9 @@
 @media (min-width:769px) {
-  
+
+.w-15-laptop {width:15%}
+.w-60-laptop {width:60%}
+
+.hide-laptop {display: none}
+
+
 }
