@@ -19,15 +19,19 @@ body {
 .font-grey {color:#5c5c5c}
 .bg-cream { background-color: #f5f5dc;}
 .font-cream {color:#f5f5dc}
-.bg-blue {background-color: #10707F;}
-.font-blue {color: #10707F}
-.bg-orange {background-color: #ff8e1d;}
-.font-orange {color: #FF8000}
+.bg-blue {background-color: #107f72;}
+.font-blue {color: #107f72}
+.bg-orange {background-color: #ff9830;}
+.font-orange {color: #ff9830}
+.bg-light-blue {background-color: #75c8ca;}
 
 .text-center {text-align: center}
 .font-bold {font-weight: bold}
+.font-22 {font-size: 22px}
+.font-poppins {font-family: poppins, sans-serif}
 
 .w-20 {width: 20%}
+.w-30 {width:30%}
 .w-45 {width:45%}
 .w-50 {width: 50%}
 .w-60 {width:60%}
@@ -39,12 +43,13 @@ body {
 .p-10 {padding: 10px}
 .p-20 {padding: 20px}
 .pt-40 {padding-top: 40px}
+.pb-40 {padding-bottom: 40px}
+.pr-40 {padding-right:40px}
 
 .b-20 {border-top: 20px; border-bottom: 20px}
 
 .m-8 {margin-top: 8px; margin-bottom: 8px}
 .mt-8 {margin-top: 8px}
-.mr-10 {margin-left: 10px;}
 
 
 /*LINKS*/
@@ -86,7 +91,7 @@ body {
     padding: 12px
 }
 .icon-header:hover {
-    color:#FF8000;
+    color:#ff9830;
     /*animation: girar 500ms*/
 }
 /*@keyframes girar {
@@ -107,7 +112,7 @@ body {
     font-family: poppins, roboto;
 }
 .categories:hover {
-    color:#FF8000;
+    color:#ff9830;
     text-decoration: underline
 }
 
@@ -123,7 +128,7 @@ body {
 .login-buttons {
     padding: 10px;
     font-size: 14px;
-    background-color: #10707F;
+    background-color: #107f72;
     color: white ;
     border: 1px;
     border-radius: 10px;
@@ -165,6 +170,32 @@ body {
     text-align: center;
    
   }
+
+/*FOOTER*/
+.newsletter {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    border: 2px; 
+    color: #666;
+    height: 40px;
+}
+
+.newsletter-s {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    border: 2px;
+    background-color: #100f0f;
+    color:#f5f5dc;
+    height: 40px;
+    cursor: pointer
+}
+.newsletter-s:hover {
+    background-color: #272626
+}
+
+
 
 /*MOBILE Y TABLET: ESCONDER CATEGORÍAS DEL HEADER*/
 @media (max-width:769px){
