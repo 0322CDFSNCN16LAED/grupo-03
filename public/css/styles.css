@@ -43,7 +43,7 @@ body {
 .w-30 {width:30%}
 .w-45 {width:45%}
 .w-50 {width: 50%}
-.w-54 {width:54%}
+.w-54 {width:52%}
 .w-60 {width:60%}
 .w-70 {width: 70%}
 .w-80 {width:80%}
@@ -257,4 +257,16 @@ body {
 /*MOBILE Y TABLET: ESCONDER CATEGORÍAS DEL HEADER*/
 @media (max-width:769px){
     .hide-tab-mobile {display:none}
-    }
+}
+
+.login-buttons_login {
+    padding: 5px;
+    color: black;
+    font-size: 14px;
+    background-color: #f5f5dc;
+    /*color: white ;*/
+    border: 1px;
+    border-radius: 10px;
+    cursor: pointer    
+}
+    
