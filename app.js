@@ -57,6 +57,12 @@ app.get('/producto-bicicleta-mountain',(req,res)=>{
 app.get('/producto-monopatin1',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/producto-monopatin1.html'));
 });
+app.get('/producto-monopatin-blanco',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-monopatin-blanco.html'));
+});
+app.get('/producto-monopatin-infantil',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-monopatin-infantil.html'));
+});
 app.get('/producto-hoverboard1',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/producto-hoverboard1.html'));
 });
