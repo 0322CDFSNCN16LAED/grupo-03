@@ -23,6 +23,7 @@ body {
 .font-blue {color: #107f72}
 .bg-orange {background-color: #ff9830;}
 .font-orange {color: #ff9830}
+.font-light-blue {color:#75c8ca}
 .bg-light-blue {background-color: #75c8ca;}
 
 .text-center {text-align: center}
@@ -88,10 +89,13 @@ body {
 .links {
     list-style:none;
     text-decoration: none;
-    color:#f5f5dc
 }
 #link:hover {
     color: #10707F;
+    text-decoration: underline
+}
+
+.underline:hover {
     text-decoration: underline
 }
 
@@ -141,6 +145,7 @@ body {
     padding: 8px;
     font-weight: bold;
     font-family: poppins, roboto;
+    color: #f5f5dc
 }
 .categories:hover {
     color:#ff9830;
@@ -252,6 +257,26 @@ body {
     background-color: #272626
 }
 
+.margins-footer {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background-color: #100f0f
+}
+
+.footer-icons {
+    font-size: 28px;
+    color: #cae9f5
+}
+
+.footer:hover .spin {
+    transform: rotate(-360deg);
+    transition: 1s
+}
+
+.redes-sociales {
+    font-size: 18px;
+    margin-top: 8px
+}
 
 
 /*MOBILE Y TABLET: ESCONDER CATEGORÍAS DEL HEADER*/
