@@ -66,6 +66,18 @@ app.get('/producto-monopatin-infantil',(req,res)=>{
 app.get('/producto-hoverboard1',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/producto-hoverboard1.html'));
 });
+app.get('/producto-hoverboard2',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-hoverboard2.html'));
+});
+app.get('/producto-hoverboard3',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-hoverboard3.html'));
+});
 app.get('/producto-combo-skate',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/producto-combo-skate.html'));
+});
+app.get('/producto-skate2',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-skate2.html'));
+});
+app.get('/producto-skate3',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-skate3.html'));
 });
