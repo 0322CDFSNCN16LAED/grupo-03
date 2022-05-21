@@ -10,4 +10,9 @@
     font-size: 25px;
 }
 
+.footer-laptop {
+    display: flex;
+    justify-content: space-between;
+}
+
 }
