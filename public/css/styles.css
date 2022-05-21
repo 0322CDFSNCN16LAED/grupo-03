@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: roboto;
+    font-family: roboto, sans-serif;
     background-color: #f5f5dc;
 }
 
@@ -16,12 +16,12 @@ body {
 
 .bg-black { background-color: #100f0f}
 .font-black {color:#100f0f}
-.font-grey {color:gray}
+.font-grey {color:#5c5c5c}
 .bg-cream { background-color: #f5f5dc;}
 .font-cream {color:#f5f5dc}
 .bg-blue {background-color: #10707F;}
 .font-blue {color: #10707F}
-.bg-orange {background-color: #FF8000;}
+.bg-orange {background-color: #ff8e1d;}
 .font-orange {color: #FF8000}
 
 .text-center {text-align: center}
@@ -38,6 +38,7 @@ body {
 .p-8 {padding:13px}
 .p-10 {padding: 10px}
 .p-20 {padding: 20px}
+.pt-40 {padding-top: 40px}
 
 .b-20 {border-top: 20px; border-bottom: 20px}
 
@@ -67,6 +68,7 @@ body {
 .fx-space-between {justify-content: space-between;}
 
 /*HEADER*/
+.position-fixed {position:fixed}
 .menu-hamburguesa { text-align: center }
 .menu-hamburguesa i {
     padding: 10px;
@@ -74,9 +76,13 @@ body {
     cursor: pointer;
     font-size:20px
 }
+.menu-hamburguesa i:hover {
+    transform: rotate(90deg);
+    transition: all 500ms
+}
 
 .icon-header {
-    font-size: 25px;
+    font-size: 20px;
     padding: 12px
 }
 .icon-header:hover {

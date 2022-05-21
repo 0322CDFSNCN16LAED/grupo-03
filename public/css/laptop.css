@@ -2,8 +2,12 @@
 
 .w-15-laptop {width:15%}
 .w-60-laptop {width:60%}
+.p-10-laptop {padding: 10px}
 
 .hide-laptop {display: none}
 
+.icon-header {
+    font-size: 25px;
+}
 
 }
