@@ -9,24 +9,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/laptop.css">
     <link rel="stylesheet" href="/css/tablet.css">
-    <link rel="stylesheet" href="/css/styles.css">
 
 </head>
+ 
+<body>
+  <header class="bg-black p-10">
+        
+    <div class="fx fx-wrap fx-space-between align-center p-20">
+            <div class="menu-hamburguesa p-10 hide-laptop">
+                <i class="fas fa-bars"></i>
+            </div>
 
-<header>
-    <h3 class="text-center p-20 font-black bg-orange">Productos</h3>
-</header>
+        <h1 class="text-center w-20 w-15-laptop">
+            <a href="/">
+            <img class="w-75 w-60-laptop" src="/imagenes/logo-teme.png" alt="Logo Teme"/>
+            </a>
+        </h1>
 
-<body>    
+        <!-- Solo se verá en laptop -->
+        <nav class="fx fx-wrap hide-tab-mobile">
+            <ul type="none" class="fx fx-wrap">
+                <li> <a href="/producto" class="links categories">BICICLETAS</a> </li>
+                <li> <a href="/producto" class="links categories">MONOPATINES</a></li>
+                <li> <a href="/producto" class="links categories">SKATEBOARDS</a> </li>
+                <li> <a href="/producto" class="links categories">HOVERBOARDS</a> </li>
+                <li> <a href="/producto" class="links categories">ACCESORIOS</a> </li>
+            </ul>
+        </nav>
+        <!---->
+
+        <ul type="none" class="fx fx-wrap align-self-center">      
+            <a href="/login">
+                <li class=""> <i class="fas fa-user-circle font-cream icon-header"></i> </li>
+            </a>
+            <a href="/compras">
+                <li class=""> <i class="fas fa-shopping-bag font-cream icon-header"></i></li>
+            </a>
+        </ul>
+    </div>               
+    
+  </header>   
+
     <main>
+      <h3 class="text-center p-20 font-black bg-orange">Productos</h3>
         
         <article>
             <img
               class="img"
-              src="/images/bici-electrica-tourism.jpg"
+              src="/imagenes/bici-electrica-tourism.jpg"
               alt="Bicicleta Tourism"
             />
             <div>
@@ -73,7 +110,7 @@
           <article>
             <img
               class="img"
-              src="/images/bici-electrica-mountain-bike.jpg"
+              src="/imagenes/bici-electrica-mountain-bike.jpg"
               alt="Bicicleta Mountain Bike"
             />
             <div>
@@ -124,7 +161,7 @@
           <article>
             <img
               class="img"
-              src="/images/mono-electrico.jpg"
+              src="/imagenes/mono-electrico.jpg"
               alt="Monopatín Eléctrico"
             />
             <div>
@@ -169,7 +206,7 @@
           <article>
             <img
             class="img"
-              src="/images/bici-electrica-cortina.jpg"
+              src="/imagenes/bici-electrica-cortina.jpg"
               alt="Bicicleta Eléctrica Cortina"
             />
             <div>              
@@ -222,7 +259,7 @@
           <article>
             <img 
             class="img" 
-            src="/images/skateboard.jpg" alt="Skateboard" />
+            src="/imagenes/skateboard.jpg" alt="Skateboard" />
             <div>
               <h3 class="text-center p-20 font-black">Combo Skateboard</h3>
               
@@ -259,7 +296,7 @@
           <article>
             <img
             class="img"
-            src="/images/hoverboard.jpg" alt="Hoverboard" />
+            src="/imagenes/hoverboard.jpg" alt="Hoverboard" />
             <div>
               <h3 class="text-center p-20 font-black">Hoverboard</h3>
               

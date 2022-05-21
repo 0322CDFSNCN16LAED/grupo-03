@@ -76,14 +76,33 @@ body {
 }
 
 .icon-header {
-    font-size: 22px;
+    font-size: 25px;
     padding: 12px
 }
+.icon-header:hover {
+    color:#FF8000;
+    /*animation: girar 500ms*/
+}
+/*@keyframes girar {
+    0% {
+        transform: rotateY(0deg);
+      }
+      50% {
+        transform: rotateY(90deg);
+      }
+      100% {
+        transform: rotateY(0deg);
+      }
+}*/
 
 .categories {
     padding: 8px;
     font-weight: bold;
     font-family: poppins, roboto;
+}
+.categories:hover {
+    color:#FF8000;
+    text-decoration: underline
 }
 
 /*REGISTRO Y LOGIN*/
