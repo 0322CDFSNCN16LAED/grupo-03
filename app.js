@@ -23,9 +23,43 @@ app.get('/login',(req,res)=>{
 });
 
 app.get('/compras',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views/productCart.html'));
+    res.sendFile(path.join(__dirname,'views/carrito.html'));
 });
 
-app.get('/producto',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views/productDetail.html'));
+//PRODUCTOS EN GENERAL//
+app.get('/p-bicicletas',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/p-bicicletas.html'));
+});
+app.get('/p-monopatines',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/p-monopatines.html'));
+});
+app.get('/p-hoverboards',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/p-hoverboards.html'));
+});
+
+app.get('/p-skateboards',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/p-skateboards.html'));
+});
+app.get('/p-accesorios',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/p-accesorios.html'));
+});
+
+//PRODUCTOS INDIVIDUALES//
+app.get('/producto-bicicleta-cortina',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-bicicleta-cortina.html'));
+});
+app.get('/producto-bicicleta-tourism',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-bicicleta-tourism.html'));
+});
+app.get('/producto-bicicleta-mountain',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-bicicleta-mountain.html'));
+});
+app.get('/producto-monopatin1',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-monopatin1.html'));
+});
+app.get('/producto-hoverboard1',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-hoverboard1.html'));
+});
+app.get('/producto-combo-skate',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-combo-skate.html'));
 });

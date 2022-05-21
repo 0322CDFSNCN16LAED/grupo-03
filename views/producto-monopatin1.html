@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/laptop.css">
+    <link rel="stylesheet" href="/css/tablet.css">
+
+</head>
+ 
+<body>
+    <header class="bg-black">
+        
+        <div class="fx fx-wrap fx-space-between align-center p-20">
+                <div class="menu-hamburguesa p-10 hide-laptop">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            <h1 class="text-center w-20 w-15-laptop">
+                <a href="/">
+                <img class="w-75 w-60-laptop" src="/imagenes/logo-teme.png" alt="Logo Teme"/>
+                </a>
+            </h1>
+
+            <!-- Solo se verá en laptop -->
+            <nav class="fx fx-wrap hide-tab-mobile">
+                <ul type="none" class="fx fx-wrap">
+                    <li> <a href="/p-bicicletas" class="links categories">BICICLETAS</a> </li>
+                    <li> <a href="/p-monopatines" class="links categories">MONOPATINES</a></li>
+                    <li> <a href="/p-skateboards" class="links categories">SKATEBOARDS</a> </li>
+                    <li> <a href="/p-hoverboards" class="links categories">HOVERBOARDS</a> </li>
+                    <li> <a href="/p-accesorios" class="links categories">ACCESORIOS</a> </li>
+                </ul>
+            </nav>
+            <!---->
+
+            <ul type="none" class="fx fx-wrap align-self-center p-20-laptop">      
+                <a href="/login">
+                    <li class=""> <i class="fas fa-user-circle font-cream icon-header"></i> </li>
+                </a>
+                <a href="/compras">
+                    <li class=""> <i class="fas fa-shopping-bag font-cream icon-header"></i></li>
+                </a>
+            </ul>
+        </div>               
+        
+    </header>
+
+  <main>
+    <h3 class="text-center p-20 font-black bg-orange">Monopatín Eléctrico</h3>
+    <div>
+        <img class="p-8 img2_detalle" src="/imagenes/mono-electrico.jpg" alt="Monopatín Eléctrico"/>
+    </div>
+    <form action="/compras" method="get">
+        <div>              
+            <div class="linea"></div>                                              
+            <p class= "text-line">Cuadro: Aleación de aluminio | Plegable</p>
+            <div class="linea"></div>                                                                  
+            <p class= "text-line">Batería: Samsung, 36V/13AH | 468 Watts l Litio</p>
+            <div class="linea"></div>                                                                  
+            <p class= "text-line">Freno: De disco delantero, hidráulico trasero</p>
+            <div class="linea"></div>                                                                  
+            <p class= "text-line">Display: Verificá toda la información</p>        
+            <div class="linea"></div>                                                          
+            <p class= "text-line">Motor: 350W</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Velocidad: 25 Km/h</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Niveles de asistencia: 5</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Autonomía: 35 Km</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Peso: 17 Kg</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Rodado: 10"</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Accesorios: Guardabarros y bocina</p>            
+            <div class="linea"></div>                                                      
+            <p class= "text-line">Conexiones: Puerto USB</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Colores: Blanco y negro</p> 
+            <div class="linea"></div>  
+        <div>
+            <button class="login-producto w-30" type="submit" id="color">Compra online</button>  
+        </div>
+    </form>
+    <form action="/" method="get">    
+        <div>
+            <button class="login-producto w-30" type="submit" id="color">Regresar</button>
+        </div> 
+    </form>              
+    <h2 class="text-center p-20 font-black">Precio: $40.000</h2>             
+</main>
+
+</body>
+</html>

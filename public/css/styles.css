@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+    /*color: #f5f5dc;    */
 }
 
 body {
@@ -29,6 +29,15 @@ body {
 .font-bold {font-weight: bold}
 .font-22 {font-size: 22px}
 .font-poppins {font-family: poppins, sans-serif}
+.h3_letra{
+    padding: 20px;
+    color: black;
+    font-size: 80px;
+}
+.letra_color{
+    color: #FF8000;
+    list-style: none;    
+  }
 
 .w-20 {width: 20%}
 .w-30 {width:30%}
@@ -45,12 +54,33 @@ body {
 .pt-40 {padding-top: 40px}
 .pb-40 {padding-bottom: 40px}
 .pr-40 {padding-right:40px}
+.p-40 {
+    font-size: 30px;
+    padding: 40px
+}
 
 .b-20 {border-top: 20px; border-bottom: 20px}
 
 .m-8 {margin-top: 8px; margin-bottom: 8px}
 .mt-8 {margin-top: 8px}
 
+.div_seccion{
+    display: flex;   
+    align-items: flex-start;
+    padding: 50px 50px;
+    margin-left: 200px;    
+  }
+
+.div_seccion div{    
+    flex-wrap: wrap;  
+  }
+
+  
+.estilo_imagen{       
+    color: blue;
+    font-size: 2em;
+    margin-top: 10px;
+}
 
 /*LINKS*/
 .links {
@@ -73,7 +103,6 @@ body {
 .fx-space-between {justify-content: space-between;}
 
 /*HEADER*/
-.position-fixed {position:fixed}
 .menu-hamburguesa { text-align: center }
 .menu-hamburguesa i {
     padding: 10px;
@@ -140,15 +169,42 @@ body {
     transition: all 0.5s
 }
 
+.login-producto {    
+    font-size: 14px;
+    background-color: #f5f5dc;     
+    color: #10707F;
+    border: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 500px;
+    margin-top: 10px;
+}
 
 /*PRODUCTOS*/
-.img {
-    width: 80%;
-    text-align:center;
-    border-radius:5%;
-    margin: 35px; }
- 
 
+.img {
+        width: 80%;
+        border-radius:5%; 
+        text-align: center;  
+    }
+     
+.img2 {
+        width: 50%;
+        border-radius: 5px;
+    }
+    
+.img2_detalle {
+        width: 40%;
+        border-radius: 300px; 
+        margin-left: 400px; 
+    }
+    
+.img3 {
+        width: 30%;
+        border-radius:5%;   
+    }
 
 .text-line {
     font-size: 80%;

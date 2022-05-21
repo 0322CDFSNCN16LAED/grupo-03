@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="/css/tablet.css">
 
 </head>
-
-<body> 
+ 
+<body>
     <header class="bg-black">
         
         <div class="fx fx-wrap fx-space-between align-center p-20">
@@ -56,44 +56,44 @@
         </div>               
         
     </header>
-    
-    <main>
-    <h3 class="text-center font-black bg-orange">
-        <nav class="fx fx-wrap justify-center">
-            <a href="/login" class="links">
-                <p class="text-center p-20 font-black">Iniciar sesión</p>
-            </a>
-            <p class="text-center align-self-center b-20">/</p>
-            <a href="/register" class="links">
-                <p class="text-center p-20 font-grey" id="link">Registrarse</p>
-            </a>
-        </nav>
-    </h3>
 
+  <main>
+    <h3 class="text-center p-20 font-black bg-orange">Combo-skateboard</h3>
+    <div>
+        <img class="p-8 img2_detalle" src="/imagenes/skateboard.jpg" alt="Skateboard"/>
+    </div>
+    <form action="/compras" method="get">
+        <div>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Madera: Maple económico</p>     
+            <div class="linea"></div>                                                             
+            <p class= "text-line">Casco</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Llave: T</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Protecciones: SM/ML</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Tabla: cóncava con doble kick, compuesto por 7 laminas de madera y
+              resina epoxi</p class= "text-line"></p>
+              <div class="linea"></div>                                                                  
+            <p class= "text-line">Bujes: 95 A. Rulemanes Abec 9</p>                  
+            <div class="linea"></div>                                                
+            <p class= "text-line">Ruedas: de Uretano 54 mm</p>                    
+            <div class="linea"></div>                                              
+            <p class= "text-line">Truck: reforzados de aluminio</p>
+            <div class="linea"></div>   
+        </div>
+        <div>
+            <button class="login-producto w-30" type="submit" id="color">Compra online</button>  
+        </div>
+    </form>
+    <form action="/" method="get">    
+        <div>
+            <button class="login-producto w-30" type="submit" id="color">Regresar</button>
+        </div> 
+    </form>              
+    <h2 class="text-center p-20 font-black">Precio: $35.000</h2>             
+</main>
 
-        <form class="fx fx-wrap justify-center" action="/" method="GET">  
-            <p class="font-bold m-8 w-70 pt-40">Nombre de usuario:</p>   
-           <input class="login-forms m-8" type="text" name="nombre-usuario" placeholder="Escriba su nombre de usuario">
-           <p class="font-bold m-8 w-70">Contraseña:</p>   
-           <input class="login-forms m-8" type="password" name="contraseña" placeholder="Escriba su contraseña">
-
-           <div class="align-self-center text-center w-70 p-20 pb-40">
-                <button class="login-buttons m-8 w-60" type="submit" id="color">Iniciar sesión</button>
-            </div>      
-        </form>
-
-    </main>
-
-    <footer class="bg-black">
-        <section class="bg-light-blue fx fx-wrap fx-space-between p-20 pr-40 font-22 font-poppins">
-            <p class="w-60 p-20 font-cream font-bold">¡Eenterate de las novedades y ofertas antes que nadie!</p>
-           
-            <form class="fx fx-wrap" action="/" method="GET"> 
-                <input class="newsletter align-self-center" type="email" name="newsletter" placeholder="Ingresá tu E-mail">  
-                <button class="newsletter-s align-self-center" type="submit">Suscribirme</button>
-            </form>
-        </section>
-       
-    </footer>
 </body>
 </html>
