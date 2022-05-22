@@ -343,7 +343,10 @@ body {
     font-size: 28px;    
 }
 
-
+.boton_tarjetas{
+    border: none;
+    background-color: #f5f5dc;
+}
 
 /********DATOS DE TARGETA*****/
 
