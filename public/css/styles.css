@@ -359,7 +359,7 @@ main section section article form button{
 
 /**********CARRITO *************/
 .buscar_b{
-    width: 30%;
+    width: 60%;
     height: 40px;   
     border-radius: 10px 10px 10px 10px;     
     margin-top: 60px;
@@ -377,10 +377,16 @@ main section section article form button{
 .top_tamano{ margin-left: 20px;}
 
 .font-12 {font-size: 12px}
+.font-10 {font-size: 10px}
 
 .margen_inferior{
     margin-left: 40px;
     margin-bottom: 10px;
+}
+
+.margen_superior{
+    margin-top: 5px;
+    padding: 10px;
 }
 
 .tamano_imagen{
@@ -390,18 +396,35 @@ main section section article form button{
 }
 
 .articulo_carro{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 40px;
-    margin-bottom: 5px;
+    display: flex;  
+    justify-content: space-around;    
+    margin-bottom: 15px;    
 }
 
 .articulo_carro div{      
-    align-items: wrap;  
-    padding: 10px 10px;  
+    justify-content: center; 
+}
+
+.ancho_detalle{
+    width: 2px;
+    
+}
+
+.ancho_imagen{
+    width: 50%;
+    height: 50%;
 }
 
 .carro-icons {
     font-size: 28px;    
 }
-    
+
+.boton_tarjetas{
+    border: none;
+    background-color: #f5f5dc;
+}
+
+/********DATOS DE TARGETA*****/
+
+
+ 

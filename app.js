@@ -81,3 +81,6 @@ app.get('/producto-skate2',(req,res)=>{
 app.get('/producto-skate3',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/producto-skate3.html'));
 });
+app.get('/datos-tarjeta',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/datos-tarjeta.html'));
+});
