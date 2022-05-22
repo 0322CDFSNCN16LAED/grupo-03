@@ -55,40 +55,72 @@
         </div> 
     </header>
     <main>
-        <section class="top_tamano">
-            <div>
-                <form>
-                    <input  class="buscar_b" id="busqueda" name="busqueda"  placeholder="  Buscar Productos"/>
-                    <button class="boton_buscar"><i class="fas fa-search"></i> </button>   
-                </form>      
-            </div>
-        </section>
-
-        
+            <!--<section class="justify-center">
+                <div>
+                    <form>
+                        <input  class="buscar_b" id="busqueda" name="busqueda"  placeholder="  Buscar Productos"/>
+                        <button class="boton_buscar"><i class="fas fa-search"></i> </button>   
+                    </form>      
+                </div>
+            </section> -->
             <br><br>            
             <section >
-                    <article class="articulo_carro">
-                        <div>                                           
+                    <article class="articulo_carro ">
+                        <div class=ancho_imagen>                                           
                             <figure><img class="tamano_imagen" src="/imagenes/mono-electrico.jpg" alt="Monopatin"></figure>
-                            <p class="font-12">Motopatin Electrico</p> 
+                            <p class="font-10">Motopatin Electrico</p> 
                         </div>
-                        <div>
+                        <div class="ancho_detalle">
                             <p class="font-12">1</p>
                         </div>
-                        <div>
+                        <div class="ancho_detalle">
                             <p class="font-12">$6.770</p>
                         </div>
-                        <div>
+                        <div class="ancho_detalle">
                             <i class="fas fa-times-circle"></i> 
                         </div> 
                     </article>
             </section>
-            <div class="font-12 margen_inferior">
+            <section >
+                <article class="articulo_carro ">
+                    <div class=ancho_imagen>                                           
+                        <figure><img class="tamano_imagen" src="/imagenes/mono-electrico.jpg" alt="Monopatin"></figure>
+                        <p class="font-10">Motopatin Electrico</p> 
+                    </div>
+                    <div class="ancho_detalle">
+                        <p class="font-12">1</p>
+                    </div>
+                    <div class="ancho_detalle">
+                        <p class="font-12">$6.770</p>
+                    </div>
+                    <div class="ancho_detalle">
+                        <i class="fas fa-times-circle"></i> 
+                    </div> 
+                </article>
+            </section>
+            <section >
+                <article class="articulo_carro ">
+                    <div class=ancho_imagen>                                           
+                        <figure><img class="tamano_imagen" src="/imagenes/mono-electrico.jpg" alt="Monopatin"></figure>
+                        <p class="font-10">Motopatin Electrico</p> 
+                    </div>
+                    <div class="ancho_detalle">
+                        <p class="font-12">1</p>
+                    </div>
+                    <div class="ancho_detalle">
+                        <p class="font-12">$6.770</p>
+                    </div>
+                    <div class="ancho_detalle">
+                        <i class="fas fa-times-circle"></i> 
+                    </div> 
+                </article>
+            </section>
+            <div class="font-12 margen_inferior margen_superior">
                 <label>CUPON DE DESCUENTO </label>
                 <input id="cupondescuento" name="cupondescuento">
                 <button class="font-12" type="submit">Aplicar Descuento</button>
             </div>
-            <section class="font-12 margen_inferior">
+            <section class="font-12 margen_inferior margen_superior">
                 <div>
                     <label for="formapago">SUB-TOTAL: </label>
                     <label for="formapago">41.000,00</label><br>
@@ -99,7 +131,7 @@
                 </div>  
             </section>       
             
-            <form class="font-12 margen_inferior" action="/datos-tarjeta" method="get">
+            <form class="font-12 margen_inferior margen_superior" action="/datos-tarjeta" method="get">
                         <label for="formapago"><strong>FORMA DE PAGO</strong></label><br>
                         <button class="boton_tarjetas" type="submit"><i class="fab fa-cc-visa p-8 carro-icons spin"></i></button>
                         <button class="boton_tarjetas" type="submit"><i class="fab fa-cc-amex p-8 carro-icons spin"></i></button>
@@ -107,7 +139,7 @@
                         <button class="boton_tarjetas" type="submit"><i class="fab fa-cc-mastercard p-8 carro-icons spin"></i></button> 
             </form>   
             
-            <section class="font-12 margen_inferior">                
+            <section class="font-12 margen_inferior margen_superior">                
                 <div>
                     <label for="entrega"><strong>ENTREGA DE PRODUCTO</strong></label><br>
                     <input type="radio" name="entrega" value="adomic"> A Domicilio
@@ -115,11 +147,11 @@
                     <input type="radio" name="entrega" value="enviocorreo"> Envio al Correo  
                 </div> 
             </section> 
-        <form class="justify-center" action="/" method="get">      
-            <div class="align-self-center text-center w-70 p-20 pb-40">
-                <button class="login-buttons m-8 w-60" type="submit" id="color">Pagar</button>
-            </div>  
-        </form>             
+            <form class="fx fx-wrap justify-center" action="/" method="get">      
+                <div class="text-center w-70 p-20 pb-40">
+                    <button class="login-buttons m-8 w-60" type="submit" id="color">Pagar</button>
+                </div>  
+            </form>             
     </main>
     <footer class="bg-black">
         <section class="bg-light-blue fx fx-wrap fx-space-between p-20 pr-40 font-22 font-poppins">
