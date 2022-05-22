@@ -294,4 +294,52 @@ body {
     border-radius: 10px;
     cursor: pointer    
 }
+
+/**********CARRITO *************/
+.buscar_b{
+    width: 30%;
+    height: 40px;   
+    border-radius: 10px 10px 10px 10px;     
+    margin-top: 60px;
+    margin-left: 50px;
+}
+
+.boton_buscar{
+    border-radius: 0px 10px 10px 0px;  
+    background-color: #f5f5dc;
+    width: 2%;
+    height: 40px; 
+    border: none;       
+}
+
+.top_tamano{ argin-left: 20px;}
+
+.font-12 {font-size: 12px}
+
+.margen_inferior{
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.tamano_imagen{
+    width: 8%;
+    height: 8%;
+    border-radius: 0px 10px 10px 0px;  
+}
+
+.articulo_carro{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-bottom: 5px;
+}
+
+.articulo_carro div{      
+    align-items: wrap;  
+    padding: 10px 10px;  
+}
+
+.carro-icons {
+    font-size: 28px;    
+}
     
