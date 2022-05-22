@@ -350,5 +350,9 @@ body {
 
 /********DATOS DE TARGETA*****/
 
-
+.img-tarjeta{
+    display: flex;
+    justify-content: flex-end;
+    width: 35%;
+}
  
