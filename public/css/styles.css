@@ -25,6 +25,7 @@ body {
 .font-orange {color: #ff9830}
 .font-light-blue {color:#75c8ca}
 .bg-light-blue {background-color: #75c8ca;}
+.bg-white {background-color: white;}
 
 .text-center {text-align: center}
 .font-bold {font-weight: bold}
@@ -51,6 +52,14 @@ body {
 .w-75 {width: 75%}
 .w-100 {width:100%}
 
+.he_20 {height: 20%;}
+.he_40 {height: 40%;}
+.he_100 {height: 100%;}
+
+.w_px-200 {width: 200px;}
+
+.he_vh-200 {height: 200px;}
+
 .p-8 {padding:13px}
 .p-10 {padding: 10px}
 .p-20 {padding: 20px}
@@ -64,8 +73,13 @@ body {
 
 .b-20 {border-top: 20px; border-bottom: 20px}
 
+.m-0 {margin: 0px;}
 .m-8 {margin-top: 8px; margin-bottom: 8px}
 .mt-8 {margin-top: 8px}
+
+.rad-10 {border-radius: 10%;}
+
+
 
 .div_seccion{
     display: flex;   
@@ -84,6 +98,33 @@ body {
     font-size: 2em;
     margin-top: 10px;
 }
+
+main section section article form button{
+    justify-content: center;
+    background-color: #272626;
+    border: #272626;
+}
+
+.section_articulo_producto{
+    display: flex;
+    background-color: #272626;
+    padding: 10px;
+    width: 100%;
+    margin-right: 0px;
+    
+    
+}
+
+.articulo_producto{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #100f0f;
+    align-items: center;
+    padding: 10px;
+}
+
 
 /*LINKS*/
 .links {
@@ -106,6 +147,8 @@ body {
 .justify-center {justify-content: center}
 .align-center {align-items: center}
 .align-self-center {align-self: center}
+.align-end {align-items: flex-end;}
+
 .fx-space-between {justify-content: space-between;}
 
 /*HEADER*/
@@ -173,7 +216,12 @@ body {
 
 #color:hover {
     background-color: #FF8000;
-    transition: all 0.5s
+    transition: all 0.5s;
+    color:#100f0f;
+}
+
+#articulo_anim:hover {
+    box-shadow: 0px 5px 4px -2px#FF8000;
 }
 
 .login-producto {    
@@ -192,9 +240,10 @@ body {
 /*PRODUCTOS*/
 
 .img {
-        width: 80%;
-        border-radius:5%; 
-    }
+    width: 80%;
+    border-radius:5%;
+    margin-right: 0px;
+}
      
 .img2 {
         width: 50%;
@@ -212,6 +261,12 @@ body {
         border-radius:5%;   
     }
 
+.imagen_producto{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+} 
+
 .text-line {
     font-size: 80%;
     text-align: center;
@@ -223,7 +278,7 @@ body {
  
     }
 
-  .linea {
+.linea {
     border-top: 1px solid black;
     height: 2px;
     min-width: 20px;
@@ -231,7 +286,14 @@ body {
     margin: 10px ;
     text-align: center;
    
-  }
+}
+
+.button{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    width: 100%;
+}
 
 /*FOOTER*/
 .newsletter {
@@ -312,7 +374,7 @@ body {
     border: none;       
 }
 
-.top_tamano{ argin-left: 20px;}
+.top_tamano{ margin-left: 20px;}
 
 .font-12 {font-size: 12px}
 
