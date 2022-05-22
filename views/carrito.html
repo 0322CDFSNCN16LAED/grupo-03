@@ -61,7 +61,7 @@
             </div>
         </section>
 
-        <form class="justify-center" action="/" method="get">
+        
             <br><br>            
             <section >
                     <article class="articulo_carro">
@@ -95,23 +95,23 @@
                     <label for="formapago"><strong>41.000,00</strong></label>
                 </div>  
             </section>       
-            <section class="font-12 margen_inferior">   
-                <div>
-                    <label for="formapago"><strong>FORMA DE PAGO</strong></label><br>
-                    <i class="fab fa-cc-visa p-8 carro-icons spin"></i>
-                    <i class="fab fa-cc-mastercard p-8 carro_icono spin"></i>
-                    <i class="fab fa-cc-amex p-8 carro-icons spin"></i>
-                    <i class="far fa-credit-card p-8 carro-icons spin"></i>                
-                </div>
-            </section> 
-            <section class="font-12 margen_inferior">            
+            
+            <form class="font-12 margen_inferior" action="/datos-tarjeta" method="get">
+                        <label for="formapago"><strong>FORMA DE PAGO</strong></label><br>
+                        <button type="submit"><i class="fab fa-cc-visa p-8 carro-icons spin"></i></button>
+                        <button type="submit"><i class="fab fa-cc-amex p-8 carro-icons spin"></i></button>
+                        <button type="submit"><i class="far fa-credit-card p-8 carro-icons spin"></i></button> 
+            </form>   
+            
+            <section class="font-12 margen_inferior">                
                 <div>
                     <label for="entrega"><strong>ENTREGA DE PRODUCTO</strong></label><br>
                     <input type="radio" name="entrega" value="adomic"> A Domicilio
                     <input type="radio" name="entrega" value="localc"> Local Comercial 
                     <input type="radio" name="entrega" value="enviocorreo"> Envio al Correo  
                 </div> 
-            </section>    
+            </section> 
+        <form class="justify-center" action="/" method="get">      
             <div class="align-self-center text-center w-70 p-20 pb-40">
                 <button class="login-buttons m-8 w-60" type="submit" id="color">Pagar</button>
             </div>  
