@@ -363,12 +363,15 @@ main section section article form button{
 .img2 {
         width: 40%;
         border-radius: 5px;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     
 .img2_detalle {
         width: 40%;
-        border-radius: 200px; 
+        border-radius: 50px; 
         margin-left: 400px; 
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
     }
     
 .img3 {
