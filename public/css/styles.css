@@ -22,7 +22,7 @@ body {
 .bg-blue {background-color: #107f72;}
 .font-blue {color: #107f72}
 .bg-orange {background-color: #ff9830;}
-.font-orange {color: #ff9830}
+.font-orange {color: #FF8000}
 .font-light-blue {color:#75c8ca}
 .bg-light-blue {background-color: #75c8ca;}
 .bg-white {background-color: white;}
@@ -34,7 +34,7 @@ body {
 .h3_letra{
     padding: 20px;
     color: black;
-    font-size: 80px;
+    font-size: 65px;
 }
 .letra_color{
     color: #FF8000;
@@ -220,6 +220,93 @@ main section section article form button{
 .categories:hover {
     color:#ff9830;
     text-decoration: underline
+}
+
+/*BANNERS DEL INICIO*/
+.banner-bicis {
+    font-size: 27px;
+    font-family: poppins, roboto, sans-serif;
+    color:#FF8000;
+    text-shadow: 2px 2px #272626;
+    padding: 20px;
+    background-image: url("/imagenes/banner-bicis-bw.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+.banner-bicis:hover {
+    cursor: pointer;
+    background-image: url("/imagenes/banner-bicis.jpeg");
+    opacity: 0.95;
+    color:#FF8000
+}
+
+.banner-skates {
+    font-size: 30px;
+    font-family: poppins, roboto, sans-serif;
+    color:#FF8000;
+    text-shadow: 2px 2px #272626;
+    padding:20px;
+    background-image: url("/imagenes/banner-skates-bw.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+.banner-skates:hover {
+    cursor: pointer;
+    background-image: url("/imagenes/banner-skates.jpeg");
+    opacity: 0.95;
+    color:#FF8000;
+}
+
+.banner-hoverboard {
+    font-size: 30px;
+    font-family: poppins, roboto, sans-serif;
+    color:#FF8000;
+    text-shadow: 2px 2px #272626;
+    padding:20px;
+    background-image: url("/imagenes/banner-hoverboard-bw.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+.banner-hoverboard:hover {
+    cursor: pointer;
+    background-image: url("/imagenes/banner-hoverboard.jpeg");
+    opacity: 0.95;
+    color:#FF8000
+}
+
+.banner-mono {
+    font-size: 30px;
+    font-family: poppins, roboto, sans-serif;
+    color:#FF8000;
+    text-shadow: 2px 2px #272626;
+    padding:20px;
+    background-image: url("/imagenes/banner-mono-bw.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+.banner-mono:hover {
+    cursor: pointer;
+    background-image: url("/imagenes/banner-mono.jpeg");
+    opacity: 0.95;
+    color:#FF8000
+}
+
+
+.banner-accesorios {
+    font-size: 30px;
+    font-family: poppins, roboto, sans-serif;
+    color:#FF8000;
+    text-shadow: 2px 2px #272626;
+    padding:20px;
+    background-image: url("/imagenes/banner-accesorios-bw.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+.banner-accesorios:hover {
+    cursor: pointer;
+    background-image: url("/imagenes/banner-accesorios.jpeg");
+    opacity: 0.95;
+    color:#FF8000
 }
 
 /*REGISTRO Y LOGIN*/

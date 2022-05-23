@@ -10,6 +10,18 @@
     font-size: 25px;
 }
 
+.banner-bicis {padding: 75px; font-size:45px}
+.banner-bicis:hover {font-size: 50px; transition:400ms}
+.banner-skates {padding: 75px; font-size: 45px}
+.banner-skates:hover {font-size: 50px; transition:400ms}
+.banner-hoverboard {padding: 70px; font-size: 45px}
+.banner-hoverboard:hover {font-size: 50px; transition:400ms}
+.banner-mono {padding: 79px; font-size: 45px}
+.banner-mono:hover {font-size: 50px; transition:400ms}
+.banner-accesorios {padding: 65px; font-size: 45px}
+.banner-accesorios:hover {font-size: 50px; transition:400ms}
+
+
 .footer-laptop {
     display: flex;
     justify-content: space-between;
