@@ -340,16 +340,16 @@ main section section article form button{
 }
 
 .login-producto {    
-    font-size: 14px;
+    font-size: 20px;
     background-color: #f5f5dc;     
     color: #10707F;
     border: 1px;
     border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 10px;
-    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-right: 30px;
     margin-left: 500px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 /*PRODUCTOS*/
@@ -367,7 +367,7 @@ main section section article form button{
     
 .img2_detalle {
         width: 40%;
-        border-radius: 300px; 
+        border-radius: 200px; 
         margin-left: 400px; 
     }
     
@@ -383,12 +383,10 @@ main section section article form button{
 } 
 
 .text-line {
-    font-size: 80%;
+    font-size: 90%;
     text-align: center;
     font-family: roboto;
-    /*position: relative;
-    left: 100px;
-    */
+    padding-top: 20px;
     
  
     }
