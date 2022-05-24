@@ -81,6 +81,12 @@ app.get('/producto-skate2',(req,res)=>{
 app.get('/producto-skate3',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/producto-skate3.html'));
 });
+app.get('/producto-ruedas',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-ruedas.html'));
+});
+app.get('/producto-kit',(req,res)=>{
+    res.sendFile(path.join(__dirname,'views/producto-kit.html'));
+});
 app.get('/datos-tarjeta_respaldo',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/datos-tarjeta_respaldo.html'));
 });
