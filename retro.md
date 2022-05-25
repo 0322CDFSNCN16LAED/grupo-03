@@ -1,3 +1,5 @@
+Sprint #1
+
 1.-Comenzar Hacer: 
 - Programar el proyecto
 - Al día siguiente del sprint organizarnos el nuevo sprint
@@ -15,3 +17,11 @@
 - Evitar contactarnos esporádicamente, sin organizarnos
 
 5.- Dejar de hacer:
+
+
+Sprint #2
+   Continuar con las reuniones semanales
+   Hacer mas consultas al entorno (grupo o profesores)
+   Hacer un canal para imagenes o archivos  
+   Evitar dejar las actividades del proyecto para ultimo momento
+   Fraccionar mas las tareas en el equipo

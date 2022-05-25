@@ -15,15 +15,15 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/register',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views/register.html'));
+    res.sendFile(path.join(__dirname,'views/usuario/register.html'));
 });
 
 app.get('/login',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views/login.html'));
+    res.sendFile(path.join(__dirname,'views/usuario/login.html'));
 });
 
 app.get('/compras',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views/carrito.html'));
+    res.sendFile(path.join(__dirname,'views/carrito/carrito.html'));
 });
 
 //PRODUCTOS EN GENERAL//
@@ -88,5 +88,5 @@ app.get('/producto-kit',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/producto-kit.html'));
 });
 app.get('/datos-tarjeta_respaldo',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views/datos-tarjeta_respaldo.html'));
+    res.sendFile(path.join(__dirname,'views/carrito/datos-tarjeta_respaldo.html'));
 });
