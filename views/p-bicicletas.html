@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio</title>
+        <title>Bicicletas</title>
 
-        <link rel="icon" href="/imagenes/tab-icon.sgv">
+        <link rel="icon" type="image/png" href="/imagenes/favicon-32x32.png" sizes="32x32" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
@@ -41,11 +41,45 @@
             <!-- Solo se verá en laptop -->
             <nav class="fx fx-wrap hide-tab-mobile">
                 <ul type="none" class="fx fx-wrap">
-                    <li> <a href="/p-bicicletas" class="links categories">BICICLETAS ELÉCTRICAS</a> </li>
-                    <li> <a href="/p-monopatines" class="links categories">MONOPATINES</a></li>
-                    <li> <a href="/p-skateboards" class="links categories">SKATEBOARDS</a> </li>
-                    <li> <a href="/p-hoverboards" class="links categories">HOVERBOARDS</a> </li>
-                    <li> <a href="/p-accesorios" class="links categories">ACCESORIOS</a> </li>
+                    <div class="menu-desplegable">
+                        <li> <a href="/p-bicicletas" class="links categories">BICICLETAS ELÉCTRICAS</a> </li>
+                            <div class="desplegable">
+                                <a href="/producto-bicicleta-cortina">Bicicleta Cortina</a>
+                                <a href="/producto-bicicleta-mountain">Bicicleta Montañera</a>
+                                <a href="/producto-bicicleta-tourism">Bicicleta Tourism</a>
+                            </div>
+                    </div>
+                    <div class="menu-desplegable">
+                        <li> <a href="/p-monopatines" class="links categories">MONOPATINES</a></li>
+                            <div class="desplegable">
+                                <a href="/producto-monopatin1">Monopatín Uno</a>
+                                <a href="/producto-monopatin-blanco">Monopatín Blanco</a>
+                                <a href="/producto-monopatin-infantil">Monopatín Infantil</a>
+                            </div>
+                    </div>
+                    <div class="menu-desplegable">
+                        <li> <a href="/p-skateboards" class="links categories">SKATEBOARDS</a> </li>
+                            <div class="desplegable">
+                                <a href="/producto-skate3">Skateboard #1</a>
+                                <a href="/producto-skate2">Skateboard #2</a>
+                                <a href="/producto-combo-skate">Skateboard #3</a>
+                            </div>
+                    </div>
+                    <div class="menu-desplegable">
+                        <li> <a href="/p-hoverboards" class="links categories">HOVERBOARDS</a> </li>
+                            <div class="desplegable">
+                                <a href="/producto-hoverboard1">Hoverboard</a>
+                                <a href="/producto-hoverboard2">Hoverboard Verde</a>
+                                <a href="/producto-hoverboard3">Hoverboard KANY</a>
+                            </div>
+                    </div>
+                    <div class="menu-desplegable">
+                        <li> <a href="/p-accesorios" class="links categories">ACCESORIOS</a> </li>
+                            <div class="desplegable">
+                                <a href="/producto-ruedas">Ruedas</a>
+                                <a href="/producto-kit">Kit</a>
+                            </div>
+                    </div>
                 </ul>
             </nav>
             <!---->
@@ -54,9 +88,13 @@
                 <a href="/">
                     <li class=""> <i class="fas fa-home font-cream icon-header"></i></li>
                 </a>         
-                <a href="/login">
+                <div class="menu-desplegable">
                     <li class=""> <i class="fas fa-user-circle font-cream icon-header"></i> </li>
-                </a>
+                        <div class="desplegable2">
+                            <a href="/login">Iniciar sesión</a>
+                            <a href="/register">Registrarse</a>
+                        </div>
+                </div> 
                 <a href="/compras">
                     <li class=""> <i class="fas fa-shopping-bag font-cream icon-header"></i></li>
                 </a>
