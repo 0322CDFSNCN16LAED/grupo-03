@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+  <%-include ("../partial/head")%>
+</head>
+<body>
+    <%-include ("../partial/header")%>    
+    <main>
+        <h3 class="text-center font-black bg-orange">
+                <nav class="fx fx-wrap justify-center">
+                    <a href="/login" class="links">
+                        <p class="text-center p-20 font-black">Registro de Tarjetas</p>
+                    </a>                    
+                </nav>
+        </h3>
+        <form class="fx fx-wrap justify-center" action="/ventas/carrito" method="GET">                    
+            <section class="p-20 conte_tar">
+                    <div>  
+                        <label for="entrega"><strong>Tipo de Tarjeta</strong></label><br>                           
+                        <input type="radio" name="entrega" value="adomic"> Debito
+                        <input type="radio" name="entrega" value="localc"> Credito
+                    </div>
+                    <br>    
+                    <div>                  
+                        <input class="boton-tarjeta-forms m-8" type="text" name="num_tarjeta" placeholder="Numero de tarjeta">  
+                    </div> 
+                    <div>                       
+                        <input class="boton-tarjeta-forms m-8" type="text" name="numbre_tarjeta" placeholder="Nombre y apellido"> 
+                    </div> 
+                    <div>     
+                        <input class="boton-tarjeta-forms m-8" type="text" name="numbre_tarjeta" placeholder="Fecha de Expiracion">   
+                    </div>
+                    <div>      
+                        <input class="boton-tarjeta-forms m-8" type="text" name="numbre_tarjeta" placeholder="Codigo de seguridad">  
+                    </div>
+                    <div>      
+                        <input class="boton-tarjeta-forms m-8" type="text" name="numbre_tarjeta" placeholder="DNI del titular de la tarjeta"> 
+                    </div>    
+            </section>
+            <section class="p-20 conte_tar"> 
+                    <div>
+                       <img class="img2" src="/imagenes/cards_credit.png">
+                    </div> 
+            </section> 
+            <div class="align-self-center text-center w-70 p-20 pb-40">
+                <button class="login-buttons m-8 w-45" id=color type="submit">Registrar Tarjeta</button>                    
+            </div>      
+        </form>
+    </main>
+    <%-include ("../partial/footer")%>
+</body>
+</html>

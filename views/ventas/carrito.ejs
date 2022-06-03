@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+  <%-include ("../partial/head")%>
+</head>  
+<body>
+    <%-include ("../partial/header")%>    
+    <main>            
+        <h3 class="text-center font-black bg-orange">
+            <nav class="fx fx-wrap justify-center">
+                <a href="/login" class="links">
+                    <p class="text-center p-20 font-black">Carro de Compras</p>
+                </a>                    
+            </nav>
+        </h3>
+        <br>
+        <section class="articulo_carro">
+            <article >
+                <div>                                           
+                    <figure><img class="tamano_imagen" src="/imagenes/hoverboard.jpg" alt="Hoverboard"></figure>                            
+                </div>
+                <div>
+                    <p class="font-16">Hoverboard</p> 
+                </div>
+                <div>
+                    <p class="font-16">1</p>
+                </div>
+                <div>
+                    <p class="font-16">$32.770</p>
+                </div>
+                <div>
+                    <i class="fas fa-times-circle"></i> 
+                </div> 
+            </article>
+        </section>
+        <section class="articulo_carro">
+            <article >
+                <div>                                           
+                    <figure><img class="tamano_imagen" src="/imagenes/bici-electrica-mountain-bike.jpg" alt="Hoverboard"></figure>                            
+                </div>
+                <div class="w-25">
+                    <p class="font-16">Bicicleta Eléctrica Montañera</p> 
+                </div>
+                <div class="w-25">
+                    <p class="font-16">1</p>
+                </div>
+                <div class="w-25">
+                    <p class="font-16">$45.000</p>
+                </div>
+                <div class="w-25">
+                    <i class="fas fa-times-circle"></i> 
+                </div> 
+            </article>
+        </section>            
+        <div class="font-12  margen_detalle margen_superior">
+            <label>CUPON DE DESCUENTO </label>
+            <input class="descuento m-8" type="text" id="cupondescuento" name="cupondescuento" placeholder="Código descuento">                
+            <button class="font-10 boton_aplica" type="submit"> Aplicar Descuento</button>
+        </div>
+        <section class="font-12 margen_detalle margen_superior">
+            <div>
+                <label for="formapago">SUB-TOTAL: </label>
+                <label for="formapago">77.770,00</label><br>
+                <label for="formapago">DESCUENTO: </label>
+                <label for="formapago">0,00</label><br>
+                <label for="formapago"><strong>TOTAL: </strong></label>
+                <label for="formapago"><strong>77.770,00</strong></label>
+            </div>  
+        </section>       
+        
+        <form class="font-12  margen_superior margen_opciones" action="/ventas/datosTarjeta" method="get">
+                    <label for="formapago"><strong>FORMA DE PAGO</strong></label><br>
+                    <button class="boton_tarjetas" type="submit"><i class="fab fa-cc-visa p-8 carro-icons spin"></i></button>
+                    <button class="boton_tarjetas" type="submit"><i class="fab fa-cc-amex p-8 carro-icons spin"></i></button>
+                    <button class="boton_tarjetas" type="submit"><i class="far fa-credit-card p-8 carro-icons spin"></i></button> 
+                    <button class="boton_tarjetas" type="submit"><i class="fab fa-cc-mastercard p-8 carro-icons spin"></i></button> 
+        </form>   
+        
+        <section class="font-12 margen_superior margen_opciones">                
+            <div>
+                <label for="entrega"><strong>ENTREGA DE PRODUCTO</strong></label><br>
+                <input type="radio" name="entrega" value="adomic"> A Domicilio
+                <input type="radio" name="entrega" value="localc"> Local Comercial 
+                <input type="radio" name="entrega" value="enviocorreo"> Envio al Correo  
+            </div> 
+        </section> 
+        <form class="fx fx-wrap justify-center" action="/" method="get">      
+            <div class="text-center w-70 p-20 pb-40">
+                <button class="login-buttons m-8 w-60" type="submit" id="color">Pagar</button>
+            </div>  
+        </form>             
+</main>
+ <%-include ("../partial/footer")%>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%-include ("./partial/head")%>
+</head>   
+<body>
+    <%-include ("./partial/header")%>    
+    <main>
+        <!--<img class="w-100" src="/imagenes/reemplazo_video.png" alt="video"> -->
+        <h3 class="h3_letra">Velocidad, Acción y Movimiento</h3>
+        
+        <h2 class="text-center banner-bicis"><a href="/p-bicicletas" class="links font-orange">Bicicletas</a></h2>
+
+        <section class="m-0 w-100 he_vh-50">
+             <section class="section_articulo_producto he_vh-50">
+                    <article class="articulo_producto" id="articulo_anim">
+                        <div class="imagen_producto">  
+                            <img class="w-100 he-100 img" src="/imagenes/bici-electrica-tourism.jpg" alt="Bicicleta Tourism"/>
+                        </div>
+                        <p class="font-orange nombre_producto">Bicicleta Electrica Tourism</p>
+                        <form action="/productos/productoDetalle" method="get">
+                            <button class="rad-10 p-10 font-cream w-80 botton_producto" type="submit" id="color">Ver detalle del producto</button>
+                        </form>
+                    </article>
+
+                    <article class="articulo_producto" id="articulo_anim">
+
+                        <div>
+                            <img class="img"  src="/imagenes/bici-electrica-mountain-bike.jpg" alt="Bicicleta Mountain Bike" />
+                        </div>
+
+                        <p class="font-orange nombre_producto">Bicicleta Electrica Montañera</p> 
+
+                        <form action="/producto-bicicleta-mountain" method="get">
+                            <button class="rad-10 p-10 font-cream w-80 botton_producto" type="submit" id="color">Ver detalle del producto</button>
+                        </form>
+
+                    </article>
+
+                    <article class="articulo_producto" id="articulo_anim">
+
+                        <img class="img" src="/imagenes/mono-electrico.jpg" alt="Monopatín Eléctrico" />  
+
+                        <p class="font-orange nombre_producto">Monopatín Electrico</p>
+
+                        <form action="/producto-monopatin1" method="get">
+                            <button class="rad-10 p-10 font-cream w-80 botton_producto" type="submit" id="color">Ver detalle del producto</button>
+                        </form>
+
+                    </article>
+
+                    <article class="articulo_producto" id="articulo_anim">
+
+                            <img class="img" src="/imagenes/bici-electrica-cortina.jpg" alt="Bicicleta Eléctrica Cortina" />
+
+                            <p class="font-orange nombre_producto">Bicicleta Eléctrica Cortina</p>
+
+                            <form action="/producto-bicicleta-cortina" method="get">
+                                <button class="rad-10 p-10 font-cream w-80 botton_producto" type="submit" id="color">Ver detalle del producto</button>
+                            </form> 
+                    </article>
+
+                    <article class="articulo_producto" id="articulo_anim">
+
+                        <img class="img" src="/imagenes/skateboard_solo.jpg" alt="Skateboard" /> 
+
+                        <p class="font-orange nombre_producto">Combo-skateboard</p>   
+
+                        <form action="/producto-combo-skate" method="get">
+                            <button class="rad-10 p-10 font-cream w-80 botton_producto" type="submit" id="color">Ver detalle del producto</button>
+                        </form>
+                    </article>
+
+                    <article class="articulo_producto" id="articulo_anim">
+
+                        <img class="img" src="/imagenes/hoverboard.jpg" alt="Hoverboard" />   
+                        
+                        <p class="font-orange nombre_producto">Hoverboard</p>
+
+                        <form class="button" action="/producto-hoverboard1" method="get">
+                            <button class="rad-10 p-10 font-cream w-80 botton_producto" type="submit" id="color">Ver detalle del producto</button>
+                        </form>
+                    </article>
+
+             </section>  
+         </section>  
+         
+         <h2 class="text-center banner-mono"><a href="/p-monopatines" class="links font-orange">Monopatines</a></h2>
+
+         <h2 class="text-center banner-skates"><a href="/p-skateboards" class="links font-orange">Skateboards</a></h2>
+
+         <h2 class="text-center banner-hoverboard"><a href="/p-hoverboards" class="links font-orange">Hoverboards</a></h2>
+
+         <h2 class="text-center banner-accesorios"><a href="/p-accesorios" class="links font-orange">Accesorios</a></h2>
+
+ </main>
+ <%-include ("./partial/footer")%>
+</body>
+</html>

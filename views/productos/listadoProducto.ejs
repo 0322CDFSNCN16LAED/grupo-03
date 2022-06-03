@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include ("./partial/head")%>
+<body>
+    <%-include ("./partial/header")%>    
+    <main>
+        <h3 class="text-center p-20 font-black bg-orange">Accesorios para skateboard</h3>
+        <div>
+            <img class=" img p-8 img2_detalle" src="/imagenes/skateboard_accesorios1.jpg" alt="Skateboard"/>
+        </div>
+        <form action="/compras" method="get">
+            <div>                                          
+                <p class= "text-line">Madera: Maple económico</p>          
+                <p class= "text-line">Casco</p>                    
+                                                            
+                <p class= "text-line">Llave: T</p>                    
+                                                             
+                <p class= "text-line">Protecciones: SM/ML</p>                    
+                                                              
+                <p class= "text-line">Tabla: cóncava con doble kick, compuesto por 7 laminas de madera y
+                  resina epoxi</p class= "text-line"></p>
+                                                                                   
+                <p class= "text-line">Bujes: 95 A. Rulemanes Abec 9</p>                  
+                                                               
+                <p class= "text-line">Ruedas: de Uretano 54 mm</p>                    
+                                                            
+                <p class= "text-line">Truck: reforzados de aluminio</p>
+                   
+            </div>
+
+            <h2 class="text-center p-20 font-black">Precio: $35.000</h2> 
+
+            <div>
+                <button class="login-producto w-30" type="submit" id="color">Compra online</button>  
+            </div>
+        </form>
+        <form action="/" method="get">    
+            <div>
+                <button class="login-producto w-30" type="submit" id="color">Regresar</button>
+            </div> 
+        </form>  
+    </main>   
+    <%-include ("./partial/footer")%>
+</body>
+</html>
