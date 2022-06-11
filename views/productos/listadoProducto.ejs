@@ -6,11 +6,11 @@
     <main>
         <% if (productos.category=='Monopatines'){%>
         <% productos.forEach(producto => { %>
-            <h3 class="text-center p-20 font-black bg-orange"><%= productos.name%></h3>
+            <h3 class="text-center p-20 font-black bg-orange"><%= producto.name%></h3>
             <div>
               <img class=" img p-8 img2_detalle" src="/imagenes/<%=producto.image%>" alt="<%= producto.name%>"/>
             </div>
-            <form action="/ventas/carrito" method="get">            
+            <form action="/" method="get">            
                 <div>                          
                     <p class= "text-line">Batería: <%=producto.bateria%></p>
                     <p class= "text-line">Motor: <%=producto.motor%></p> 
