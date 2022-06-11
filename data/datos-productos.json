@@ -48,8 +48,8 @@
         "price": 40000,
         "bateria": "Extra Premium Litio | Duración: 6hs",
         "luces": "LED",
-        "capacidad-max": "100 kg",
-        "velocidad-max": "10 km/h",
+        "capacidad_max": "100 kg",
+        "velocidad_max": "10 km/h",
         "motor": "350 W",
         "conexiones": "Bluetooth",  
         "image": "hoverboard.jpg"
@@ -61,8 +61,8 @@
         "price": 47000,
         "bateria": "Extra Premium Litio | Duración: 12hs",
         "luces": "No",
-        "capacidad-max": "120 kg",
-        "velocidad-max": "12 km/h",
+        "capacidad_max": "120 kg",
+        "velocidad_max": "12 km/h",
         "motor": "500 W",
         "conexiones": "Bluetooth",  
         "image": "hoverboard2.jpg"
@@ -74,8 +74,8 @@
         "price": 50000,
         "bateria": "Extra Premium Litio 4000mAH | Duración: 17 km",
         "luces": "No",
-        "capacidad-max": "150 kg",
-        "velocidad-max": "15 km/h",
+        "capacidad_max": "150 kg",
+        "velocidad_max": "15 km/h",
         "motor": "500 W",
         "conexiones": "Bluetooth",  
         "image": "hoverboard3.jpg"
@@ -87,7 +87,7 @@
         "price": 47000,
         "bateria": "36 V/13 AH | 468 W",
         "cuadro": "Aleación de aluminio | Plegable",
-        "velocidad-max": "25 km/h",
+        "velocidad_max": "25 km/h",
         "motor": "350 W",
         "image": "mono-electrico.jpg"
     },
@@ -98,7 +98,7 @@
         "price": 45000,
         "bateria": "36 V/13 AH | 468 W",
         "cuadro": "Aleación de aluminio | Plegable",
-        "velocidad-max": "25 km/h",
+        "velocidad_max": "25 km/h",
         "motor": "350 W",
         "image": "mono-blanco.jpg"
     },
@@ -109,7 +109,7 @@
         "price": 40000,
         "bateria": "19.2 V/2 AH ",
         "cuadro": "Aleación de aluminio | Plegable",
-        "velocidad-max": "10 km/h",
+        "velocidad_max": "10 km/h",
         "motor": "60 W",
         "image": "monopatin-infantil.jpg"
     },
