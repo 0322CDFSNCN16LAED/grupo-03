@@ -3,10 +3,10 @@ const express = require('express');
 const router= express.Router();
 const productoController= require("../controller/productoController");
 
-router.get("/productoDetalle",productoController.productoDetalle);
-router.get("/listadoProducto",productoController.listadoProducto);
+/*** GET ALL PRODUCTS ***/ 
+router.get('/', productoController.index); 
 
 /************para obtener un solo producto***********************/
-router.get('/detalle/:id/', productoController.detail); 
+router.get('/:id', productoController.detail); 
 
 module.exports=router;

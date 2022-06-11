@@ -2,17 +2,17 @@ const db = require("../data/db");
 const products = db.getAll();
 
 const productoController ={
-    productoDetalle: (req, res)=>{
-        res.render('productos/productoDetalle');
+        
+    // Root - Show all products
+    index: (req, res) => {
+        res.render("./productos/listadoProducto", {
+            productos: products,
+        });
     },
     
-    listadoProducto: (req, res)=>{
-        res.render('productos/listadoProducto');
-    }, 
-    
     detail: (req, res) => {
-        res.render("productoDetalle", {
-            product: db.getOne(req.params.id),
+        res.render("./productos/productoDetalle", {
+            producto: db.getOne(req.params.id),
         });
     },
 }

@@ -8,7 +8,7 @@
     <main>
         <h3 class="text-center p-20 font-black bg-orange"><%= producto.name%></h3>
         <div>
-            <img class="p-8 img2_detalle" src="/imagenes/<%=producto.image%>" alt="<%= product.name%>"/>
+            <img class="p-8 img2_detalle" src="/imagenes/<%=producto.image%>" alt="<%= producto.name%>"/>
         </div>
         <form action="/productos/" method="get">
             <div>
@@ -21,7 +21,7 @@
                         </div>
                        <%}%>
                        
-                        <% if (producto.category=='Biciletas'){%>
+                        <% if (producto.category=='Bicicletas'){%>
                             <div>
                                 <p class= "text-line">Batería: <%=producto.bateria%></p>
                                 <p class= "text-line">Motor: <%=producto.motor%></p> 
@@ -29,7 +29,7 @@
                                 <p class= "text-line">Autonomía: <%=producto.autonomia%></p>
                                 <p class= "text-line">Rodado: <%=producto.rodado%>"</p>                        
                                 <p class= "text-line">Accesorios: <%=producto.accesorios%></p> 
-                                <p class= "text-line">Conexiones: <%=producto.conexion%></p>
+                                <p class= "text-line">Conexiones: <%=producto.conexiones%></p>
                             </div>
                         <%}%>
                                                
@@ -51,9 +51,15 @@
                                 <p class= "text-line">Bujes: <%=producto.bujes%></p>                                                                                           
                                 <p class= "text-line">Ruedas: <%=producto.ruedas%></p>
                             </div>
-                        <%}%>                        
+                        <%}%> 
+                        
+                        <% if (producto.category=='Accesorios'){%>
+                            <div>  
+                                <p class= "text-line">Descripcion: <%=producto.descripcion%></p> 
+                            </div>
+                        <%}%>         
             </div>
-            <h2 class="text-center p-20 font-black">Precio: <%=producto.price%></h2>
+            <h2 class="text-center p-20 font-black">Precio: $ <%=producto.price%></h2>
             <div>
                 <button class="login-producto w-30" type="submit" id="color">Compra online</button>  
             </div>
