@@ -151,9 +151,7 @@
         "name": "Ruedas para skate",
         "category": "Accesorios",
         "price": 2800,
-        "material": "Uretano",
-        "tamaño": "54 mm",
-        "colores": "Amarillo | Azul | Negro | Verde | Rojo",
+        "descripcion": "Material: Uretano | Tamaño: 54mm | Colores: Amarillo, Azul, Negro, Verde y Rojo",
         "image": "skateboard_accesorios.jpg"
     },
     {
@@ -161,8 +159,7 @@
         "name": "Rulemanes",
         "category": "Accesorios",
         "price": 1000,
-        "unidades": "8",
-        "tipo": "Abec 3 608rs",
+        "descripcion": "Unidades: 8 | Tipo: Abec 3 608rs",
         "image": "rulemanes.jpg"
     },
     {
@@ -170,7 +167,7 @@
         "name": "Kit de protección",
         "category": "Accesorios",
         "price": 4000,
-        "incluye": "1 Casco | 2 rodilleras | 2 muñequeras ",
+        "descripcion": "Incluye: 1 Casco | 2 rodilleras | 2 muñequeras ",
         "image": "kit-proteccion.jpg"
     }
 
