@@ -15,6 +15,14 @@ const productoController ={
             producto: db.getOne(req.params.id),
         });
     },
+
+    category:(req,res) =>{
+        res.render("./productos/listadoProducto",{
+            const filteredProductsCategoria = products.filter((p) => {
+                return p.category == req.params.category;
+            });
+        })
+    }
 }
 
 module.exports=productoController;

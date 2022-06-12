@@ -9,30 +9,17 @@
         <h3 class="text-center p-20 font-black bg-orange">Registro</h3>       
         <form action="/products" method="POST">
             <div class="row product-detail">
-                <div class="col-12 col-md-6">
-                    <label for="name" class="form-label"
-                        >Nombre del producto:</label
-                    >
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Ej: Zapatillas Reebok"
-                        class="form-input"
-                    />
+                <div class="col-12 col-md-6">                    
+                    <div id="category" class="col-md-12 row">
+                        <legend><label for="cate">Categoría</label></legend>
+                        <input type="radio" name="cate" id="nivel" value="mo" class="radio-inline" onclick="mostrarOpcion()" >Monopatines
+                        <input type="radio" name="cate" id="nivel" value="bi" class="radio-inline" onclick="mostrarOpcion()">Bicicletas  
+                        <input type="radio" name="cate" id="nivel" value="ho" class="radio-inline" onclick="mostrarOpcion()" >Hoverboards
+                        <input type="radio" name="cate" id="nivel" value="sk" class="radio-inline" onclick="mostrarOpcion()">Skateboards    
+                        <input type="radio" name="cate" id="nivel" value="ac" class="radio-inline" onclick="mostrarOpcion()" >Accesorios                                             
+                    </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <label for="price" class="form-label"
-                        >Precio del producto:</label
-                    >
-                    <input
-                        type="text"
-                        id="price"
-                        name="price"
-                        placeholder="Ej: 5678"
-                        class="form-input"
-                    />
-                </div>
+
                 <div class="col-12 col-md-6">
                     <label for="discount" class="form-label"
                         >Descuento:</label
@@ -45,22 +32,7 @@
                         class="form-input"
                     />
                 </div>
-                <div class="col-12 col-md-6">
-                    <label for="category" class="form-label"
-                        >Categoría:</label
-                    >
-                    <select
-                        name="category"
-                        id="category"
-                        class="form-input"
-                    >
-                        <option value="">Elegí</option>
-                        <option value="in-sale">En oferta</option>
-                        <option value="visited">
-                            Últimos agregados
-                        </option>
-                    </select>
-                </div>
+                
                 <div class="col-12">
                     <label for="description" class="form-label"
                         >Descripción:</label
