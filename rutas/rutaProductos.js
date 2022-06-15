@@ -10,6 +10,6 @@ router.get('/', productoController.index);
 router.get('/:id', productoController.detail); 
 
 /************para obtener productos or categoria***********************/
-router.get('/products/by-category/:category', productoController.category); 
+router.get('/by-category/:category', productoController.category); 
 
 module.exports=router;

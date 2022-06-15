@@ -16,12 +16,10 @@ const productoController ={
         });
     },
 
-    category:(req,res) =>{
-        res.render("./productos/listadoProducto",{
-            const filteredProductsCategoria = products.filter((p) => {
-                return p.category == req.params.category;
-            });
-        })
+    category:(req,res) =>{        
+        res.render("./productos/listadoProducto", {
+            products: products.filter((p) => p.category == req.params.category),
+        });
     }
 }
 
