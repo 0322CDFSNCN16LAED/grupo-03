@@ -20,6 +20,10 @@ const productoController ={
         res.render("./productos/listadoProducto", {
             products: products.filter((p) => p.category == req.params.category),
         });
+    },
+
+    create: (req, res) =>{
+        res.render("./productos/productAdd");
     }
 }
 

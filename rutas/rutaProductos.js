@@ -6,6 +6,10 @@ const productoController= require("../controller/productoController");
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productoController.index); 
 
+/*** edit  PRODUCTS ***/ 
+router.get('/create', productoController.create); 
+
+
 /************para obtener un solo producto***********************/
 router.get('/:id', productoController.detail); 
 

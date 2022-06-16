@@ -6,7 +6,7 @@
 <body>
     <%-include ("../partial/header")%>    
     <main>
-        <h3 class="text-center p-20 font-black bg-orange">Registro</h3>       
+        <h3 class="text-center p-20 font-black bg-orange">Registro de Productos</h3>       
         <form action="/products" method="POST">
             <div class="row product-detail">
                 <div class="col-12 col-md-6">                    
@@ -19,44 +19,16 @@
                         <input type="radio" name="cate" id="nivel" value="ac" class="radio-inline" onclick="mostrarOpcion()" >Accesorios                                             
                     </div>
                 </div>
-
-                <div class="col-12 col-md-6">
-                    <label for="discount" class="form-label"
-                        >Descuento:</label
-                    >
-                    <input
-                        type="text"
-                        id="discount"
-                        name="discount"
-                        placeholder="Ej: 15"
-                        class="form-input"
-                    />
-                </div>
-                
-                <div class="col-12">
-                    <label for="description" class="form-label"
-                        >Descripción:</label
-                    >
-                    <textarea
-                        name="description"
-                        id="description"
-                        class="form-input"
-                    ></textarea>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="buy-now-button">
-                        Guardar producto
-                    </button>
-                </div>
             </div>
         </form>
-        <form action="/" method="get">    
+        <form action="/" method="get"> 
+            <div>
+                <button class="login-producto w-30" type="submit" id="color">Guardar</button>
+            </div>    
             <div>
                 <button class="login-producto w-30" type="submit" id="color">Regresar</button>
             </div> 
-        </form>              
-       
-        
+        </form>
         </main>
     <%-include ("../partial/footer")%>
 </body>
