@@ -6,21 +6,37 @@
 <body>
     <%-include ("../partial/header")%>    
     <main>
-        <h3 class="text-center p-20 font-black bg-orange">Registro de Productos</h3>       
-        <form action="/products" method="POST">
-            <div class="row product-detail">
-                <div class="col-12 col-md-6">                    
-                    <div id="category" class="col-md-12 row">
-                        <legend><label for="cate">Categoría</label></legend>
-                        <input type="radio" name="cate" id="nivel" value="mo" class="radio-inline" onclick="mostrarOpcion()" >Monopatines
-                        <input type="radio" name="cate" id="nivel" value="bi" class="radio-inline" onclick="mostrarOpcion()">Bicicletas  
-                        <input type="radio" name="cate" id="nivel" value="ho" class="radio-inline" onclick="mostrarOpcion()" >Hoverboards
-                        <input type="radio" name="cate" id="nivel" value="sk" class="radio-inline" onclick="mostrarOpcion()">Skateboards    
-                        <input type="radio" name="cate" id="nivel" value="ac" class="radio-inline" onclick="mostrarOpcion()" >Accesorios                                             
-                    </div>
-                </div>
-            </div>
+        <h3 class="text-center p-20 font-black bg-orange">Agregar un productos</h3>       
+        
+        <form class="fx fx-wrap justify-center" action="/products" method="POST" enctype="multipart/form-data">
+                       
+                <label for="category" class="font-bold w-70 pt-40 p-8">Categoría del producto:</label>
+                    <select name="category" id="category" class="form-input">
+                        <option value="bicicletas">Bicicletas</option>
+                        <option value="monopatines">Monopatines</option>
+                        <option value="skateboards">Skateboards</option>
+                        <option value="hoverboards">Hoverboards</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+
+                <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
+                    <input class="login-forms mb-10" type="text" name="nombre-producto" placeholder="Bicicleta Cortina">
+
+                <label for="name" class="font-bold w-70 p-8">Imagen:</label>
+                    <input class="w-70 mb-10" type="file" name="imagen-producto">
+                     
+                <label for="description" class="font-bold w-70 mt-8 p-8">Especificaciones:</label>
+                    <input class="login-forms mb-10" type="text" name="nombre-producto" placeholder="Batería">
+                    <input class="login-forms mb-10" type="text" name="nombre-producto" placeholder="Motor">
+                    <input class="login-forms mb-10" type="text" name="nombre-producto" placeholder="Rodado">
+
+                <label for="description" class="font-bold w-70 mt-8 p-8">Otras especificaciones:</label>
+                    <textarea class="textarea mb-10" type="text" name="nombre-producto" placeholder=""></textarea>
+
+                <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
+                    <input class="login-forms mb-10" type="number" name="precio-producto" placeholder="40000">
         </form>
+
         <form action="/" method="get"> 
             <div>
                 <button class="login-producto w-30" type="submit" id="color">Guardar</button>
