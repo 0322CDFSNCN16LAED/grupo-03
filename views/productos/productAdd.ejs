@@ -8,9 +8,14 @@
     <main>
         <h3 class="text-center p-20 font-black bg-orange">Agregar un productos</h3>       
         
-        <form class="fx fx-wrap justify-center" action="/products" method="POST" enctype="multipart/form-data">
-                       
-                <label for="category" class="font-bold w-70 pt-40 p-8">Categoría del producto:</label>
+        <form class="fx fx-wrap justify-center" action="/productos" method="POST">                 
+            <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
+            <input class="login-forms mb-10" type="text" name="name" id="name" placeholder="Bicicleta Cortina">
+
+            <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
+            <input class="login-forms mb-10" type="number" name="price" id="price" placeholder="40000">
+                
+            <label for="category" class="font-bold w-70 pt-40 p-8">Categoría del producto:</label>
                     <select name="category" id="category" class="form-input">
                         <option value="bicicletas">Bicicletas</option>
                         <option value="monopatines">Monopatines</option>
@@ -19,32 +24,19 @@
                         <option value="accesorios">Accesorios</option>
                     </select>
 
-                <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
-                    <input class="login-forms mb-10" type="text" name="nombre-producto" placeholder="Bicicleta Cortina">
-
-                <label for="name" class="font-bold w-70 p-8">Imagen:</label>
-                    <input class="w-70 mb-10" type="file" name="imagen-producto">
+            
+            
+                <!--<label for="name" class="font-bold w-70 p-8">Imagen:</label>
+                <input class="w-70 mb-10" type="file" name="imagen-producto">-->
                      
-                <label for="description" class="font-bold w-70 mt-8 p-8">Especificaciones:</label>
-                    <input class="login-forms mb-10" type="text" name="nombre-producto" placeholder="Batería">
-                    <input class="login-forms mb-10" type="text" name="nombre-producto" placeholder="Motor">
-                    <input class="login-forms mb-10" type="text" name="nombre-producto" placeholder="Rodado">
-
-                <label for="description" class="font-bold w-70 mt-8 p-8">Otras especificaciones:</label>
-                    <textarea class="textarea mb-10" type="text" name="nombre-producto" placeholder=""></textarea>
-
-                <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
-                    <input class="login-forms mb-10" type="number" name="precio-producto" placeholder="40000">
+                <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
+                <textarea class="textarea mb-10" type="text" name="description" id="description" placeholder="description"></textarea>
+                
+                <div class="align-self-center text-center w-70 p-20 ">
+                    <button class="login-producto w-30" type="submit" id="color">Guardar</button>
+                </div>
         </form>
-
-        <form action="/" method="get"> 
-            <div>
-                <button class="login-producto w-30" type="submit" id="color">Guardar</button>
-            </div>    
-            <div>
-                <button class="login-producto w-30" type="submit" id="color">Regresar</button>
-            </div> 
-        </form>
+        
         </main>
     <%-include ("../partial/footer")%>
 </body>

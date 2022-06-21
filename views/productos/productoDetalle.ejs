@@ -12,52 +12,9 @@
         </div>
         <form action="/productos/" method="get">
             <div>
-                       <% if (producto.category=='Monopatines'){%>
-                        <div>                          
-                                <p class= "text-line">Batería: <%=producto.bateria%></p>
-                                <p class= "text-line">Motor: <%=producto.motor%></p> 
-                                <p class= "text-line">Cuadro: <%=producto.cuadro%></p> 
-                                <p class= "text-line">Velocidad Maxima: <%=producto.velocidad_max%></p> 
-                        </div>
-                       <%}%>
-                       
-                        <% if (producto.category=='Bicicletas'){%>
-                            <div>
-                                <p class= "text-line">Batería: <%=producto.bateria%></p>
-                                <p class= "text-line">Motor: <%=producto.motor%></p> 
-                                <p class= "text-line">Display: <%=producto.display%></p> 
-                                <p class= "text-line">Autonomía: <%=producto.autonomia%></p>
-                                <p class= "text-line">Rodado: <%=producto.rodado%>"</p>                        
-                                <p class= "text-line">Accesorios: <%=producto.accesorios%></p> 
-                                <p class= "text-line">Conexiones: <%=producto.conexiones%></p>
-                            </div>
-                        <%}%>
-                                               
-                        <% if (producto.category=='Hoverboards'){%>
-                            <div>
-                                <p class= "text-line">Batería: <%=producto.bateria%></p>
-                                <p class= "text-line">Motor: <%=producto.motor%></p> 
-                                <p class= "text-line">Velocidad Maxima: <%=producto.velocidad_max%></p> 
-                                <p class= "text-line">Capacidad Maxima: <%=producto.capacidad_max%></p>     
-                                <p class= "text-line">Luces: <%=producto.luces%></p> 
-                                <p class= "text-line">Conexiones: <%=producto.conexiones%></p>      
-                            </div>
-                        <%}%> 
-         
-                        <% if (producto.category=='Skateboards'){%>
-                            <div>                       
-                                <p class= "text-line">Tabla: <%=producto.tabla%></p> 
-                                <p class= "text-line">Lija: <%=producto.lija%></p> 
-                                <p class= "text-line">Bujes: <%=producto.bujes%></p>                                                                                           
-                                <p class= "text-line">Ruedas: <%=producto.ruedas%></p>
-                            </div>
-                        <%}%> 
-                        
-                        <% if (producto.category=='Accesorios'){%>
-                            <div>  
-                                <p class= "text-line">Descripcion: <%=producto.descripcion%></p> 
-                            </div>
-                        <%}%>         
+                <div>                          
+                    <p class= "text-line">Descripcion: <%=producto.description%></p>                    
+                </div>   
             </div>
             <h2 class="text-center p-20 font-black">Precio: $ <%=producto.price%></h2>
             <div>
