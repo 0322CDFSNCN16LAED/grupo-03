@@ -10,8 +10,10 @@
               <img class=" img p-8 img2_detalle" src="/imagenes/<%=producto.image%>" alt="<%= producto.name%>"/>
             </div>
             <form action="/" method="get">            
-                <div>                          
-                    <p class= "text-line">Descripción: <%=producto.description%></p>                    
+                <div class="fx fx-wrap justify-center">
+                    <p class= "w-60 text-center p-20 text-line"><%=producto.description%></p>                    
+                    </div>  
+             
                     <h2 class="text-center p-20 font-black">Precio: $ <%=producto.price%></h2>
                     <div>
                         <button class="login-producto w-30" type="submit" id="color">Compra online</button>  
