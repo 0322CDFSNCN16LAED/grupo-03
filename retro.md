@@ -29,13 +29,14 @@ Sprint #2
  Sprint #3
 
 1.-Comenzar Hacer:
-
+Establecer un dia especifico de reunion que podamos todos
 
 2.- Hacer más:
-Reuniones grupales
+Reuniones y consultas grupales
 
 3.- Continuar haciendo:
-Estar en contacto de manera constante
+Estar en contacto con los integrantes del grupo
 
 4.- Hacer menos:
+Dejar de consultar a los profesores cuando nos surge un inconveniente
 
