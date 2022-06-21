@@ -25,3 +25,17 @@ Sprint #2
    Hacer un canal para imagenes o archivos  
    Evitar dejar las actividades del proyecto para ultimo momento
    Fraccionar mas las tareas en el equipo
+   
+ Sprint #3
+
+1.-Comenzar Hacer:
+
+
+2.- Hacer más:
+Reuniones grupales
+
+3.- Continuar haciendo:
+Estar en contacto de manera constante
+
+4.- Hacer menos:
+
