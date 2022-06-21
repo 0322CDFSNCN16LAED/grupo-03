@@ -8,7 +8,7 @@ router.get('/', productoController.index);
 
 /*crear un producto*/ 
 router.get('/create', productoController.create); 
-router.post('/', productoController.store); 
+router.post('/guardar', productoController.store); 
 
 
 /*obtener un solo producto*/

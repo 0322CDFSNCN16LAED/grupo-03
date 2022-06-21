@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 app.set('view engine', 'ejs'); /* para utilizar plantillas ejs   */
 
+
+app.use(express.urlencoded({ extended: false }));
 const PUERTO=3000;
 
 app.listen(PUERTO,()=>{

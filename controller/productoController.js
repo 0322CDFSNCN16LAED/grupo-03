@@ -37,7 +37,7 @@ const productoController ={
         newProduct.image = "bici-electrica-cortina.jpg";
         products.push(newProduct);
         db.saveAll(products);
-        res.redirect("/productos");
+        res.redirect("/");
     },
 
     // Update - Form to edit

@@ -1,5 +1,5 @@
 [
-     {
+    {
         "id": 1,
         "name": "Bicicleta Eléctrica Cortina",
         "category": "Bicicletas",
@@ -28,7 +28,7 @@
         "name": "Hoverboard Blanco",
         "category": "Hoverboards",
         "price": 40000,
-        "description":"Batería: Extra Premium Litio | Duración: 6hs. Luces: LED. Velocidad Máxima: 10 km/h . Capacidad Máxima: 100 km. Motor: 350W" , 
+        "description": "Batería: Extra Premium Litio | Duración: 6hs. Luces: LED. Velocidad Máxima: 10 km/h . Capacidad Máxima: 100 km. Motor: 350W",
         "image": "hoverboard.jpg"
     },
     {
@@ -36,7 +36,7 @@
         "name": "Hoverboard Verde",
         "category": "Hoverboards",
         "price": 47000,
-        "description":"Batería: Extra Premium Litio | Duración: 12hs. Velocidad Máxima: 12 km/h . Capacidad Máxima: 120 km. Motor: 500W" , 
+        "description": "Batería: Extra Premium Litio | Duración: 12hs. Velocidad Máxima: 12 km/h . Capacidad Máxima: 120 km. Motor: 500W",
         "image": "hoverboard2.jpg"
     },
     {
@@ -44,7 +44,7 @@
         "name": "Hoverboard KANY",
         "category": "Hoverboards",
         "price": 50000,
-        "description":"Batería: Extra Premium Litio. Velocidad Máxima: 15 km/h . Capacidad Máxima: 150 km. Motor: 500W" , 
+        "description": "Batería: Extra Premium Litio. Velocidad Máxima: 15 km/h . Capacidad Máxima: 150 km. Motor: 500W",
         "image": "hoverboard3.jpg"
     },
     {
@@ -118,6 +118,37 @@
         "price": 4000,
         "description": "Incluye: 1 Casco | 2 rodilleras | 2 muñequeras ",
         "image": "kit-proteccion.jpg"
+    },
+    {
+        "name": "gdgsdg",
+        "price": "5555",
+        "category": "Monopatines",
+        "description": "sdsgs",
+        "id": 16,
+        "image": "bici-electrica-cortina.jpg"
+    },
+    {
+        "name": "prueba",
+        "price": "30000",
+        "category": "Accesorios",
+        "description": "prueba",
+        "id": 17,
+        "image": "bici-electrica-cortina.jpg"
+    },
+    {
+        "name": "lunes",
+        "price": "550",
+        "category": "Hoverboards",
+        "description": "lunes 550",
+        "id": 18,
+        "image": "bici-electrica-cortina.jpg"
+    },
+    {
+        "name": "martes",
+        "price": "600",
+        "category": "Bicicletas",
+        "description": "martes 600",
+        "id": 19,
+        "image": "bici-electrica-cortina.jpg"
     }
-
 ]
