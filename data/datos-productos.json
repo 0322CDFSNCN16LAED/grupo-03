@@ -4,13 +4,7 @@
         "name": "Bicicleta Eléctrica Cortina",
         "category": "Bicicletas",
         "price": 56000,
-        "bateria": "LG 36 V/10.4 AH | 374 W",
-        "display": "Sí",
-        "motor": "Bafang 350 W con sensor de velocidad",
-        "autonomia": "35 km",
-        "rodado": "28",
-        "accesorios": "Guardabarros | Portaequipajes | Bocina ", 
-        "conexiones": "Puerto USB", 
+        "description": "Batería: LG 36 V/10.4 AH | 374 W. Motor: Bafang 350 W con sensor de velocidad. Autonomía: 35 km. Rodado: 28. Accesorios: Guardabarros | Portaequipajes | Bocina ",
         "image": "bici-electrica-cortina.jpg"
     },
     {
@@ -18,13 +12,7 @@
         "name": "Bicicleta Eléctrica Montañera",
         "category": "Bicicletas",
         "price": 60000,
-        "bateria": "LG 36 V/10.4 AH | 468 W",
-        "display": "Sí",
-        "motor": "Bafang 350 W con sensor de velocidad",
-        "autonomia": "45 km",
-        "rodado": "29",
-        "accesorios": "Grip con mancuernas", 
-        "conexiones": "Puerto USB", 
+        "description": "Batería: LG 36 V/10.4 AH | 468 W. Motor: Bafang 350 W con sensor de velocidad. Autonomía: 45 km. Rodado: 29. Accesorios: Grip con mancuernas.",
         "image": "bici-electrica-mountain-bike.jpg"
     },
     {
@@ -32,13 +20,7 @@
         "name": "Bicicleta Eléctrica Tourism",
         "category": "Bicicletas",
         "price": 50000,
-        "bateria": "LG 9.6 AH | 465 W",
-        "display": "No",
-        "motor": "Bafang 350 W con sensor de velocidad",
-        "autonomia": "35 km",
-        "rodado": "27",
-        "accesorios": "Bocina",  
-        "conexiones": "Puerto USB",
+        "description": "Batería: LG 9.6 AH | 465 W. Motor: Bafang 350 W con sensor de velocidad. Autonomía: 35 km. Rodado: 27. Accesorios: Bocina.",
         "image": "bici-electrica-tourism.jpg"
     },
     {
@@ -46,12 +28,7 @@
         "name": "Hoverboard Blanco",
         "category": "Hoverboards",
         "price": 40000,
-        "bateria": "Extra Premium Litio | Duración: 6hs",
-        "luces": "LED",
-        "capacidad_max": "100 kg",
-        "velocidad_max": "10 km/h",
-        "motor": "350 W",
-        "conexiones": "Bluetooth",  
+        "description":"Batería: Extra Premium Litio | Duración: 6hs. Luces: LED. Velocidad Máxima: 10 km/h . Capacidad Máxima: 100 km. Motor: 350W" , 
         "image": "hoverboard.jpg"
     },
     {
@@ -59,12 +36,7 @@
         "name": "Hoverboard Verde",
         "category": "Hoverboards",
         "price": 47000,
-        "bateria": "Extra Premium Litio | Duración: 12hs",
-        "luces": "No",
-        "capacidad_max": "120 kg",
-        "velocidad_max": "12 km/h",
-        "motor": "500 W",
-        "conexiones": "Bluetooth",  
+        "description":"Batería: Extra Premium Litio | Duración: 12hs. Velocidad Máxima: 12 km/h . Capacidad Máxima: 120 km. Motor: 500W" , 
         "image": "hoverboard2.jpg"
     },
     {
@@ -72,12 +44,7 @@
         "name": "Hoverboard KANY",
         "category": "Hoverboards",
         "price": 50000,
-        "bateria": "Extra Premium Litio 4000mAH | Duración: 17 km",
-        "luces": "No",
-        "capacidad_max": "150 kg",
-        "velocidad_max": "15 km/h",
-        "motor": "500 W",
-        "conexiones": "Bluetooth",  
+        "description":"Batería: Extra Premium Litio. Velocidad Máxima: 15 km/h . Capacidad Máxima: 150 km. Motor: 500W" , 
         "image": "hoverboard3.jpg"
     },
     {
@@ -85,10 +52,7 @@
         "name": "Monopatín Eléctrico Uno",
         "category": "Monopatines",
         "price": 47000,
-        "bateria": "36 V/13 AH | 468 W",
-        "cuadro": "Aleación de aluminio | Plegable",
-        "velocidad_max": "25 km/h",
-        "motor": "350 W",
+        "description": "Batería: 36 V/13 AH | 468 W. Cuadro: Aleación de aluminio | Plegable. Velocidad Máxima: 25 km/h. Motor: 350W ",
         "image": "mono-electrico.jpg"
     },
     {
@@ -96,10 +60,7 @@
         "name": "Monopatín Eléctrico Blanco",
         "category": "Monopatines",
         "price": 45000,
-        "bateria": "36 V/13 AH | 468 W",
-        "cuadro": "Aleación de aluminio | Plegable",
-        "velocidad_max": "25 km/h",
-        "motor": "350 W",
+        "description": "Batería: 36 V/13 AH | 468 W. Cuadro: Aleación de aluminio | Plegable. Velocidad Máxima: 25 km/h. Motor: 350W ",
         "image": "mono-blanco.jpg"
     },
     {
@@ -107,10 +68,7 @@
         "name": "Monopatín Eléctrico Infantil",
         "category": "Monopatines",
         "price": 40000,
-        "bateria": "19.2 V/2 AH ",
-        "cuadro": "Aleación de aluminio | Plegable",
-        "velocidad_max": "10 km/h",
-        "motor": "60 W",
+        "description": "Batería: 19.2 V/2 AH. Cuadro: Aleación de aluminio | Plegable. Velocidad Máxima: 10 km/h. Motor: 60W ",
         "image": "monopatin-infantil.jpg"
     },
     {
@@ -118,10 +76,7 @@
         "name": "Skateboard #1",
         "category": "Skateboards",
         "price": 8000,
-        "tabla": "Cóncava con doble cola | 7 láminas de madera",
-        "lija": "Completa para el agarre grip tape 80 AB",
-        "bujes": "95 A | Rulemanes Abec 9",
-        "ruedas": "Uretano 54 mm",
+        "description": "Tabla: Cóncava con doble cola | 7 láminas de madera. Lija: Completa para el agarre grip tape 80 AB. Bujes: 95 A | Rulemanes Abec 9. Ruedas: Uretano 54 mm ",
         "image": "skate1.jpg"
     },
     {
@@ -129,10 +84,7 @@
         "name": "Skateboard #2",
         "category": "Skateboards",
         "price": 8000,
-        "tabla": "Cóncava con doble cola | 7 láminas de madera",
-        "lija": "Completa para el agarre grip tape 80 AB",
-        "bujes": "95 A | Rulemanes Abec 9",
-        "ruedas": "Uretano 54 mm",
+        "description": "Tabla: Cóncava con doble cola | 7 láminas de madera. Lija: Completa para el agarre grip tape 80 AB. Bujes: 95 A | Rulemanes Abec 9. Ruedas: Uretano 54 mm ",
         "image": "skate2.jpg"
     },
     {
@@ -140,10 +92,7 @@
         "name": "Skateboard #3",
         "category": "Skateboards",
         "price": 8000,
-        "tabla": "Maple chino | 6 láminas de madera",
-        "lija": "Anti-slip",
-        "bujes": "95 A | Rulemanes Abec 9",
-        "ruedas": "Uretano 54 mm",
+        "description": "Tabla: Maple chino | 6 láminas de madera. Bujes: 95 A | Rulemanes Abec 9. Ruedas: Uretano 54 mm ",
         "image": "skateboard_solo.jpg"
     },
     {
@@ -151,7 +100,7 @@
         "name": "Ruedas para skate",
         "category": "Accesorios",
         "price": 2800,
-        "descripcion": "Material: Uretano | Tamaño: 54mm | Colores: Amarillo, Azul, Negro, Verde y Rojo",
+        "description": "Material: Uretano | Tamaño: 54mm | Colores: Amarillo, Azul, Negro, Verde y Rojo",
         "image": "skateboard_accesorios1.jpg"
     },
     {
@@ -159,7 +108,7 @@
         "name": "Rulemanes",
         "category": "Accesorios",
         "price": 1000,
-        "descripcion": "Unidades: 8 | Tipo: Abec 3 608rs",
+        "description": "Unidades: 8 | Tipo: Abec 3 608rs",
         "image": "rulemanes.jpg"
     },
     {
@@ -167,7 +116,7 @@
         "name": "Kit de protección",
         "category": "Accesorios",
         "price": 4000,
-        "descripcion": "Incluye: 1 Casco | 2 rodilleras | 2 muñequeras ",
+        "description": "Incluye: 1 Casco | 2 rodilleras | 2 muñequeras ",
         "image": "kit-proteccion.jpg"
     }
 
