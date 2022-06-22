@@ -34,7 +34,7 @@ const productoController ={
         } else {
             newProduct.id = 1;
         }
-        newProduct.image = "bici-electrica-cortina.jpg";
+        newProduct.image = "Falta_imagen.jpg";
         products.push(newProduct);
         db.saveAll(products);
         res.redirect("/");

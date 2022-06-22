@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const PUERTO=3000;
+
 app.set('view engine', 'ejs'); /* para utilizar plantillas ejs   */
 
+const methodOverride = require("method-override");/** para utilizar put y delete***** */
+app.use(methodOverride("_method")); /** para utilizar put y delete***** */
 
-app.use(express.urlencoded({ extended: false }));
-const PUERTO=3000;
+app.use(express.urlencoded({ extended: false })); /***pasa salvar los productos en el objeto ***/
 
 app.listen(PUERTO,()=>{
     console.log("Aplicacion corriendo en puerto "+PUERTO);
