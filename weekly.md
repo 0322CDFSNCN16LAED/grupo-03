@@ -18,3 +18,9 @@ Sprint #4
 ● Qué va a hacer hoy: CRUD en equipo
 ● Proxima reunion:  22/06
 
+4. 22/06:
+● Qué hicimos la semana pasada: Corregir errores y form de editar
+● Si se encontró con algún impedimento: Con las rutas.
+● Qué va a hacer hoy: Hacer formulario de Delete.
+● Proxima reunion:  -
+
