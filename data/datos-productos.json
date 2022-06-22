@@ -134,6 +134,7 @@
         "description": "prueba",
         "id": 17,
         "image": "faltaimg.jpg"
+
     },
     {
         "name": "lunes",
@@ -141,7 +142,7 @@
         "category": "Hoverboards",
         "description": "lunes 550",
         "id": 18,
-        "image": "faltaimg.jpg"
+        "image": "Falta_imagen.jpg"
     },
     {
         "name": "martes",
