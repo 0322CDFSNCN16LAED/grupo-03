@@ -125,7 +125,7 @@
         "category": "Monopatines",
         "description": "sdsgs",
         "id": 16,
-        "image": "bici-electrica-cortina.jpg"
+        "image": "faltaimg.jpg"
     },
     {
         "name": "prueba",
@@ -133,7 +133,7 @@
         "category": "Accesorios",
         "description": "prueba",
         "id": 17,
-        "image": "bici-electrica-cortina.jpg"
+        "image": "faltaimg.jpg"
     },
     {
         "name": "lunes",
@@ -141,7 +141,7 @@
         "category": "Hoverboards",
         "description": "lunes 550",
         "id": 18,
-        "image": "bici-electrica-cortina.jpg"
+        "image": "faltaimg.jpg"
     },
     {
         "name": "martes",
@@ -149,6 +149,6 @@
         "category": "Bicicletas",
         "description": "martes 600",
         "id": 19,
-        "image": "bici-electrica-cortina.jpg"
+        "image": "faltaimg.jpg"
     }
 ]

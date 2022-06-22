@@ -3,30 +3,34 @@ const products = db.getAll();
 
 const productoController ={
         
-    // Root - Show all products
+    // Mostrar todos los productos
     index: (req, res) => {
-        res.render("./productos/listadoProducto", {
-            productos: products,
+        res.render("./productos/productosListado", {
+            products: products,
         });
     },
     
+    
+    // Mostrar un producto
     detail: (req, res) => {
         res.render("./productos/productoDetalle", {
             producto: db.getOne(req.params.id),
         });
     },
-
-    category:(req,res) =>{        
-        res.render("./productos/listadoProducto", {
+    
+     // Mostrar productos por categoría
+     category:(req,res) =>{        
+        res.render("./productos/productosCategoria", {
             products: products.filter((p) => p.category == req.params.category),
         });
     },
 
+    // Agregar producto - vista
     create: (req, res) =>{
         res.render("./productos/productAdd");
     },
 
-     // Create -  Method to store
+    // Agregar producto 
     store: (req, res) => {
         const newProduct = req.body;
         if (products.length) {
@@ -34,22 +38,23 @@ const productoController ={
         } else {
             newProduct.id = 1;
         }
-        newProduct.image = "bici-electrica-cortina.jpg";
+        newProduct.image = "faltaimg.jpg";
         products.push(newProduct);
         db.saveAll(products);
-        res.redirect("/");
+        res.redirect("/productosListado");
     },
 
-    // Update - Form to edit
-    /*edit: (req, res) => {
-        let id = req.params.id;
-        let productToEdit = products.find((product) => product.id == id);
-
-        res.render("product-edit-form", { productToEdit: productToEdit });
+    // Editar un producto - vistas
+    edit: (req, res) => {
+        let productoEditar = products.find((product) => product.id == req.params.id);
+        res.render("./productos/productEdit", { productoEditar: productoEditar });
     },
-    // Update - Method to update
+
+    
+    // Editar un producto
     update: (req, res) => {
-        const productIndex = products.findIndex((p) => p.id == req.params.id);
+        const productIndex = products.findIndex((p) => 
+                p.id == req.params.id);
 
         const product = products[productIndex];
 
@@ -57,13 +62,14 @@ const productoController ={
         product.description = req.body.description;
         product.category = req.body.category;
         product.price = req.body.price;
-        product.discount = req.body.discount;
 
         db.saveAll(products);
 
-        res.redirect("/products");
+        res.redirect("/productosListado");
     },
 
+
+    /*
     // Delete - Delete one product from DB
     destroy: (req, res) => {
         const filteredProducts = products.filter((p) => {
@@ -75,12 +81,6 @@ const productoController ={
         res.redirect("/products");
     },*/
 
-
-
 }
 
 module.exports=productoController;
-
-
-
-

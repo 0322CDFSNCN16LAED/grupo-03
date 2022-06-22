@@ -4,22 +4,29 @@
 <body>
     <%-include ("../partial/header")%>    
     <main>
+
+            <form class="p-20 text-center" action="/search" method="GET">
+                <input  class="p-10 m-8 products-search" type="text" name="search" placeholder="Buscar un producto">
+                <button type="submit"><i class="fas fa-search products-search-button"></i></button>
+            </form>
+
         <% products.forEach(producto => { %>
             <h3 class="text-center p-20 font-black bg-orange"><%= producto.name%></h3>
             <div>
               <img class=" img p-8 img2_detalle" src="/imagenes/<%=producto.image%>" alt="<%= producto.name%>"/>
             </div>
-            <form action="/" method="get">            
+
                 <div class="fx fx-wrap justify-center">
                     <p class= "w-60 text-center p-20 text-line"><%=producto.description%></p>                    
                     </div>  
              
-                    <h2 class="text-center p-20 font-black">Precio: $ <%=producto.price%></h2>
+                    <h2 class="text-center p-8 font-black">Precio: $<%=producto.price%></h2>
+                
+                <form action="/productos/edit/<%=producto.id%>" method="get">            
                     <div>
-                        <button class="login-producto w-30" type="submit" id="color">Compra online</button>  
+                        <button class="login-producto w-30 " type="submit" id="color">Editar producto</button>  
                     </div> 
-                </div>
-            </form>
+                </form>
         <%})%>
         <form action="/" method="get">    
             <div>

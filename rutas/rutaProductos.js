@@ -10,11 +10,15 @@ router.get('/', productoController.index);
 router.get('/create', productoController.create); 
 router.post('/guardar', productoController.store); 
 
-
 /*obtener un solo producto*/
-router.get('/:id', productoController.detail); 
-
+router.get('/:id', productoController.detail);
+ 
 /*obtener productos por categoria*/
-router.get('/by-category/:category', productoController.category); 
+router.get('/by-category/:category', productoController.category);
+
+/*editar un producto*/ 
+router.get("/edit/:id", productoController.edit)
+router.get("/:id", productoController.update)
+
 
 module.exports=router;

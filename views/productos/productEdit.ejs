@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+  <%-include ("../partial/head")%>
+</head>
+<body>
+    <%-include ("../partial/header")%>    
+    <main>
+        <h3 class="text-center p-20 font-black bg-orange">Estás editando: <%= productoEditar.name %></h3>       
+        
+
+        <form class="fx fx-wrap justify-center" action="/products/edit/<%=productoEditar.id%>?_method=PUT" method="POST">                 
+          
+             <!--
+            <label for="image" class="font-bold w-70 mt-8 p-8">Imagen:</label>
+            <div>
+                <img class=" img p-8 img2_detalle" src="/imagenes/<%=productoEditar.image%>" alt="<%= productoEditar.name%>"/>
+            </div>
+            <label for="name" class="font-bold w-70 p-8">Imagen:</label>
+            <input class="w-70 mb-10" type="file" name="imagen-producto">
+            -->
+
+            <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
+            <input class="login-forms mb-10" type="text" name="name" id="name" value="<%=productoEditar.name%>">
+
+            <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
+            <input class="login-forms mb-10" type="number" name="price" id="price" value="<%=productoEditar.price%>">
+                
+            <label for="category" class="font-bold w-70 pt-40 p-8">Categoría del producto:</label>
+            <input class="login-forms mb-10" type="text" name="category" id="category" value="<%=productoEditar.category%>">
+
+                     
+            <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
+            <textarea class="textarea mb-10" type="text" name="description" id="description"><%=productoEditar.description%></textarea>
+            
+
+                <button class="align-self-center update-buttons mt-15 m-8 w-45" id="update" type="submit" id="color">Guardar modificaciones</button>
+            </form>
+
+            <form class="fx fx-wrap justify-center mb-30">
+                <button class="align-self-center update-buttons m-8 w-45" id="delete" type="submit" id="color">Eliminar producto</button>
+            </div>
+            </form>
+        
+    </main>
+    <%-include ("../partial/footer")%>
+</body>
+</html>

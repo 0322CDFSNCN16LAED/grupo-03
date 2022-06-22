@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include ("../partial/head")%>
+<body>
+    <%-include ("../partial/header")%>    
+    <main>
+        <% products.forEach(producto => { %>
+            <h3 class="text-center p-20 font-black bg-orange"><%= producto.name%></h3>
+            <div>
+              <img class=" img p-8 img2_detalle" src="/imagenes/<%=producto.image%>" alt="<%= producto.name%>"/>
+            </div>
+            <form action="/ventas/carrito" method="get">            
+                <div class="fx fx-wrap justify-center">
+                    <p class= "w-60 text-center p-20 text-line"><%=producto.description%></p>                    
+                    </div>  
+             
+                    <h2 class="text-center p-8 font-black">Precio: $ <%=producto.price%></h2>
+                    <div>
+                        <button class="login-producto w-30" type="submit" id="color">Compra online</button>  
+                    </div> 
+                </div>
+            </form>
+        <%})%>
+        <form action="/" method="get">    
+            <div>
+                <button class="login-producto w-30" type="submit" id="color">Regresar</button>
+            </div> 
+        </form>  
+    </main>   
+    <%-include ("../partial/footer")%>
+</body>
+</html>

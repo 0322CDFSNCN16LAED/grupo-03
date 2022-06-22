@@ -78,6 +78,8 @@ body {
 .m-8 {margin-top: 8px; margin-bottom: 8px}
 .mt-8 {margin-top: 8px}
 .mb-10 {margin-bottom: 10px}
+.mt-15 {margin-top: 15px}
+.mb-30 {margin-bottom: 30px}
 
 .rad-10 {border-radius: 10%;}
 
@@ -657,4 +659,57 @@ margin-bottom: 15px;
     padding:10px;
     font-size: 16px;
     border-radius: 7px;
+}
+
+.products-search {
+    font-size: 14px;
+    color: #272626;
+    line-height: 1.625;
+    background-color:#d7cecb;
+    border: 0px;
+    border-radius: 32px;
+    width: 65%;
+    cursor: auto
+}
+
+.products-search-button {
+    font-size: 14px;
+    color: #272626;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 32px;
+    cursor: pointer;
+    margin-left: -55px;
+}
+
+.edit-buttons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    padding: 20;
+    padding-bottom: 40;
+}
+
+.update-buttons {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #bcb7b6;
+    color: #272626 ;
+    border: 2px;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+#delete:hover {
+    background-color: #981111;
+    transition: all 0.5s;
+    color: white;
+}
+
+#update:hover {
+    background-color: #107f72;
+    transition: all 0.5s;
+    color: white;
 }
