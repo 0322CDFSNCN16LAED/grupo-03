@@ -16,9 +16,9 @@ router.get('/:id', productoController.detail);
 /*obtener productos por categoria*/
 router.get('/by-category/:category', productoController.category);
 
-/*editar un producto*/ 
-router.get("/edit/:id", productoController.edit)
-router.get("/:id", productoController.update)
-
+/*editar, actualizar y eliminar un producto*/ 
+router.get("/edit/:id", productoController.edit);
+router.put("/update/:id", productoController.update);
+router.delete("/delete/:id", productoController.destroy);
 
 module.exports=router;

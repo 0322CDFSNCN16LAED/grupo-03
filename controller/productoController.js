@@ -51,35 +51,27 @@ const productoController ={
     },
 
     
-    // Editar un producto
+    // Editar y actualizar un producto
     update: (req, res) => {
-        const productIndex = products.findIndex((p) => 
-                p.id == req.params.id);
-
+        const productIndex = products.findIndex((p) =>p.id == req.params.id);
         const product = products[productIndex];
-
         product.name = req.body.name;
-        product.description = req.body.description;
         product.category = req.body.category;
         product.price = req.body.price;
-
+        product.description = req.body.description;
         db.saveAll(products);
-
         res.redirect("/productosListado");
     },
 
-
-    /*
+    
     // Delete - Delete one product from DB
     destroy: (req, res) => {
         const filteredProducts = products.filter((p) => {
             return p.id != req.params.id;
-        });
-
+        });        
         db.saveAll(filteredProducts);
-
-        res.redirect("/products");
-    },*/
+        res.redirect("/");
+    },
 
 }
 
