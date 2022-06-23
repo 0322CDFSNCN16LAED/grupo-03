@@ -52,9 +52,13 @@ const productoController ={
 
     
     // Editar y actualizar un producto
-    update: (req, res) => {
-        const productIndex = products.findIndex((p) =>p.id == req.params.id);
+    update: (req, res) => {        
+        const productIndex = products.findIndex((p) => p.id == req.params.id);        
         const product = products[productIndex];
+        
+        console.log(p);
+        console.log(productIndex);
+        console.log(product);        
         product.name = req.body.name;
         product.category = req.body.category;
         product.price = req.body.price;

@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Bicicleta Eléctrica Cortina",
         "category": "Bicicletas",
-        "price": 56000,
+        "price": "9999999",
         "description": "Batería: LG 36 V/10.4 AH | 374 W. Motor: Bafang 350 W con sensor de velocidad. Autonomía: 35 km. Rodado: 28. Accesorios: Guardabarros | Portaequipajes | Bocina ",
         "image": "bici-electrica-cortina.jpg"
     },
@@ -134,7 +134,6 @@
         "description": "prueba",
         "id": 17,
         "image": "faltaimg.jpg"
-
     },
     {
         "name": "lunes",
