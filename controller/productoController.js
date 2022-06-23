@@ -38,10 +38,16 @@ const productoController ={
         } else {
             newProduct.id = 1;
         }
-        newProduct.image = "faltaimg.jpg";
+        
+        newProduct.name= req.body.name;
+        newProduct.price= req.body.price;
+        newProduct.category=req.body.category;
+        newProduct.description=req.body.description;
+        newProduct.image=req.file.filename;
+
         products.push(newProduct);
         db.saveAll(products);
-        res.redirect("/productosListado");
+        res.redirect("/");
     },
 
     // Editar un producto - vistas
@@ -56,7 +62,6 @@ const productoController ={
         const productIndex = products.findIndex((p) => p.id == req.params.id);        
         const product = products[productIndex];
         
-        console.log(p);
         console.log(productIndex);
         console.log(product);        
         product.name = req.body.name;
@@ -64,7 +69,7 @@ const productoController ={
         product.price = req.body.price;
         product.description = req.body.description;
         db.saveAll(products);
-        res.redirect("/productosListado");
+        res.redirect("/");
     },
 
     

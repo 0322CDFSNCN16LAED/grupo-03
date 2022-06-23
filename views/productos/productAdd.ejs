@@ -8,7 +8,7 @@
     <main>
         <h3 class="text-center p-20 font-black bg-orange">Agregar un producto</h3>       
         
-        <form class="fx fx-wrap justify-center" action="/productos/guardar/" method="POST">                 
+        <form class="fx fx-wrap justify-center" action="/productos/guardar/" method="POST" enctype="multipart/form-data">                 
             <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
             <input class="login-forms mb-10" type="text" name="name" id="name" placeholder="Bicicleta Cortina">
 
@@ -24,17 +24,15 @@
                         <option value="Accesorios">Accesorios</option>
                     </select>
 
-            
-            
-                <!--<label for="name" class="font-bold w-70 p-8">Imagen:</label>
-                <input class="w-70 mb-10" type="file" name="imagen-producto">-->
+            <label for="name" class="font-bold w-70 p-8">Imagen:</label>
+            <input class="w-70 mb-10" type="file" name="image" id="image">
                      
-                <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
-                <textarea class="textarea mb-10" type="text" name="description" id="description"></textarea>
+            <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
+            <textarea class="textarea mb-10" type="text" name="description" id="description"></textarea>
                 
-                <div class="align-self-center text-center w-70 p-20 ">
+            <div class="align-self-center text-center w-70 p-20 ">
                     <button class="login-producto w-30" type="submit" id="color">Guardar</button>
-                </div>
+            </div>
         </form>
         
         </main>
