@@ -43,11 +43,15 @@ const productoController ={
         newProduct.price= req.body.price;
         newProduct.category=req.body.category;
         newProduct.description=req.body.description;
-        newProduct.image=req.file.filename;
+        if (req.file){
+            newProduct.image=req.file.filename; /*******************/
+        }else{
+            newProduct.image="faltaimg.jpg"
+        }       
 
         products.push(newProduct);
         db.saveAll(products);
-        res.redirect("/");
+        res.redirect("/productos");
     },
 
     // Editar un producto - vistas
@@ -58,18 +62,22 @@ const productoController ={
 
     
     // Editar y actualizar un producto
-    update: (req, res) => {        
-        const productIndex = products.findIndex((p) => p.id == req.params.id);        
-        const product = products[productIndex];
+    update: (req, res) => {       
+        const index = products.findIndex((p) => { 
+            return p.id == req.params.id
+        });
         
-        console.log(productIndex);
-        console.log(product);        
+        const product = products[index];           
         product.name = req.body.name;
         product.category = req.body.category;
         product.price = req.body.price;
         product.description = req.body.description;
+        if (req.file){
+            product.image = req.file.filename;
+        }
+        
         db.saveAll(products);
-        res.redirect("/");
+        res.redirect("/productos");
     },
 
     
@@ -79,7 +87,7 @@ const productoController ={
             return p.id != req.params.id;
         });        
         db.saveAll(filteredProducts);
-        res.redirect("/");
+        res.redirect("/productos");
     },
 
 }

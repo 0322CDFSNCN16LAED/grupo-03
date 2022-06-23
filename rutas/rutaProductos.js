@@ -35,7 +35,7 @@ router.get('/by-category/:category', productoController.category);
 
 /*editar, actualizar y eliminar un producto*/ 
 router.get("/edit/:id", productoController.edit);
-router.put("/update/:id", productoController.update);
+router.put("/update/:id", fileUpload.single('image'), productoController.update);
 router.delete("/delete/:id", productoController.destroy);
 
 module.exports=router;
