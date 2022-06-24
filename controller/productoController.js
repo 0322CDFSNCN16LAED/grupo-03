@@ -90,6 +90,19 @@ const productoController ={
         res.redirect("/productos");
     },
 
+    search: (req,res)=> {
+        const searchedProducts = [];
+        
+        for (var i=0; i < products.length; i++){            
+            if (products[i].name.includes(req.query.search)) {
+                console.log('entre a la validacion');
+                searchedProducts.push(products[i]);
+            }
+        };
+        console.log(searchedProducts);
+        res.render("./productos/productosListado", {products: searchedProducts});
+    }, 
+
 }
 
 module.exports=productoController;

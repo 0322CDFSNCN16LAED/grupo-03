@@ -22,6 +22,9 @@ const fileUpload= multer({storage: multerDiskStorage});
 /*obtener todos los productos*/ 
 router.get('/', productoController.index); 
 
+/*************buscar un producto******************/
+router.get("/search", productoController.search);
+
 /*crear un producto*/ 
 router.get('/create', productoController.create); 
 //router.post('/guardar', productoController.store); 
