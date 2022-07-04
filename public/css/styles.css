@@ -382,17 +382,41 @@ main section section article form button{
 
 .login-buttons {
     padding: 10px;
-    font-size: 14px;
+    font-size: 18px;
     background-color: #107f72;
     color: white ;
-    border: 1px;
+    border: solid 2px transparent ;
     border-radius: 10px;
-    cursor: pointer
+    cursor: pointer;
+    margin-bottom: 20px
+}
+
+.buttons2 {
+    border: 2px solid #107f72;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #10707F;
+    color: white ;
+    border-radius: 9px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons2:hover{
+    background-color: #2d8f91;
+    border: 2px solid #2d8f91;
+    transition: all 0.3s;
+    color: white;
 }
 
 #color:hover {
-    background-color: #FF8000;
-    transition: all 0.5s;
+    background-color: #fc7e30;
+    border: solid 2px #ff7230;
+    transition: all 0.3s;
     color:#100f0f;
 }
 
@@ -400,20 +424,52 @@ main section section article form button{
     box-shadow: 0px 5px 4px -2px#FF8000;
 }
 
-.login-producto {    
-    font-size: 20px;
+.login-producto {   
+    border: 2px solid #272626;
+    padding: 10px;
+    font-size: 18px;
     background-color: #f5f5dc;     
-    color: #10707F;
-    border: 1px;
+    color: #272626;
     border-radius: 10px;
     cursor: pointer;
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
 
+.edit-buttons {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    text-align: center;
+    width: 70%;
+    padding: 20;
+    padding-bottom: 40;
+}
+
+.update-buttons {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #bcb7b6;
+    color: #272626 ;
+    border: 2px;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+#delete:hover {
+    background-color: #981111;
+    transition: all 0.3s;
+    color: white;
+}
+
+#update:hover {
+    background-color: #107f72;
+    transition: all 0.3s;
+    color: white;
+}
 /*PRODUCTOS*/
 
 .img {
@@ -665,9 +721,9 @@ margin-bottom: 15px;
     font-size: 14px;
     color: #272626;
     line-height: 1.625;
-    background-color:#d7cecb;
+    background-color:#ddd4d1;
     border: 0px;
-    border-radius: 32px;
+    border-radius: 0px;
     width: 65%;
     cursor: auto
 }
@@ -683,33 +739,3 @@ margin-bottom: 15px;
     margin-left: -55px;
 }
 
-.edit-buttons {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 70%;
-    padding: 20;
-    padding-bottom: 40;
-}
-
-.update-buttons {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #bcb7b6;
-    color: #272626 ;
-    border: 2px;
-    border-radius: 10px;
-    cursor: pointer
-}
-
-#delete:hover {
-    background-color: #981111;
-    transition: all 0.5s;
-    color: white;
-}
-
-#update:hover {
-    background-color: #107f72;
-    transition: all 0.5s;
-    color: white;
-}
