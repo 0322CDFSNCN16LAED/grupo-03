@@ -4,7 +4,16 @@ const router= express.Router();
 const multer = require("multer");
 const path = require('path');
 const userController= require("../controller/userController");
- 
+const registerValidation = require("../middlewares/validarContrasena");
+const {body}= require("express-validator");
+
+const validationFormulario= [
+    body("name").notEmpty().withMessage('Debe ingresar el nombre del usuario'),
+    body("user").notEmpty().withMessage('Debe ingresar el usuario'),
+    body("mail").isEmail().withMessage('Debe ingresar un email valido'),
+    body("contrasena").isLength(10).withMessage('Debes ingresar una contraseña de 10 digitos')    
+];
+
 /***************para carga de archivo**************************/
 let multerDiskStorage= multer.diskStorage({
     destination:(req, file, cb)=>{        
@@ -21,9 +30,9 @@ const fileUpload= multer({storage: multerDiskStorage});
 
 /*registrar un usuario*/ 
 router.get('/register', userController.register); 
-//router.post('/guardar', productoController.store); 
-router.post('/guardar', fileUpload.single('image'),  userController.store);
 
+//router.post('/register', validationFormulario, fileUpload.single('image'),  userController.store);
+router.post('/register', validationFormulario,  userController.store);
 router.get("/login",userController.login);
 
 /*obtener un solo usuario*/

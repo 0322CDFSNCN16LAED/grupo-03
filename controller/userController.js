@@ -1,5 +1,8 @@
+const bcrypt = require("bcryptjs");
 const db = require("../data/db-users");
 const users = db.getAll();
+const { validationResult } = require("express-validator");
+
 
 const userController ={
     // Registro de usuario
@@ -8,31 +11,36 @@ const userController ={
     },
 
     store: (req, res) => {
-        const newUser = req.body;
-        if (users.length) {
-            newUser.id = users[users.length - 1].id + 1;            
-        } else {
-            newUser.id = 1;
-        }
-        
-        //CAMBIAR CAMPOS
-        newUser.first_name = req.body.name;
-        newUser.price= req.body.price;
-        newUser.category=req.body.category;
-        newUser.description=req.body.description;
-        if (req.file){
-            newUser.image=req.file.filename; /*******************/
-        }else{
-            newUser.image="faltaimg.jpg"
-        }       
+        const errors = validationResult(req);
 
-        users.push(newUser);
-        db.saveAll(users);
-        res.redirect("/");
+        if (errors.isEmpty()) {
+            const newUser = req.body;
+            if (users.length) {
+                newUser.id = users[users.length - 1].id + 1;            
+            } else {
+                newUser.id = 1;
+            } 
+            newUser.name = req.body.name;
+            newUser.user= req.body.user;
+            newUser.email=req.body.mail;        
+            newUser.password=bcrypt.hashSync(req.body.contrasena,10);
+            delete newUser.confirmar;
+
+            if (req.file){
+                newUser.image=req.file.filename; 
+            }else{
+                newUser.image="faltaimg.jpg"
+            } 
+            users.push(newUser);
+            db.saveAll(users);
+            res.redirect("/user/login");
+        }else{
+            res.redirect("/user/register", {errors: errors.array()});
+        }        
     },
     
     login: (req, res)=>{
-        res.render('usuario/login');
+        res.render('./usuario/login');
     }   
 }
 

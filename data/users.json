@@ -1,92 +1,20 @@
 [
     {
-        "id":1,
-        "first_name":"Inesita",
-        "last_name":"Maciunas",
-        "email":"imaciunas0@networkadvertising.org",
-        "password":"gPkrvQcNtiUA",
-        "category":"user",
-        "image":"user_1.jpg"
+        "id": 1,
+        "name": "Inesita",
+        "user": "Maciunas",
+        "email": "imaciunas0@networkadvertising.org",
+        "password": "gPkrvQcNtiUA",
+        "image": "user_1.jpg"
     },
-{
-    "id":2,
-    "first_name":"Thorstein",
-    "last_name":"Yellowlee",
-    "email":"tyellowlee1@yellowbook.com",
-    "password":"3JERZ7C",
-    "category":"user",
-    "image":"user_2.jpg"
-},
-{
-    "id":3,
-    "first_name":"Culley",
-    "last_name":"Clutram",
-    "email":"cclutram2@discovery.com",
-    "password":"iMDcD1X",
-    "category":"user",
-    "image":"user_3.jpg"
-},
-{
-    "id":4,
-    "first_name":"Gibb",
-    "last_name":"Dainton",
-    "email":"gdainton3@merriam-webster.com",
-    "password":"22Wxt5S",
-    "category":"user",
-    "image":"user_4.jpg"
-},
-{
-    "id":5,
-    "first_name":"Kyle",
-    "last_name":"MacElane",
-    "email":"kmacelane4@usatoday.com",
-    "password":"31kNAFezUr",
-    "category":"user",
-    "image":"user_5.jpg"
-},
-{
-    "id":6,
-    "first_name":"Rochella",
-    "last_name":"Castilljo",
-    "email":"rcastilljo5@arstechnica.com",
-    "password":"x4eaJhvqqEdB",
-    "category":"user",
-    "image":"user_6.jpg"
-},
-{
-    "id":7,
-    "first_name":"Pooh",
-    "last_name":"O'Tierney",
-    "email":"potierney6@chron.com",
-    "password":"tP4KH3mtz",
-    "category":"user",
-    "image":"user_7.jpg"
-},
-{
-    "id":8,
-    "first_name":"Claresta",
-    "last_name":"Leadbeatter",
-    "email":"cleadbeatter7@google.com.br",
-    "password":"tT7DMU5sIQe",
-    "category":"user",
-    "image":"user_8.jpg"
-},
-{
-    "id":9,
-    "first_name":"Korrie",
-    "last_name":"Hellwig",
-    "email":"khellwig8@sitemeter.com",
-    "password":"dAiSOXR8u",
-    "category":"user",
-    "image":"user_9.jpg"
-},
-{
-    "id":10,
-    "first_name":"Lawrence",
-    "last_name":"Collier",
-    "email":"lcollier9@ca.gov",
-    "password":"7JZbXXehMAE",
-    "category":"user",
-    "image":"user_10.jpg"
+    {
+        "name": "",
+        "user": "",
+        "mail": "",
+        "contrasena": "",
+        "image": "faltaimg.jpg",
+        "id": 2,
+        "email": "",
+        "password": "$2a$10$UG8LeDM5InXy7l6gvhtTw.sNVXtkVqJY4eciqoHI2IXLdHpFgK9tu"
     }
 ]

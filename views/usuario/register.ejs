@@ -17,19 +17,26 @@
                 </a>
             </nav>
         </h3>
-
-        <form class="fx fx-wrap justify-center" action="/" method="GET">  
+        <% if (locals.errors){ 
+            errors.forEach(error=> { %>
+               <p><%=error.msg%></p>
+            <%})%>
+        <%}%>   
+        <form name="forRegistro" id="forRegistro" class="fx fx-wrap justify-center" action="/user/register" method="POST"> 
+            
             <p class="font-bold m-8 w-70 pt-40">Nombre y apellido:</p>   
-            <input class="login-forms m-8" type="text" name="nombre-completo" placeholder="Escriba su nombre" required>   
+            <input class="login-forms m-8" type="text" name="name" id="name" placeholder="Escriba su nombre" >   
             <p class="font-bold m-8 w-70">Nombre de usuario:</p>   
-            <input class="login-forms m-8" type="text" name="nombre-usuario" placeholder="Escriba un nomrbre de usuario" required>   
+            <input class="login-forms m-8" type="text" name="user" id="user" placeholder="Escriba un nomrbre de usuario" >   
             <p class="font-bold m-8 w-70">Mail:</p>   
-            <input class="login-forms m-8" type="email" name="mail" placeholder="Escriba su mail" required>    
+            <input class="login-forms m-8" type="email" name="mail" id="mail" placeholder="Escriba su mail" >    
             <p class="font-bold m-8 w-70">Contraseña:</p>    
-            <input class="login-forms m-8" type="password" name="contraseña" placeholder="Escriba una contraseña" required>   
+            <input class="login-forms m-8" type="password" name="contrasena" id="contrasena" placeholder="Escriba una contraseña" >   
             <p class="font-bold m-8 w-70">Confirmar contraseña:</p>   
-            <input class="login-forms m-8" type="password" name="confirmar-contraseña" placeholder="Repita la contraseña" required>   
-
+            <input class="login-forms m-8" type="password" name="confirmar" id="confirmar" placeholder="Repita la contraseña" >   
+            
+            <!-- <label for="foto" class="font-bold w-70 p-8">Foto:</label>
+            <input class="w-70 mb-10" type="file" name="image" id="image"> -->
             
            <div class="align-self-center text-center w-70 p-20 pb-40">
                 <button class="login-buttons m-8 w-45" id=color type="submit">Registrarse</button>
