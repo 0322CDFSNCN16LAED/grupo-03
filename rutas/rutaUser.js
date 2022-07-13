@@ -31,8 +31,8 @@ const fileUpload= multer({storage: multerDiskStorage});
 /*registrar un usuario*/ 
 router.get('/register', userController.register); 
 
-//router.post('/register', validationFormulario, fileUpload.single('image'),  userController.store);
-router.post('/register', validationFormulario,  userController.store);
+router.post('/register', validationFormulario, fileUpload.single('image'),  userController.store);
+
 router.get("/login",userController.login);
 
 /*obtener un solo usuario*/
