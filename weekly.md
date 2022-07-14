@@ -22,5 +22,24 @@ Sprint #4
 ● Qué hicimos la semana pasada: Corregir errores y form de editar
 ● Si se encontró con algún impedimento: Con las rutas.
 ● Qué va a hacer hoy: Hacer formulario de Delete.
-● Proxima reunion:  -
+● Proxima reunion: 04/07.-
+
+4. 04/07:
+● Qué hicimos la semana pasada: Terminar con el sprint 4
+● Si se encontró con algún impedimento: Ninguno.
+● Qué va a hacer hoy: Programar el Sprint 5.
+● Proxima reunion: 13/07.-
+
+5. 13/07:
+● Qué hicimos la semana pasada: Implementar Midlwares.-
+● Si se encontró con algún impedimento: Problema con las rutas.
+● Qué va a hacer hoy: Implementacion de creacion de usuario
+● Proxima reunion: 14/07.-
+
+6. 14/07:
+● Qué hicimos la semana pasada: 
+● Si se encontró con algún impedimento: Problema con las rutas.
+● Qué va a hacer hoy: 
+● Proxima reunion: 
+
 
