@@ -99,3 +99,4 @@ Ofrece productos similares (bicicletas, monopatines y skateboards eléctricos), 
 
 Link al tablero de trabajo:
 https://trello.com/b/NxT6MifY/trabajo-integrador 
+Actualizado el 14/07.-
