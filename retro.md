@@ -40,3 +40,14 @@ Estar en contacto con los integrantes del grupo
 4.- Hacer menos:
 Dejar de consultar a los profesores cuando nos surge un inconveniente
 
+
+Sprint #4
+
+1.-Comenzar Hacer: Dividirnos las tareas.
+
+2.- Hacer más: Consultas a los profesores. Que todo el grupo trabaje.
+
+3.- Continuar haciendo: Estar en contacto entre nosotros.
+
+4.- Hacer menos: Falta de participacion de algunos integrantes.
+
