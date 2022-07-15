@@ -22,8 +22,8 @@ const userController ={
             } 
             newUser.name = req.body.name;
             newUser.user= req.body.user;
-            newUser.email=req.body.mail;        
-            newUser.password=bcrypt.hashSync(req.body.contrasena,10);
+            newUser.email=req.body.email;        
+            newUser.password=bcrypt.hashSync(req.body.password,10);
             delete newUser.confirmar;
 
             if (req.file){

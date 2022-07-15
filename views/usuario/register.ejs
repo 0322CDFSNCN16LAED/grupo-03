@@ -35,20 +35,23 @@
             <%}%>   
 
             <label class="font-bold m-8 w-70">Mail:</label>   
-            <input class="login-forms m-8" type="email" name="mail" id="mail" placeholder="Escriba su mail" value="<%=locals.old && old.mail ? old.mail: '' %>">   
-            <%if (locals.errors && errors.mail){%>
-                <label class="font-bold m-8 w-70 c-red"><%=errors.mail.msg%></label>   
+            <input class="login-forms m-8" type="email" name="email" id="email" placeholder="Escriba su mail" value="<%=locals.old && old.mail ? old.email: '' %>">   
+            <%if (locals.errors && errors.email){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.email.msg%></label>   
             <%}%>
 
             <label class="font-bold m-8 w-70">Contraseña:</label>    
-            <input class="login-forms m-8" type="password" name="contrasena" id="contrasena" placeholder="Escriba una contraseña" value="<%=locals.old && old.contrasena ? old.contrasena: '' %>"> 
-            <%if (locals.errors && errors.name){%>
-                <label class="font-bold m-8 w-70 c-red"><%=errors.contrasena.msg%></label>   
+            <input class="login-forms m-8" type="password" name="password" id="password" placeholder="Escriba una contraseña" value="<%=locals.old && old.password ? old.password: '' %>"> 
+            <%if (locals.errors && errors.password){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.password.msg%></label>   
             <%}%>  
 
             <label class="font-bold m-8 w-70">Confirmar contraseña:</label>   
             <input class="login-forms m-8" type="password" name="confirmar" id="confirmar" placeholder="Repita la contraseña" >   
             
+            <%if (locals.errors && errors.confirmar){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.confirmar.msg%></label>   
+            <%}%>  
            <div class="align-self-center text-center w-70 p-20 pb-40">
                 <button class="login-buttons m-8 w-45" id=color type="submit">Registrarse</button>
                 <button class="login-buttons m-8 w-45" id=color type="reset">Borrar</button>

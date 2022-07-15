@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router= express.Router();
-const registerValidation = require("../middlewares/validarContrasena");
+
 const multer = require("multer");
 const path = require('path');
 const userController= require("../controller/userController");
@@ -11,8 +11,14 @@ const {body}= require("express-validator");
 const validationFormulario= [
     body("name").notEmpty().withMessage('Debe ingresar el nombre del usuario'),
     body("user").notEmpty().withMessage('Debe ingresar el usuario'),
-    body("mail").isEmail().withMessage('Debe ingresar un email valido'),
-    body("contrasena").isLength(10).withMessage('Debes ingresar un password de 10 digitos')  
+    body("email").isEmail().withMessage('Debe ingresar un email valido'),
+    body("password").isLength({min: 5}).withMessage('Debes ingresar un password de 5 digitos'),
+    body("confirmar").custom((value, extra) => {
+        if (value !== extra.req.body.password) {
+            throw new Error("La Contraseña no coincide; por favor intentar de nuevo");
+        }
+        return true;
+    })
 ];
 
 /***************para carga de archivo**************************/

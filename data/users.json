@@ -8,13 +8,19 @@
         "image": "user_1.jpg"
     },
     {
-        "name": "",
-        "user": "",
-        "mail": "",
-        "contrasena": "",
-        "image": "faltaimg.jpg",
-        "id": 2,
-        "email": "",
-        "password": "$2a$10$UG8LeDM5InXy7l6gvhtTw.sNVXtkVqJY4eciqoHI2IXLdHpFgK9tu"
+        "name": "carito",
+        "user": "car",
+        "email": "mnoeliacostilla18@gmail.com",
+        "password": "$2a$10$r4cj.jgYSZl0SW0IRKLyouiWCtsya0uOKyrgqCYmntY3DAGgKWe.C",
+        "id": 6,
+        "image": "faltaimg.jpg"
+    },
+    {
+        "name": "nazira",
+        "user": "nazi",
+        "email": "nazi@hotmail.com",
+        "password": "$2a$10$Wz9fVibXMfQWp/y4jrYiRuZCGfE6..6j98Io1uVsG.dOnejpEkJx2",
+        "id": 7,
+        "image": "faltaimg.jpg"
     }
 ]
