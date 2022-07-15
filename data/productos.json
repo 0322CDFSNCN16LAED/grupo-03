@@ -120,35 +120,11 @@
         "image": "kit-proteccion.jpg"
     },
     {
-        "name": "gdgsdg",
-        "price": "5555",
-        "category": "Monopatines",
-        "description": "sdsgs",
-        "id": 16,
-        "image": "faltaimg.jpg"
-    },
-    {
-        "name": "prueba",
-        "price": "30000",
-        "category": "Accesorios",
-        "description": "prueba",
-        "id": 17,
-        "image": "faltaimg.jpg"
-    },
-    {
-        "name": "lunes",
-        "price": "550",
-        "category": "Hoverboards",
-        "description": "lunes 550",
-        "id": 18,
-        "image": "Falta_imagen.jpg"
-    },
-    {
-        "name": "martes",
-        "price": "600",
+        "name": "bici",
+        "price": "20000",
         "category": "Bicicletas",
-        "description": "martes 600",
-        "id": 19,
+        "description": "hola hola",
+        "id": 16,
         "image": "faltaimg.jpg"
     }
 ]
