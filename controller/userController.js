@@ -7,7 +7,7 @@ const { validationResult } = require("express-validator");
 const userController ={
     // Registro de usuario
     register: (req, res)=>{
-        res.render('usuario/register')
+        res.render('./usuario/register')
     },
 
     store: (req, res) => {
@@ -35,7 +35,7 @@ const userController ={
             db.saveAll(users);
             res.redirect("/user/login");
         }else{
-            res.redirect("/user/register", {errors: errors.array()});
+            res.render("./usuario/register", { errors: errors.mapped(), old: req.body });
         }        
     },
     

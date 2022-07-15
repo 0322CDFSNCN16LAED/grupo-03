@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>    
-  <%-include ("../partial/head")%>
+  <%-include ("../partial/head")%>   
 </head>
 <body> 
     <%-include ("../partial/header")%>  
@@ -16,27 +16,38 @@
                     <p class="text-center p-20 font-grey" id="link">Iniciar sesión</p>
                 </a>
             </nav>
-        </h3>
-        <% if (locals.errors){ 
-            errors.forEach(error=> { %>
-               <p><%=error.msg%></p>
-            <%})%>
-        <%}%>   
-        <form name="forRegistro" id="forRegistro" class="fx fx-wrap justify-center" action="/user/register" method="POST"> 
-            
-            <p class="font-bold m-8 w-70 pt-40">Nombre y apellido:</p>   
-            <input class="login-forms m-8" type="text" name="name" id="name" placeholder="Escriba su nombre" >   
-            <p class="font-bold m-8 w-70">Nombre de usuario:</p>   
-            <input class="login-forms m-8" type="text" name="user" id="user" placeholder="Escriba un nomrbre de usuario" >   
-            <p class="font-bold m-8 w-70">Mail:</p>   
-            <input class="login-forms m-8" type="email" name="mail" id="mail" placeholder="Escriba su mail" >    
-            <p class="font-bold m-8 w-70">Contraseña:</p>    
-            <input class="login-forms m-8" type="password" name="contrasena" id="contrasena" placeholder="Escriba una contraseña" >   
-            <p class="font-bold m-8 w-70">Confirmar contraseña:</p>   
-            <input class="login-forms m-8" type="password" name="confirmar" id="confirmar" placeholder="Repita la contraseña" >   
-            
-            <label for="foto" class="font-bold w-70 p-8">Foto:</label>
+        </h3>  
+        
+        <form name="forRegistro" id="forRegistro" enctype="multipart/form-data" class="fx fx-wrap justify-center" action="/user/register" method="POST">
+            <label for="foto" class="font-bold w-70 pt-40">Foto:</label>
             <input class="w-70 mb-10" type="file" name="image" id="image"> 
+            
+            <label class="font-bold m-8 w-70">Nombre y apellido:</label>   
+            <input class="login-forms m-8" type="text" name="name" id="name" placeholder="Escriba su nombre" value="<%=locals.old && old.name ? old.name: '' %>" >
+            <%if (locals.errors && errors.name){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.name.msg%></label>   
+            <%}%>  
+                        
+            <label class="font-bold m-8 w-70">Nombre de usuario:</label>   
+            <input class="login-forms m-8" type="text" name="user" id="user" placeholder="Escriba un nomrbre de usuario" value="<%=locals.old && old.user ? old.user: '' %>">
+            <%if (locals.errors && errors.user){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.user.msg%></label>   
+            <%}%>   
+
+            <label class="font-bold m-8 w-70">Mail:</label>   
+            <input class="login-forms m-8" type="email" name="mail" id="mail" placeholder="Escriba su mail" value="<%=locals.old && old.mail ? old.mail: '' %>">   
+            <%if (locals.errors && errors.mail){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.mail.msg%></label>   
+            <%}%>
+
+            <label class="font-bold m-8 w-70">Contraseña:</label>    
+            <input class="login-forms m-8" type="password" name="contrasena" id="contrasena" placeholder="Escriba una contraseña" value="<%=locals.old && old.contrasena ? old.contrasena: '' %>"> 
+            <%if (locals.errors && errors.name){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.contrasena.msg%></label>   
+            <%}%>  
+
+            <label class="font-bold m-8 w-70">Confirmar contraseña:</label>   
+            <input class="login-forms m-8" type="password" name="confirmar" id="confirmar" placeholder="Repita la contraseña" >   
             
            <div class="align-self-center text-center w-70 p-20 pb-40">
                 <button class="login-buttons m-8 w-45" id=color type="submit">Registrarse</button>
