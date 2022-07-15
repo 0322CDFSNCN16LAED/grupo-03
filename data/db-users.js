@@ -14,5 +14,8 @@ module.exports = {
     },
     getOne: function (id) {
         return this.getAll().find((p) => p.id == id);
+    },
+    findByEmail: function (email) {
+        return this.getAll().find((p) => p.email == email);
     }
 };

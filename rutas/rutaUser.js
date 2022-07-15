@@ -8,7 +8,7 @@ const userController= require("../controller/userController");
 
 const {body}= require("express-validator");
 
-const validationFormulario= [
+const validationFormularioRegistro= [
     body("name").notEmpty().withMessage('Debe ingresar el nombre del usuario'),
     body("user").notEmpty().withMessage('Debe ingresar el usuario'),
     body("email").isEmail().withMessage('Debe ingresar un email valido'),
@@ -20,6 +20,12 @@ const validationFormulario= [
         return true;
     })
 ];
+
+const validationFormularioIngreso= [    
+    body("email").isEmail().withMessage('Debe ingresar un email valido'),
+    body("password").isLength({min: 5}).withMessage('Debes ingresar un password de 5 digitos')    
+];
+
 
 /***************para carga de archivo**************************/
 let multerDiskStorage= multer.diskStorage({
@@ -36,11 +42,13 @@ const fileUpload= multer({storage: multerDiskStorage});
 /******************************************************************/
 
 /*registrar un usuario*/ 
-router.get('/register', userController.register); 
-
-router.post('/register', fileUpload.single('image'), validationFormulario, userController.store);
+router.get('/register', userController.register);
+router.post('/register', fileUpload.single('image'), validationFormularioRegistro, userController.store);
 
 router.get("/login",userController.login);
+router.post("/login",validationFormularioIngreso,userController.ingreso);
+
+router.get("/perfil",userController.perfil);
 
 /*obtener un solo usuario*/
 //router.get('/:id', userController.detail);

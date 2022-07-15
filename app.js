@@ -1,6 +1,8 @@
 const express = require('express');
+const session= require("express-session");
 const app = express();
 const path = require('path');
+const sessionActiva = require("./middleware/sessionActiva");
 const PUERTO=3000;
 
 app.set('view engine', 'ejs'); /* para utilizar plantillas ejs   */
@@ -16,6 +18,8 @@ app.listen(PUERTO,()=>{
 
 
 app.use(express.static(path.join(__dirname,'public')));
+app.use(session( { secret: "mensaje secreto" } ));
+app.use(sessionActiva);
 
 const rutaMain= require("./rutas/rutaMain");
 app.use("/",rutaMain);

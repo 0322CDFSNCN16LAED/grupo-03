@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+   <%-include ("../partial/head")%>
+</head>   
+<body> 
+    <%-include ("../partial/header")%>  
+    <main>
+            <h3 class="text-center font-black bg-orange">
+                <nav class="fx fx-wrap justify-center">
+                    <a href="/user/login" class="links">
+                        <p class="text-center p-20 font-black">Perfil de Usuario</p>
+                    </a>
+                </nav>
+            </h3>
+            <form class="fx fx-wrap justify-center" action="/" method="GET">  
+                <% if (locals.loggedUser) { %>
+                    <li>Te damos la Bienvenida <%= locals.loggedUser.name %></li>
+                <%}%>    
+               
+               <div class="align-self-center text-center w-70 p-20 pb-40">
+                    <button class="login-buttons m-8 w-60" type="submit" id="color">Cerrar Sesion</button>
+                </div>      
+            </form>
+    
+        </main>
+    <%-include ("../partial/footer")%>
+</body>
+</html>

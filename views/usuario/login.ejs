@@ -6,25 +6,31 @@
 <body> 
     <%-include ("../partial/header")%>  
     <main>
-        <h3 class="text-center font-black bg-orange">
-            <nav class="fx fx-wrap justify-center">
-                <a href="/user/login" class="links">
-                    <p class="text-center p-20 font-black">Iniciar sesión</p>
-                </a>
-                <p class="text-center align-self-center b-20">/</p>
-                <a href="/user/register" class="links">
-                    <p class="text-center p-20 font-grey" id="link">Registrarse</p>
-                </a>
-            </nav>
-        </h3>
+            <h3 class="text-center font-black bg-orange">
+                <nav class="fx fx-wrap justify-center">
+                    <a href="/user/login" class="links">
+                        <p class="text-center p-20 font-black">Iniciar sesión</p>
+                    </a>
+                    <p class="text-center align-self-center b-20">/</p>
+                    <a href="/user/register" class="links">
+                        <p class="text-center p-20 font-grey" id="link">Registrarse</p>
+                    </a>
+                </nav>
+            </h3>    
     
-    
-            <form class="fx fx-wrap justify-center" action="/" method="GET">  
-                <p class="font-bold m-8 w-70 pt-40">Nombre de usuario:</p>   
-               <input class="login-forms m-8" type="text" name="nombre-usuario" placeholder="Escriba su nombre de usuario">
+            <form class="fx fx-wrap justify-center" action="/user/perfil" method="get">  
+                <p class="font-bold m-8 w-70 pt-40">Email:</p>   
+               <input class="login-forms m-8" type="email" name="email" id="email" placeholder="Escriba su email">
+               <%if (locals.errors && errors.email){%>
+                  <label class="font-bold m-8 w-70 c-red"><%=errors.email.msg%></label>   
+               <%}%> 
+                              
                <p class="font-bold m-8 w-70">Contraseña:</p>   
-               <input class="login-forms m-8" type="password" name="contraseña" placeholder="Escriba su contraseña">
-    
+               <input class="login-forms m-8" type="password" name="password" id="password" placeholder="Escriba su contraseña">
+               <%if (locals.errors && errors.password){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.password.msg%></label>   
+               <%}%> 
+
                <a href="#" class="align-self-center text-center w-70 p-10 links font-blue underline">¿Olvidaste tu contraseña?</a>
     
                <div class="align-self-center text-center w-70 p-20 pb-40">

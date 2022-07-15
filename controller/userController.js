@@ -41,7 +41,27 @@ const userController ={
     
     login: (req, res)=>{
         res.render('./usuario/login');
-    }   
+    },
+    
+    ingreso : (req,res)=>{
+        const { email, password } = req.body;
+        
+        const user = db.findByEmail(email);
+
+        if (user && bcrypt.compareSync(password, user.password)) {
+            req.session.loggedUser = user;
+            res.redirect("/user/perfil");
+            return;
+        }
+
+        res.render("./usuario/login", {
+            error: true,
+        });
+    },
+
+    perfil: (req, res)=>{        
+        res.render('./usuario/perfil');
+    }    
 }
 
 module.exports=userController;

@@ -22,5 +22,13 @@
         "password": "$2a$10$Wz9fVibXMfQWp/y4jrYiRuZCGfE6..6j98Io1uVsG.dOnejpEkJx2",
         "id": 7,
         "image": "faltaimg.jpg"
+    },
+    {
+        "name": "pepito",
+        "user": "pepito",
+        "email": "pepito@gmail.com",
+        "password": "$2a$10$nb.1l4qLTBtWPvvl/mw99.EgbKzDgjtGZ0Hu9r1h79TnA/7gldgbG",
+        "id": 8,
+        "image": "faltaimg.jpg"
     }
 ]
