@@ -34,12 +34,12 @@ Sprint #4
 ● Qué hicimos la semana pasada: Implementar Midlwares.-
 ● Si se encontró con algún impedimento: Problema con las rutas.
 ● Qué va a hacer hoy: Implementacion de creacion de usuario
-● Proxima reunion: 14/07.-
+● Proxima reunion: 15/07.-
 
-6. 14/07:
+6. 15/07:
 ● Qué hicimos la semana pasada:Se corrigieron las validaciones. 
 ● Si se encontró con algún impedimento: Empezo a fallar el json.
-● Qué va a hacer hoy: Se ajusta json y se modifica el registro. Se hace correr el suario 
+● Qué va a hacer hoy: Se ajusta json y se modifica el registro. Se hace correr el usuario.
 ● Proxima reunion:.- 
 
 
