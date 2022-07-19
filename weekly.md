@@ -40,6 +40,12 @@ Sprint #4
 ● Qué hicimos la semana pasada:Se corrigieron las validaciones. 
 ● Si se encontró con algún impedimento: Empezo a fallar el json.
 ● Qué va a hacer hoy: Se ajusta json y se modifica el registro. Se hace correr el usuario.
-● Proxima reunion:.- 
+● Proxima reunion: 19/07.-
+
+6. 19/07:
+● Qué hicimos la semana pasada:Se corrigieron las configuraciones en app.js. 
+● Si se encontró con algún impedimento: Ninguno.
+● Qué va a hacer hoy: Se hacen validaciones en login.
+● Proxima reunion: .-
 
 
