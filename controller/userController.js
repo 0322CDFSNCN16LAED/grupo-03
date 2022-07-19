@@ -12,6 +12,12 @@ const userController ={
 
     store: (req, res) => {
         const errors = validationResult(req);
+        const user = db.findByEmail(req.body.email);
+
+        if (user){            
+            return res.render("./usuario/register",{
+                errors: {email: { msg: 'Este correo ya esta registrado'}}, old : req.body}); 
+        }
 
         if (errors.isEmpty()) {
             const newUser = req.body;
@@ -44,19 +50,26 @@ const userController ={
     },
     
     ingreso : (req,res)=>{
-        const { email, password } = req.body;
+        const errors = validationResult(req);        
+        const user = db.findByEmail(req.body.email);
         
-        const user = db.findByEmail(email);
+        if (user==undefined){            
+            return res.render("./usuario/login",{
+                errors: {email: { msg: 'Este usuario no esta registrado'}}, old : req.body}); 
+        }
 
-        if (user && bcrypt.compareSync(password, user.password)) {
+        let valiPaswor= bcrypt.compareSync(req.body.password, user.password);
+
+        if (valiPaswor){            
             req.session.loggedUser = user;
             res.redirect("/user/perfil");
             return;
         }
 
-        res.render("./usuario/login", {
-            error: true,
-        });
+        return res.render("./usuario/login",{
+            errors: {password: { msg: 'Credenciales erradas'}}, old : req.body
+        }); 
+        
     },
 
     perfil: (req, res)=>{        

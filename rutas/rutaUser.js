@@ -45,19 +45,9 @@ const fileUpload= multer({storage: multerDiskStorage});
 router.get('/register', userController.register);
 router.post('/register', fileUpload.single('image'), validationFormularioRegistro, userController.store);
 
-router.get("/login",userController.login);
-router.post("/login",validationFormularioIngreso,userController.ingreso);
+router.get("/login", userController.login);
+router.post("/login", validationFormularioIngreso, userController.ingreso);
 
 router.get("/perfil",userController.perfil);
-
-/*obtener un solo usuario*/
-//router.get('/:id', userController.detail);
- 
-/*editar, actualizar y eliminar un usuario*/ 
-//router.get("/edit/:id", userController.edit);
-//router.put("/update/:id", fileUpload.single('image'), userController.update);
-//router.delete("/delete/:id", userController.destroy);
-
-
 
 module.exports=router;

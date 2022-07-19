@@ -18,7 +18,7 @@
                 </nav>
             </h3>    
     
-            <form class="fx fx-wrap justify-center" action="/user/perfil" method="get">  
+            <form class="fx fx-wrap justify-center" action="/user/login" method="POST">  
                 <p class="font-bold m-8 w-70 pt-40">Email:</p>   
                <input class="login-forms m-8" type="email" name="email" id="email" placeholder="Escriba su email">
                <%if (locals.errors && errors.email){%>
@@ -28,7 +28,7 @@
                <p class="font-bold m-8 w-70">Contraseña:</p>   
                <input class="login-forms m-8" type="password" name="password" id="password" placeholder="Escriba su contraseña">
                <%if (locals.errors && errors.password){%>
-                <label class="font-bold m-8 w-70 c-red"><%=errors.password.msg%></label>   
+                   <label class="font-bold m-8 w-70 c-red"><%=errors.password.msg%></label>   
                <%}%> 
 
                <a href="#" class="align-self-center text-center w-70 p-10 links font-blue underline">¿Olvidaste tu contraseña?</a>

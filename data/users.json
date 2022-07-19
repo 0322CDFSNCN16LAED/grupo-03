@@ -30,5 +30,37 @@
         "password": "$2a$10$nb.1l4qLTBtWPvvl/mw99.EgbKzDgjtGZ0Hu9r1h79TnA/7gldgbG",
         "id": 8,
         "image": "faltaimg.jpg"
+    },
+    {
+        "name": "pepito",
+        "user": "pepito",
+        "email": "pepito@gmail.com",
+        "password": "$2a$10$GJ9T04f.8tMQqlgOJEAgVO6PIiu9Ed2JvxvTBGos/XRbouvczqro.",
+        "id": 9,
+        "image": "faltaimg.jpg"
+    },
+    {
+        "name": "rtert",
+        "user": "retret",
+        "email": "pepito@gmail.com",
+        "password": "$2a$10$Lt2eO8cb.UV9t7tZ4wMOzOrGrB0BG92zcyzTlgSjdcPX6/FI2cjeO",
+        "id": 10,
+        "image": "faltaimg.jpg"
+    },
+    {
+        "name": "gfdgfd",
+        "user": "dfgdfg",
+        "email": "pepito@gmail.com",
+        "password": "$2a$10$4j5RRJSRoHHB89g.zX/qcetN1G4Zcl9ZN3vcWLA6vPAkbPj28thlu",
+        "id": 11,
+        "image": "faltaimg.jpg"
+    },
+    {
+        "name": "maria rangel",
+        "user": "maria",
+        "email": "mariarangel@gmail.com",
+        "password": "$2a$10$AU.9gbG8RZEgt1lgtHPvOe/iXJOng9xOi97IWZkOgtMnNuvn0b2WW",
+        "id": 12,
+        "image": "faltaimg.jpg"
     }
 ]
