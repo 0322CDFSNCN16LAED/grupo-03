@@ -17,8 +17,14 @@ app.listen(PUERTO,()=>{
 });
 
 
-app.use(express.static(path.join(__dirname,'public')));
-app.use(session( { secret: "mensaje secreto" } ));
+app.use(express.static(path.join(__dirname, 'public')));
+//se agrega configuracion session
+app.use(session({
+    secret: "mensaje secreto", 
+    resave: false,
+    saveUninitialized: false,
+}));
+
 app.use(sessionActiva);
 
 const rutaMain= require("./rutas/rutaMain");
