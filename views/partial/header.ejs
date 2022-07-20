@@ -62,14 +62,31 @@
             <div class="menu-desplegable">
                 <li class=""> <i class="fas fa-user-circle font-cream icon-header"></i> </li>
                     <div class="desplegable2">
-                        <a href="/user/login">Iniciar sesión</a>
-                        <a href="/user/register">Registrarse</a>
+                        <% if (locals.isLogger){%>
+                           <a href="/user/login">Iniciar sesión</a>
+                           <a href="/user/register">Registrarse</a>
+                           <a href="#">Mi Perfil</a> 
+                           <a href="/user/logout">Cerrar Sesion</a>
+                        <%}else{%>
+                            <a href="/user/login">Iniciar sesión</a>
+                            <a href="/user/register">Registrarse</a>                            
+                        <%}%>     
                     </div>
             </div> 
 
-            <a href="/ventas/carrito">
+            <div class="menu-desplegable">
                 <li class=""> <i class="fas fa-shopping-bag font-cream icon-header"></i></li>
-            </a>
+                <% if (locals.isLogger){%>
+                    <div class="desplegable2">
+                        <a href="/ventas/carrito">Comprar</a>
+                        <a href="#">Historial de Compras</a>
+                    </div> 
+                <%}else{%>
+                    <div class="desplegable2">
+                        <a href="/ventas/carrito">Comprar</a>
+                    </div> 
+                <%}%>    
+            </div>
 
             <div class="menu-desplegable">
                 <li class=""> <i class="fas fa-cog font-cream icon-header"></i> </li>

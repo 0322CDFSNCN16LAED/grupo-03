@@ -77,7 +77,12 @@ const userController ={
         return res.render('./usuario/perfil',{
             user: req.session.loggedUser
         });
-    }    
+    },
+    
+    logout: (req, res)=>{
+        req.session.destroy;        
+        return res.redirect("/");
+    } 
 }
 
 module.exports=userController;

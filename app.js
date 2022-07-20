@@ -2,7 +2,10 @@ const express = require('express');
 const session= require("express-session");
 const app = express();
 const path = require('path');
+const aplicationMiddleware = require("./middleware/aplicationMiddleware");
 const sessionActiva = require("./middleware/sessionActiva");
+
+
 const PUERTO=3000;
 
 app.set('view engine', 'ejs'); /* para utilizar plantillas ejs   */
@@ -25,6 +28,7 @@ app.use(session({
     saveUninitialized: false,
 }));
 
+app.use(aplicationMiddleware);
 app.use(sessionActiva);
 
 const rutaMain= require("./rutas/rutaMain");
@@ -37,4 +41,5 @@ const rutaCarrito= require("./rutas/rutaCarrito");
 app.use("/ventas",rutaCarrito);
 
 const rutaProductos= require("./rutas/rutaProductos");
+
 app.use("/productos",rutaProductos);
