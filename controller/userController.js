@@ -60,10 +60,11 @@ const userController ={
 
         let valiPaswor= bcrypt.compareSync(req.body.password, user.password);
 
-        if (valiPaswor){            
+        if (valiPaswor){  
+            delete user.password;          
             req.session.loggedUser = user;
-            res.redirect("/user/perfil");
-            return;
+            return res.redirect("/user/perfil");
+            
         }
 
         return res.render("./usuario/login",{
@@ -73,7 +74,9 @@ const userController ={
     },
 
     perfil: (req, res)=>{        
-        res.render('./usuario/perfil');
+        return res.render('./usuario/perfil',{
+            user: req.session.loggedUser
+        });
     }    
 }
 
