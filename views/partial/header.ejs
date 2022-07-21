@@ -55,7 +55,7 @@
         </nav>
         <!---->
 
-        <ul type="none" class="fx fx-wrap align-self-center p-20-laptop">
+        <ul type="none" class="fx fx-wrap align-self-center p-20-laptop">            
             <a href="/">
                 <li class=""> <i class="fas fa-home font-cream icon-header"></i></li>
             </a> 
@@ -87,14 +87,15 @@
                     </div> 
                 <%}%>    
             </div>
-
-            <div class="menu-desplegable">
-                <li class=""> <i class="fas fa-cog font-cream icon-header"></i> </li>
-                    <div class="desplegable2">
-                        <a href="/productos/create">Agregar un producto</a>
-                        <a href="/productos">Editar un producto</a>
-                    </div>
-            </div> 
+            <% if (locals.isLogger==false){%>  
+                <div class="menu-desplegable">
+                    <li class=""> <i class="fas fa-cog font-cream icon-header"></i> </li>                                        
+                        <div class="desplegable2">
+                            <a href="/productos/create">Agregar un producto</a>
+                            <a href="/productos">Editar un producto</a>
+                        </div>                    
+                </div>
+            <%}%>   
 
         </ul>
     </div>               

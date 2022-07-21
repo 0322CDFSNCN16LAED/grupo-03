@@ -20,6 +20,7 @@ const userController ={
         }
 
         if (errors.isEmpty()) {
+            
             const newUser = req.body;
             if (users.length) {
                 newUser.id = users[users.length - 1].id + 1;            
@@ -45,7 +46,7 @@ const userController ={
         }        
     },
     
-    login: (req, res)=>{
+    login: (req, res)=>{            
         res.render('./usuario/login');
     },
     
@@ -60,11 +61,13 @@ const userController ={
 
         let valiPaswor= bcrypt.compareSync(req.body.password, user.password);
 
-        if (valiPaswor){  
+        if (valiPaswor){ 
             delete user.password;          
             req.session.loggedUser = user;
-            return res.redirect("/user/perfil");
-            
+            if (req.body.recordarUsuario){
+                res.cookie('infoEmail',req.body.email, { maxAge: (1000 * 60) * 60 });/*****guardo en email en cookies*****/
+            }
+            return res.redirect("/user/perfil");            
         }
 
         return res.render("./usuario/login",{
@@ -73,13 +76,15 @@ const userController ={
         
     },
 
-    perfil: (req, res)=>{        
+    perfil: (req, res)=>{   
+        console.log(req.cookies.infoEmail);     
         return res.render('./usuario/perfil',{
             user: req.session.loggedUser
         });
     },
     
     logout: (req, res)=>{
+        res.clearCookie("infoEmail");
         req.session.destroy;        
         return res.redirect("/");
     } 
