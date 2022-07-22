@@ -5,18 +5,18 @@ module.exports=(sequelize, dataTypes) =>{
     /**2.- nombre de las columnas*****************************************/ 
     const cols= {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },        
         precio: {
-            type: dataTypes.FLOAT
+            type: DataTypes.FLOAT
         } ,
         descripcion:{
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },        
         usuario_producto_id:{
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         }
     };
  
