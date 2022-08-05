@@ -9,8 +9,8 @@ module.exports=(sequelize, dataTypes) =>{
             primaryKey: true,
             autoIncrement: true
         },
-        nombre:{
-            type: dataTypes.STRING
+        category:{
+            type: dataTypes.STRING(20)
         }
     };
  
@@ -22,6 +22,12 @@ module.exports=(sequelize, dataTypes) =>{
     
     /***4.- sequalize.define***********************************/
     const Categoria = sequelize.define(alias, cols, config); 
+    Categoria.associate= function(models){
+        Categoria.hasMany(models.Producto,{
+           as: "reproducto",
+           foreignkey : "id"
+        })
+    }
      
     /***5.- return tabla*************************************/
     return Categoria;

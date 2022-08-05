@@ -1,31 +1,34 @@
 module.exports=(sequelize, dataTypes) =>{
     /**1.- nombre de la tabla*********************/
-     const alias ="UserProductos";
+     let alias ="MetodoDepago";
  
     /**2.- nombre de las columnas*****************************************/ 
-    const cols= {
+    let cols= {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        user_id:{
-            type: dataTypes.INTEGER
-        },
-        producto_id:{
-            type: dataTypes.INTEGER
+        nombre:{
+            type: dataTypes.STRING(20)
         }
     };
  
     /***3.- configuracion***************************************/
-    const config={
-        tableName: "userproductos", /****nombre en la base de datos****/
+    let config={
+        tableName: "metododepago", /****nombre en la base de datos****/
         timestamps: false
     };
     
     /***4.- sequalize.define***********************************/
-    const UserProducto = sequelize.define(alias, cols, config); 
+    let MetodoDepago = sequelize.define(alias, cols, config); 
+    MetodoDepago.associate= function(models){
+        MetodoDepago.hasMany(models.Compra,{
+           as: "recompra",
+           foreignkey : "id"
+        })
+    }
      
     /***5.- return tabla*************************************/
-    return UserProducto;
+    return MetodoDepago;
  }

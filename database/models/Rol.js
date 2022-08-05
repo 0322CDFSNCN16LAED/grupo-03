@@ -1,6 +1,6 @@
 module.exports=(sequelize, dataTypes) =>{
     /**1.- nombre de la tabla*********************/
-     const alias ="Users";
+     const alias ="Rol";
  
     /**2.- nombre de las columnas*****************************************/ 
     const cols= {
@@ -10,22 +10,25 @@ module.exports=(sequelize, dataTypes) =>{
             autoIncrement: true
         },
         nombre:{
-            type: dataTypes.STRING
-        },        
-        imagen:{
-            type: dataTypes.STRING
-        }        
+            type: dataTypes.STRING(20)
+        }
     };
  
     /***3.- configuracion***************************************/
     const config={
-        tableName: "users", /****nombre en la base de datos****/
+        tableName: "rol", /****nombre en la base de datos****/
         timestamps: false
     };
     
     /***4.- sequalize.define***********************************/
-    const User = sequelize.define(alias, cols, config); 
+    const Rol = sequelize.define(alias, cols, config); 
+    Rol.associate= function(models){
+        Rol.hasMany(models.Usuario,{
+           as: "reusuario",
+           foreignkey : "id"
+        })
+    }
      
     /***5.- return tabla*************************************/
-    return User;
+    return Rol;
  }

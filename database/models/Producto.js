@@ -9,20 +9,20 @@ module.exports=(sequelize, dataTypes) =>{
            primaryKey: true,
            autoIncrement: true
        },
-       nombre:{
-           type: dataTypes.STRING
+       name:{
+           type: dataTypes.STRING(50)
        },
-       precio: {
+       price: {
            type: dataTypes.FLOAT
        } ,
-       descripcion:{
-           type: dataTypes.STRING
+       description:{
+           type: dataTypes.STRING(200)
        },
-       imagen:{
-           type: dataTypes.STRING
+       image:{
+           type: dataTypes.STRING(100)
        },
        categoria_id:{
-           type: dataTypes.INTEGER
+           type: dataTypes.INTEGER        
        }
    };
 
@@ -34,6 +34,18 @@ module.exports=(sequelize, dataTypes) =>{
    
    /***4.- sequalize.define***********************************/
    const Producto = sequelize.define(alias, cols, config); 
+
+   /*******************associate**************************/
+   Producto.associate= function(models){
+       Producto.belongsTo(models.Categoria,{
+          as: "recategoria",
+          foreignkey : "categoria_id"
+       }),
+       Producto.belongsTo(models.CompraProducto,{
+        as: "recompra",
+        foreignkey : "id"
+     })
+   }
     
    /***5.- return tabla*************************************/
    return Producto;
