@@ -5,30 +5,33 @@ module.exports=(sequelize, dataTypes) =>{
     /**2.- nombre de las columnas*****************************************/ 
     const cols= {
         id: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },        
         precio: {
-            type: DataTypes.FLOAT
+            type: dataTypes.FLOAT
         } ,
         descripcion:{
-            type: DataTypes.STRING(100)
+            type: dataTypes.STRING
         }, 
         fechacompra:{
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },    
         metododepago_id:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         envio_id:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
+        },
+        compra_id:{
+            type: dataTypes.INTEGER
         }
     };
  
     /***3.- configuracion***************************************/
     const config={
-        tableName: "compra", /****nombre en la base de datos****/
+        tableName: "compras", /****nombre en la base de datos****/
         timestamps: false
     };
     
@@ -36,21 +39,27 @@ module.exports=(sequelize, dataTypes) =>{
     const Compra = sequelize.define(alias, cols, config); 
     
     Compra.associate= function(models){
-        Compra.belongsTo(models.UsuarioCompra,{
-           as: "reusuariocompra",
-           foreignkey : "id"
+        Compra.belongsTo(models.Usuario,{
+           as: "usuario",
+           through: "CompraUsuario",
+           foreignKey : "compra_id",
+           otherKey: "usuario_id",
+           timestamps: false
         }),
-         Compra.belongsTo(models.CompraProducto,{
-             as: "recompraproducto",
-             foreignkey : "id"
+         Compra.belongsTo(models.Producto,{
+             as: "producto",
+             through: "CompraProducto",
+             foreignKey : "compra_id",
+             otherKey: "producto_id",
+             timestamps: false
         }),      
         Compra.belongsTo(models.MetodoDepago,{
-            as: "remetododepago",
-            foreignkey : "metododepago_id"
+            as: "metododepago",
+            foreignKey : "metododepago_id"
         }),
         Compra.belongsTo(models.Envio,{
-            as: "reenvio",
-            foreignkey : "envio_id"
+            as: "envio",
+            foreignKey : "envio_id"
         })
     }
      

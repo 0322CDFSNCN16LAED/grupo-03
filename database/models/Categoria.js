@@ -1,8 +1,5 @@
-module.exports=(sequelize, dataTypes) =>{
-    /**1.- nombre de la tabla*********************/
-     const alias ="Categorias";
- 
-    /**2.- nombre de las columnas*****************************************/ 
+module.exports=(sequelize, dataTypes) =>{    
+    const alias ="Categoria";
     const cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -10,25 +7,22 @@ module.exports=(sequelize, dataTypes) =>{
             autoIncrement: true
         },
         category:{
-            type: dataTypes.STRING(20)
+            type: dataTypes.STRING
         }
     };
- 
-    /***3.- configuracion***************************************/
     const config={
         tableName: "categorias", /****nombre en la base de datos****/
         timestamps: false
     };
-    
-    /***4.- sequalize.define***********************************/
+      
     const Categoria = sequelize.define(alias, cols, config); 
+    
     Categoria.associate= function(models){
         Categoria.hasMany(models.Producto,{
-           as: "reproducto",
-           foreignkey : "id"
+           as: "productos",
+           foreignkey : "categoria_id" ///relacopn entre las dos tablas///
         })
     }
-     
-    /***5.- return tabla*************************************/
+      
     return Categoria;
  }

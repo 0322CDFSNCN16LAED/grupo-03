@@ -1,92 +1,93 @@
-const db = require("../data/db");
-const products = db.getAll();
+const db = require("../database/models");
+
+const sequelize = db.sequelize;
+//const products = db.getAll();
 
 const productoController ={
         
-    // Mostrar todos los productos
-    index: (req, res) => {
-        res.render("./productos/productosListado", {
-            products: products,
-        });
-    },
+    // Mostrar todos los productos (listo)   
+    index: async(req,res)=>{
+        const products = await sequelize.query("SELECT * FROM `productos`", { type: sequelize.QueryTypes.SELECT });
+        res.render("./productos/productosListado",{products:products});
+        /*let products=await db.Producto.findAll();        
+        res.render("./productos/productosListado",{products:products});   */     
+    },    
     
-    
-    // Mostrar un producto
-    detail: (req, res) => {
-        res.render("./productos/productoDetalle", {
-            producto: db.getOne(req.params.id),
-        });
+    // Mostrar un producto (listo)
+    detail: async(req, res) => {        
+        /*let producto= await db.Producto.findByPk(req.params.id,{
+            include:[{associate: "categoria" }]
+        });  */   
+        let producto= await db.Producto.findByPk(req.params.id);   
+        console.log(req.params.id);
+        die(); 
+        res.render("./productos/productoDetalle",{producto:producto});        
     },
     
      // Mostrar productos por categoría
-     category:(req,res) =>{        
+    category:(req,res) =>{        
         res.render("./productos/productosCategoria", {
             products: products.filter((p) => p.category == req.params.category),
         });
     },
 
-    // Agregar producto - vista
-    create: (req, res) =>{
-        res.render("./productos/productAdd");
+    // Agregar producto - vista(listo)
+    create: async(req, res) =>{
+        const categorias= await db.Categoria.findAll();
+        res.render("./productos/productAdd", {categorias: categorias});        
     },
 
-    // Agregar producto 
+    // Agregar producto (listo)    
     store: (req, res) => {
-        const newProduct = req.body;
-        if (products.length) {
-            newProduct.id = products[products.length - 1].id + 1;            
-        } else {
-            newProduct.id = 1;
-        }
-        
-        newProduct.name= req.body.name;
-        newProduct.price= req.body.price;
-        newProduct.category=req.body.category;
-        newProduct.description=req.body.description;
+        let archivo=null;
         if (req.file){
-            newProduct.image=req.file.filename; /*******************/
+                archivo=req.file.filename; 
         }else{
-            newProduct.image="faltaimg.jpg"
-        }       
-
-        products.push(newProduct);
-        db.saveAll(products);
-        res.redirect("/productos");
-    },
-
-    // Editar un producto - vistas
-    edit: (req, res) => {
-        let productoEditar = products.find((product) => product.id == req.params.id);
-        res.render("./productos/productEdit", { productoEditar: productoEditar });
-    },
-
-    
-    // Editar y actualizar un producto
-    update: (req, res) => {       
-        const index = products.findIndex((p) => { 
-            return p.id == req.params.id
-        });
-        
-        const product = products[index];           
-        product.name = req.body.name;
-        product.category = req.body.category;
-        product.price = req.body.price;
-        product.description = req.body.description;
-        if (req.file){
-            product.image = req.file.filename;
+                archivo="faltaimg.jpg";
         }
-        
-        db.saveAll(products);
+        db.Producto.create({
+            name:req.body.name,
+            price: req.body.price,
+            description:req.body.description,
+            image:archivo,
+            categoria_id:req.body.category           
+        });
+        res.redirect("/productos");
+    },
+
+    // Editar un producto - vistas(listo)
+    edit: async(req, res) => {
+        console.log(req.params.id);
+        let producto= await db.Producto.findByPk(req.params.id);        
+        res.render("./productos/productEdit",{producto:producto});       
+    },
+    
+    // Editar y actualizar un producto (listo)
+    update: (req, res) => { 
+        let archivo=null;
+        if (req.file){
+           archivo=req.file.filename; 
+        }
+        db.Producto.update({
+            name:req.body.name,
+            price: req.body.price,
+            description:req.body.description,
+            image:archivo,
+            categoria_id:req.body.category           
+        },{
+            where: {id : req.params.id}
+        });
         res.redirect("/productos");
     },
 
     
-    // Delete - Delete one product from DB
+    // Delete - Delete one product from DB (listo)
     destroy: (req, res) => {
-        const filteredProducts = products.filter((p) => {
-            return p.id != req.params.id;
-        });        
-        db.saveAll(filteredProducts);
+        db.Producto.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
         res.redirect("/productos");
     },
 

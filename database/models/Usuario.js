@@ -10,19 +10,19 @@ module.exports=(sequelize, dataTypes) =>{
             autoIncrement: true
         },
         name:{
-            type: dataTypes.STRING(20)
+            type: dataTypes.STRING
         },  
         user:{
-            type: dataTypes.STRING(20)
+            type: dataTypes.STRING
         }, 
         email:{
-            type: dataTypes.STRING(50)
+            type: dataTypes.STRING
         },
         password:{
-            type: dataTypes.STRING(100)
+            type: dataTypes.STRING
         },      
         imagen:{
-            type: dataTypes.STRING(50)
+            type: dataTypes.STRING
         },        
         rol_id: {
             type: dataTypes.INTEGER
@@ -31,7 +31,7 @@ module.exports=(sequelize, dataTypes) =>{
  
     /***3.- configuracion***************************************/
     const config={
-        tableName: "usuario", /****nombre en la base de datos****/
+        tableName: "usuarios", /****nombre en la base de datos****/
         timestamps: false
     };
     
@@ -39,12 +39,15 @@ module.exports=(sequelize, dataTypes) =>{
     const Usuario = sequelize.define(alias, cols, config); 
 
     Usuario.associate= function(models){   
-        Usuario.belongsTo(models.UsuarioCompra,{
-            as: "rusuariocompra",
-            foreignkey : "id"
-        }),     
+        Usuario.belongsTo(models.Compra,{
+            as: "compra",
+            through: "CompraUsuario",
+            foreignKey : "usuario_id",
+            otherKey: "compra_id",
+            timestamps: false
+        });     
         Usuario.belongsTo(models.Rol,{
-            as: "rerol",
+            as: "rol",
             foreignkey : "rol_id"
         })        
     }

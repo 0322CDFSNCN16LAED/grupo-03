@@ -14,17 +14,16 @@
 
             <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
             <input class="login-forms mb-10" type="number" name="price" id="price" placeholder="40000">
-                
-            <label for="category" class="font-bold w-70 pt-40 p-8">Categoría del producto:</label>
-                    <select name="category" id="category" class="form-input">
-                        <option value="Bicicletas">Bicicletas</option>
-                        <option value="Monopatines">Monopatines</option>
-                        <option value="Skateboards">Skateboards</option>
-                        <option value="Hoverboards">Hoverboards</option>
-                        <option value="Accesorios">Accesorios</option>
-                    </select>
-
-            <label for="name" class="font-bold w-70 p-8">Imagen:</label>
+             
+            <label for="category" class="font-bold w-70 p-8">Categoría del producto:</label>
+            <select name="category" class="font-bold w-70 p-8">
+                <%for (let i=0; i < categorias.length; i++){ %>
+                    <option value="<%=categorias[i].id%>">
+                       <%=categorias[i].category%>
+                    </option>
+                <%}%>
+            </select>       
+            <label for="name" class="font-bold w-70 pt-40 p-8">Imagen:</label>
             <input class="w-70 mb-10" type="file" name="image" id="image">
                      
             <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>

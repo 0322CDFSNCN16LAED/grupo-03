@@ -1,8 +1,5 @@
-module.exports=(sequelize, dataTypes) =>{
-   /**1.- nombre de la tabla*********************/
-    const alias ="Productos";
-
-   /**2.- nombre de las columnas*****************************************/ 
+module.exports=(sequelize, dataTypes) =>{   
+   const alias ="Producto";
    const cols= {
        id: {
            type: dataTypes.INTEGER,
@@ -10,41 +7,41 @@ module.exports=(sequelize, dataTypes) =>{
            autoIncrement: true
        },
        name:{
-           type: dataTypes.STRING(50)
+           type: dataTypes.STRING
        },
        price: {
            type: dataTypes.FLOAT
        } ,
        description:{
-           type: dataTypes.STRING(200)
+           type: dataTypes.STRING
        },
        image:{
-           type: dataTypes.STRING(100)
+           type: dataTypes.STRING
        },
        categoria_id:{
            type: dataTypes.INTEGER        
        }
    };
-
-   /***3.- configuracion***************************************/
+   
    const config={
        tableName: "productos", /****nombre en la base de datos****/
        timestamps: false
-   };
-   
-   /***4.- sequalize.define***********************************/
+   };   
+  
    const Producto = sequelize.define(alias, cols, config); 
-
-   /*******************associate**************************/
+   
    Producto.associate= function(models){
        Producto.belongsTo(models.Categoria,{
-          as: "recategoria",
+          as: "categoria",
           foreignkey : "categoria_id"
-       }),
-       Producto.belongsTo(models.CompraProducto,{
-        as: "recompra",
-        foreignkey : "id"
-     })
+       });
+       Producto.belongsTo(models.Compra,{
+        as: "compra",
+        through: "CompraProducto",
+        foreignKey : "producto_id",
+        otherKey: "compra_id",
+        timestamps: false
+      })
    }
     
    /***5.- return tabla*************************************/

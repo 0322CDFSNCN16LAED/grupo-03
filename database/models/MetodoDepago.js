@@ -10,13 +10,13 @@ module.exports=(sequelize, dataTypes) =>{
             autoIncrement: true
         },
         nombre:{
-            type: dataTypes.STRING(20)
+            type: dataTypes.STRING
         }
     };
  
     /***3.- configuracion***************************************/
     let config={
-        tableName: "metododepago", /****nombre en la base de datos****/
+        tableName: "metododepagos", /****nombre en la base de datos****/
         timestamps: false
     };
     
@@ -24,8 +24,8 @@ module.exports=(sequelize, dataTypes) =>{
     let MetodoDepago = sequelize.define(alias, cols, config); 
     MetodoDepago.associate= function(models){
         MetodoDepago.hasMany(models.Compra,{
-           as: "recompra",
-           foreignkey : "id"
+           as: "compra",
+           foreignkey : "metododepago_id"
         })
     }
      

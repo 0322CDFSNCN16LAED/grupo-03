@@ -27,7 +27,6 @@ router.get("/search", productoController.search);
 
 /*crear un producto*/ 
 router.get('/create', productoController.create); 
-//router.post('/guardar', productoController.store); 
 router.post('/guardar', fileUpload.single('image'),  productoController.store);
 
 /*obtener un solo producto*/

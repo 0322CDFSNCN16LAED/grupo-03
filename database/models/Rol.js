@@ -10,13 +10,13 @@ module.exports=(sequelize, dataTypes) =>{
             autoIncrement: true
         },
         nombre:{
-            type: dataTypes.STRING(20)
+            type: dataTypes.STRING
         }
     };
  
     /***3.- configuracion***************************************/
     const config={
-        tableName: "rol", /****nombre en la base de datos****/
+        tableName: "rols", /****nombre en la base de datos****/
         timestamps: false
     };
     
@@ -24,8 +24,8 @@ module.exports=(sequelize, dataTypes) =>{
     const Rol = sequelize.define(alias, cols, config); 
     Rol.associate= function(models){
         Rol.hasMany(models.Usuario,{
-           as: "reusuario",
-           foreignkey : "id"
+           as: "usuario",
+           foreignkey : "rol_id"
         })
     }
      

@@ -1,40 +1,40 @@
 module.exports=(sequelize, dataTypes) =>{
     /**1.- nombre de la tabla*********************/
-     const alias ="Envios";
+     const alias ="Envio";
  
     /**2.- nombre de las columnas*****************************************/ 
     const cols= {
         id: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },        
         calle: {
-            type: DataTypes.STRING(50)
+            type: dataTypes.STRING
         } ,
         cp:{
-            type: DataTypes.STRING(10)
+            type: dataTypes.STRING
         },        
         numero:{
-            type: DataTypes.STRING(10)
+            type: dataTypes.STRING
         },
         piso:{
-            type: DataTypes.STRING(10)
+            type: dataTypes.STRING
         },
         apartamento:{
-            type: DataTypes.STRING(10)
+            type: dataTypes.STRING
         },
         fechaEntrega:{
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },        
         provincia:{
-            type: DataTypes.STRING(50)
+            type: dataTypes.STRING
         },
         localidad:{
-            type: DataTypes.STRING(50)
+            type: dataTypes.STRING
         },
         municipio:{
-            type: DataTypes.STRING(50)
+            type: dataTypes.STRING
         }
     };
  
@@ -48,8 +48,8 @@ module.exports=(sequelize, dataTypes) =>{
     const Envio = sequelize.define(alias, cols, config); 
     Envio.associate= function(models){
         Envio.belongsTo(models.Compra,{
-           as: "recompra",
-           foreignkey : "id"
+           as: "compra",
+           foreignKey : "envio_id"
         })
     }
      
