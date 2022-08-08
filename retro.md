@@ -51,3 +51,13 @@ Sprint #4
 
 4.- Hacer menos: Falta de participacion de algunos integrantes.
 
+Sprint #5
+
+1.-Comenzar Hacer: Contacto mas dinamico entre los integrantes que no participen.
+
+2.- Hacer más: Que todo el grupo trabaje.
+
+3.- Continuar haciendo: Llevar al dia las entregas.
+
+4.- Hacer menos: reunirnos con poca frecuencia. 
+
