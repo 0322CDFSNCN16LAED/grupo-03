@@ -1,5 +1,5 @@
 module.exports=(sequelize, dataTypes) =>{   
-    const alias ="UsuarioCompra";
+    const alias ="CompraUsuario";
     const cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -15,23 +15,23 @@ module.exports=(sequelize, dataTypes) =>{
     };
     
     const config={
-        tableName: "usuariocompras", /****nombre en la base de datos****/
+        tableName: "comprausuarios", /****nombre en la base de datos****/
         timestamps: false
     };   
    
-    const UsuarioCompra = sequelize.define(alias, cols, config); 
+    const CompraUsuario = sequelize.define(alias, cols, config); 
     
-    UsuarioCompra.associate= function(models){
-        UsuarioCompra.belongsTo(models.Compra,{
+    CompraUsuario.associate= function(models){
+        CompraUsuario.belongsTo(models.Compra,{
            as: "compra",
            foreignkey : "compra_id"
         });
-        UsuarioCompra.belongsTo(models.Usuario,{
+        CompraUsuario.belongsTo(models.Usuario,{
             as: "usuario",
             foreignkey : "usuario_id"
          })
     }
      
     /***5.- return tabla*************************************/
-    return UsuarioCompra;
+    return CompraUsuario;
  }

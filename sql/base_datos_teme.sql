@@ -107,7 +107,7 @@ CREATE TABLE `teme`.`usuarios` (
   insert into teme.usuarios values(1,"pedro perez","pepito","pepito@gmail.com","$2a$10$Lt2eO8cb.UV9t7tZ4wMOzOrGrB0BG92zcyzTlgSjdcPX6/FI2cjeO","faltaimg.jpg",2);
 
 /*************************usuario compra**************************************************/
-CREATE TABLE `teme`.`usuariocompras` (
+CREATE TABLE `teme`.`comprausuarios` (
   `id` INT NOT NULL,
   `usuario_id` INT NULL,
   `compra_id` INT NULL,
