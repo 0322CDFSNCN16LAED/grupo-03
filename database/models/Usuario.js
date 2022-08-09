@@ -39,16 +39,16 @@ module.exports=(sequelize, dataTypes) =>{
     const Usuario = sequelize.define(alias, cols, config); 
 
     Usuario.associate= function(models){   
-        Usuario.belongsTo(models.Compra,{
+        /*Usuario.belongsTo(models.Compra,{
             as: "compra",
             through: "CompraUsuario",
             foreignKey : "usuario_id",
             otherKey: "compra_id",
             timestamps: false
-        });     
+        }); */  
         Usuario.belongsTo(models.Rol,{
             as: "rol",
-            foreignkey : "rol_id"
+            foreignKey : "rol_id"
         });        
     }
      

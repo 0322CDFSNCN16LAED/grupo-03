@@ -17,10 +17,10 @@ module.exports=(sequelize, dataTypes) =>{
        },
        image:{
            type: dataTypes.STRING
-       },
+       }/*
        categoria_id:{
            type: dataTypes.INTEGER        
-       }
+       }*/
    };
    
    const config={

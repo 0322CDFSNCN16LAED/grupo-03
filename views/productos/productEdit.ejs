@@ -6,37 +6,37 @@
 <body>
     <%-include ("../partial/header")%>    
     <main>
-        <h3 class="text-center p-20 font-black bg-orange">Estás editando: <%= productoEditar.name %></h3> 
-        <form class="fx fx-wrap justify-center" action="/productos/update/<%=productoEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">             
+        <h3 class="text-center p-20 font-black bg-orange">Estás editando: <%=producto.name %></h3> 
+        <form class="fx fx-wrap justify-center" action="/productos/update/<%=producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data">             
             <div>
-                <img class=" img p-8 img2_detalle" src="/imagenes/<%=productoEditar.image%>" alt="<%= productoEditar.name%>"/>
+                <img class=" img p-8 img2_detalle" src="/imagenes/<%=producto.image%>" alt="<%= producto.name%>"/>
             </div>
 
             <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
-            <input class="login-forms mb-10" type="text" name="name" id="name" value="<%=productoEditar.name%>">
+            <input class="login-forms mb-10" type="text" name="name" id="name" value="<%=producto.name%>">
 
             <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
-            <input class="login-forms mb-10" type="number" name="price" id="price" value="<%=productoEditar.price%>">
+            <input class="login-forms mb-10" type="number" name="price" id="price" value="<%=producto.price%>">
               
             <label for="image" class="font-bold w-70 mt-8 p-8">Cambio de Imagen:</label>
             <input class="w-70 mb-10" type="file" name="image" id="image">
 
-            <label for="category" class="font-bold w-70 pt-40 p-8">Categoría del producto:</label>
-            <input class="login-forms mb-10" type="text" name="category" id="category" value="<%=productoEditar.categoria_id%>"> 
-            <!--<select>
-                <%for (let i=0; i < categoria.length; i++){ %>
-                    <option value="<%=categoria[i].id%>">
-                        <%=categoria[i].category%>
+            <label for="category" class="font-bold w-70 pt-40 p-8">Categoría actual del producto:</label>
+            <input class="login-forms mb-10" type="text" name="category" id="category" value="<%=producto.categoria.category%>"> 
+            <select name="category_id" class="font-bold w-70 p-8">
+                <%for (let i=0; i < categorias.length; i++){ %>
+                    <option value="<%=categorias[i].id%>">
+                       <%=categorias[i].category%>
                     </option>
-                <%}%> 
-             </select> -->       
+                <%}%>
+            </select>       
             <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
-            <textarea class="textarea mb-10" type="text" name="description" id="description"><%=productoEditar.description%></textarea>
+            <textarea class="textarea mb-10" type="text" name="description" id="description"><%=producto.description%></textarea>
     
             <button class="align-self-center update-buttons mt-15 m-8 w-45" id="update" type="submit" >Guardar modificaciones</button>
         </form>
 
-        <form class="fx fx-wrap justify-center mb-30" action="/productos/delete/<%=productoEditar.id%>?_method=DELETE" method="POST">
+        <form class="fx fx-wrap justify-center mb-30" action="/productos/delete/<%=producto.id%>?_method=DELETE" method="POST">
             <button class="align-self-center update-buttons m-8 w-45" id="delete" type="submit" id="color">Eliminar producto</button>                
         </form>
         

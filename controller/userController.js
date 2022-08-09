@@ -5,7 +5,7 @@ const sequelize = db.sequelize;
 const { validationResult } = require("express-validator");
 
 const userController ={
-    // Registro de usuario
+    /***Registro de usuario ***/
     register: (req, res)=>{
         res.render('./usuario/register')
     },
@@ -38,7 +38,7 @@ const userController ={
                 res.render("./usuario/register", { errors: errors.mapped(), old: req.body });
             }   
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("store error ---> " + error);
          }  
     },
     
@@ -70,7 +70,7 @@ const userController ={
                 errors: {password: { msg: 'Credenciales erradas'}}, old : req.body
             }); 
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("ingreso error ---> " + error);
          }         
     },
 
