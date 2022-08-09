@@ -17,7 +17,7 @@ CREATE TABLE `teme`.`compras` (
   `precio` FLOAT NULL,
   `descripcion` VARCHAR(100) NULL,
   `fechacompra` DATE NULL,
-  `metododepado_id` INT NOT NULL,
+  `metododepago_id` INT NOT NULL,
   `envio_id` INT NOT NULL,
   PRIMARY KEY (`id`),  
   FOREIGN KEY (envio_id) REFERENCES envios(id));
@@ -113,6 +113,6 @@ CREATE TABLE `teme`.`comprausuarios` (
   `compra_id` INT NULL,
   PRIMARY KEY (`id`));
   
- 
+
       
       

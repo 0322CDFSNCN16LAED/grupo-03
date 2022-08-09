@@ -24,11 +24,11 @@ module.exports=(sequelize, dataTypes) =>{
     CompraProducto.associate= function(models){
         CompraProducto.belongsTo(models.Compra,{
            as: "compra",
-           foreignkey : "compra_id"
+           foreignKey : "compra_id"
         });
         CompraProducto.belongsTo(models.Producto,{
             as: "producto",
-            foreignkey : "producto_id"
+            foreignKey : "producto_id"
          });
     }
      

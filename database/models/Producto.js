@@ -33,16 +33,16 @@ module.exports=(sequelize, dataTypes) =>{
    Producto.associate= function(models){
        Producto.belongsTo(models.Categoria,{
           as: "categoria",
-          foreignkey: "categoria_id",
+          foreignKey: "categoria_id",
           timestamps: false
        });
-       Producto.belongsTo(models.Compra,{
+       /*Producto.belongsTo(models.Compra,{
         as: "compra",
         through: "CompraProducto",
         foreignKey : "producto_id",
         otherKey: "compra_id",
         timestamps: false
-      });
+      });*/
    }
     
    /***5.- return tabla*************************************/

@@ -25,7 +25,7 @@ module.exports=(sequelize, dataTypes) =>{
     MetodoDepago.associate= function(models){
         MetodoDepago.hasMany(models.Compra,{
            as: "compra",
-           foreignkey : "metododepago_id"
+           foreignKey : "metododepago_id"
         });
     }
      

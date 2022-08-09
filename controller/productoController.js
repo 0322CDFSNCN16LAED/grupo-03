@@ -12,7 +12,7 @@ const productoController ={
           console.log(products);
           res.render("./productos/productosListado",{products:products});
        }catch(error){
-          console.error("error ---> " + error);
+          console.error("listado error ---> " + error);
        }   
     },    
     
@@ -24,7 +24,7 @@ const productoController ={
             die(); 
             res.render("./productos/productoDetalle",{producto:producto}); 
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("detail error ---> " + error);
          }   
     },
     
@@ -42,11 +42,11 @@ const productoController ={
             const categorias= await db.Categoria.findAll();
             res.render("./productos/productAdd", {categorias: categorias}); 
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("create error ---> " + error);
          }   
     },
 
-    // Agregar producto (listo)    
+    // (listo)    
     store: (req, res) => {
         try{
             let archivo=null;
@@ -64,22 +64,18 @@ const productoController ={
             });
             res.redirect("/productos");
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("store error ---> " + error);
          } 
     },
 
     // Editar un producto - vistas(listo)
     edit: async(req, res) => {       
-        try{
-            console.log(req.params.id);
-            let producto= await db.Producto.findByPk(req.params.id,{
-                include:[{associate: "categoria" }],
-                raw: true,
-                nest: true
-            });        
+        try{            
+            let producto= await db.Producto.findByPk(req.params.id);       
+            console.log(producto); 
             res.render("./productos/productEdit",{producto:producto}); 
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("edit error ---> " + error);
          }      
     },
     
@@ -101,7 +97,7 @@ const productoController ={
             });
             res.redirect("/productos");
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("update error ---> " + error);
          } 
     },
 
@@ -112,10 +108,10 @@ const productoController ={
             const productos= await db.Producto.destroy({where: {id: req.params.id}});
             res.redirect("/productos");
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("destroy error ---> " + error);
          }
     },
-
+    ////listo
     search: async(req,res)=> {
         try{
             const searchedProducts = [];
@@ -129,7 +125,7 @@ const productoController ={
             console.log(searchedProducts);
             res.render("./productos/productosListado", {products: searchedProducts});
          }catch(error){
-            console.error("aca el error ---> " + error);
+            console.error("search error ---> " + error);
          }
     }
 
