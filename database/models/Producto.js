@@ -33,7 +33,8 @@ module.exports=(sequelize, dataTypes) =>{
    Producto.associate= function(models){
        Producto.belongsTo(models.Categoria,{
           as: "categoria",
-          foreignkey : "categoria_id"
+          foreignkey: "categoria_id",
+          timestamps: false
        });
        Producto.belongsTo(models.Compra,{
         as: "compra",
@@ -41,7 +42,7 @@ module.exports=(sequelize, dataTypes) =>{
         foreignKey : "producto_id",
         otherKey: "compra_id",
         timestamps: false
-      })
+      });
    }
     
    /***5.- return tabla*************************************/

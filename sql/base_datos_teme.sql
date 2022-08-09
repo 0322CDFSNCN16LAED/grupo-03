@@ -112,4 +112,7 @@ CREATE TABLE `teme`.`comprausuarios` (
   `usuario_id` INT NULL,
   `compra_id` INT NULL,
   PRIMARY KEY (`id`));
+  
+ 
+      
       

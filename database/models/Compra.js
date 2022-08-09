@@ -24,7 +24,7 @@ module.exports=(sequelize, dataTypes) =>{
         envio_id:{
             type: dataTypes.INTEGER
         },
-        compra_id:{
+        producto_id:{
             type: dataTypes.INTEGER
         }
     };
@@ -45,22 +45,22 @@ module.exports=(sequelize, dataTypes) =>{
            foreignKey : "compra_id",
            otherKey: "usuario_id",
            timestamps: false
-        }),
+        });
          Compra.belongsTo(models.Producto,{
              as: "producto",
              through: "CompraProducto",
              foreignKey : "compra_id",
              otherKey: "producto_id",
              timestamps: false
-        }),      
+        });     
         Compra.belongsTo(models.MetodoDepago,{
             as: "metododepago",
             foreignKey : "metododepago_id"
-        }),
+        });
         Compra.belongsTo(models.Envio,{
             as: "envio",
             foreignKey : "envio_id"
-        })
+        });
     }
      
      

@@ -50,7 +50,7 @@ module.exports=(sequelize, dataTypes) =>{
         Envio.belongsTo(models.Compra,{
            as: "compra",
            foreignKey : "envio_id"
-        })
+        });
     }
      
     /***5.- return tabla*************************************/

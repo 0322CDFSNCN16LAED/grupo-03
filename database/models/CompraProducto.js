@@ -1,37 +1,37 @@
 module.exports=(sequelize, dataTypes) =>{   
-    const alias ="CompraUsuario";
+    const alias ="CompraProducto";
     const cols= {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },        
-        usuario_id:{
+        compra_id:{
             type: dataTypes.INTEGER        
         },
-        compra_id:{
+        producto_id:{
             type: dataTypes.INTEGER        
         }
     };
     
     const config={
-        tableName: "comprausuarios", /****nombre en la base de datos****/
+        tableName: "compraproductos", /****nombre en la base de datos****/
         timestamps: false
     };   
    
-    const CompraUsuario = sequelize.define(alias, cols, config); 
+    const CompraProducto = sequelize.define(alias, cols, config); 
     
-    CompraUsuario.associate= function(models){
-        CompraUsuario.belongsTo(models.Compra,{
+    CompraProducto.associate= function(models){
+        CompraProducto.belongsTo(models.Compra,{
            as: "compra",
            foreignkey : "compra_id"
         });
-        CompraUsuario.belongsTo(models.Usuario,{
-            as: "usuario",
-            foreignkey : "usuario_id"
-         })
+        CompraProducto.belongsTo(models.Producto,{
+            as: "producto",
+            foreignkey : "producto_id"
+         });
     }
      
     /***5.- return tabla*************************************/
-    return CompraUsuario;
+    return CompraProducto;
  }

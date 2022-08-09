@@ -49,7 +49,7 @@ module.exports=(sequelize, dataTypes) =>{
         Usuario.belongsTo(models.Rol,{
             as: "rol",
             foreignkey : "rol_id"
-        })        
+        });        
     }
      
     /***5.- return tabla*************************************/

@@ -26,7 +26,7 @@ module.exports=(sequelize, dataTypes) =>{
         MetodoDepago.hasMany(models.Compra,{
            as: "compra",
            foreignkey : "metododepago_id"
-        })
+        });
     }
      
     /***5.- return tabla*************************************/

@@ -12,17 +12,14 @@ const productoController ={
           console.log(products);
           res.render("./productos/productosListado",{products:products});
        }catch(error){
-          console.error("aca el error ---> " + error);
+          console.error("error ---> " + error);
        }   
     },    
     
     // Mostrar un producto (listo)
     detail: async(req, res) => { 
         try{
-            let producto= await db.Producto.findByPk(req.params.id);   
-            /*let producto= await db.Producto.findByPk(req.params.id,{
-               include:[{associate: "categoria" }]
-            });  */  
+            let producto= await db.Producto.findByPk(req.params.id,{include:[{associate: "categoria" }]});
             console.log(req.params.id);
             die(); 
             res.render("./productos/productoDetalle",{producto:producto}); 
@@ -75,7 +72,11 @@ const productoController ={
     edit: async(req, res) => {       
         try{
             console.log(req.params.id);
-            let producto= await db.Producto.findByPk(req.params.id);        
+            let producto= await db.Producto.findByPk(req.params.id,{
+                include:[{associate: "categoria" }],
+                raw: true,
+                nest: true
+            });        
             res.render("./productos/productEdit",{producto:producto}); 
          }catch(error){
             console.error("aca el error ---> " + error);
