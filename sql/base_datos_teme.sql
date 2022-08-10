@@ -8,27 +8,8 @@ CREATE TABLE `categorias` (
   `category` varchar(50),  
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-insert into teme.categoria values(1,"Bicicletas Eléctricas"),(2,"Monopatines"),(3,"Skateboards"),(4,"Hoverboards"),(5,"Accesorios");
+insert into teme.categorias values(1,"Bicicletas Eléctricas"),(2,"Monopatines"),(3,"Skateboards"),(4,"Hoverboards"),(5,"Accesorios");
 
-/************************************compra **********************************************/
-
-CREATE TABLE `teme`.`compras` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `precio` FLOAT NULL,
-  `descripcion` VARCHAR(100) NULL,
-  `fechacompra` DATE NULL,
-  `metododepago_id` INT NOT NULL,
-  `envio_id` INT NOT NULL,
-  PRIMARY KEY (`id`),  
-  FOREIGN KEY (envio_id) REFERENCES envios(id));
-
-/**********************compraproductos ******************************/
-CREATE TABLE `teme`.`compraproductos` (
-  `id` INT NOT NULL,
-  `compra_id` INT NULL,
-  `producto_id` INT NULL,
-  PRIMARY KEY (`id`));
-  
 /***********************envio *************************************************/
 
 CREATE TABLE `teme`.`envios` (
@@ -43,7 +24,8 @@ CREATE TABLE `teme`.`envios` (
   `localidad` VARCHAR(50) NULL,
   `municipio` VARCHAR(50) NULL,
   PRIMARY KEY (`id`));
- 
+  
+
 /**************************metodo de pago*************************************/
 CREATE TABLE `metododepagos` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -52,8 +34,22 @@ CREATE TABLE `metododepagos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 insert into teme.metododepagos values(1,"Efectivo"),(2,"Tarjeta de Debito"),(3,"Tarjeta de Credito"),(4,"Transferencia");
 
+/************************************compra **********************************************/
+
+CREATE TABLE `teme`.`compras` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `precio` FLOAT NULL,
+  `descripcion` VARCHAR(100) NULL,
+  `fechacompra` DATE NULL,
+  `metododepago_id` INT NOT NULL,
+  `envio_id` INT NOT NULL,
+  PRIMARY KEY (`id`),  
+  FOREIGN KEY (envio_id) REFERENCES envios(id));
+
+
+
 /*********************************producto ****************************/
-select * from  `teme`.`producto`;
+
 CREATE TABLE `teme`.`productos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NULL,
@@ -64,7 +60,7 @@ CREATE TABLE `teme`.`productos` (
   PRIMARY KEY (`id`),
   FOREIGN KEY (categoria_id) REFERENCES categorias(id));
  
-insert into teme.producto values(1,"Bicicleta Eléctrica Cortina",120000,"Batería: LG 36 V/10.4 AH | 374 W. Motor: Bafang 350 W con sensor de velocidad. Autonomía: 35 km. Rodado: 28. Accesorios: Guardabarros | Portaequipajes | Bocina ","bici-electrica-cortina.jpg",1),
+insert into teme.productos values(1,"Bicicleta Eléctrica Cortina",120000,"Batería: LG 36 V/10.4 AH | 374 W. Motor: Bafang 350 W con sensor de velocidad. Autonomía: 35 km. Rodado: 28. Accesorios: Guardabarros | Portaequipajes | Bocina ","bici-electrica-cortina.jpg",1),
 (2,"Bicicleta Eléctrica Montañera",60000,"Batería: LG 36 V/10.4 AH | 468 W. Motor: Bafang 350 W con sensor de velocidad. Autonomía: 45 km. Rodado: 29. Accesorios: Grip con mancuernas.","bici-electrica-mountain-bike.jpg",1),
 (3,"Bicicleta Eléctrica Tourism",50000,"Batería: LG 9.6 AH | 465 W. Motor: Bafang 350 W con sensor de velocidad. Autonomía: 35 km. Rodado: 27. Accesorios: Bocina.","bici-electrica-tourism.jpg",1),
 (4,"Hoverboard Blanco",40000,"Batería: Extra Premium Litio | Duración: 6hs. Luces: LED. Velocidad Máxima: 10 km/h . Capacidad Máxima: 100 km. Motor: 350W","hoverboard.jpg",4),
@@ -81,6 +77,12 @@ insert into teme.producto values(1,"Bicicleta Eléctrica Cortina",120000,"Bater�
 (15,"Kit de protección",4000,"Incluye: 1 Casco | 2 rodilleras | 2 muñequeras ","kit-proteccion.jpg",5),
 (16,"bici",20000,"Bicicleta de prueba con velocidad","faltaimg.jpg",1);
   
+/**********************compraproductos ******************************/
+CREATE TABLE `teme`.`compraproductos` (
+  `id` INT NOT NULL,
+  `compra_id` INT NULL,
+  `producto_id` INT NULL,
+  PRIMARY KEY (`id`));
   
   
 /**************************rol*************************************/
@@ -89,10 +91,10 @@ CREATE TABLE `rols` (
   `nombre` varchar(50),  
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-insert into teme.rol values(1,"admin"),(2,"cliente"),(3,"proveedor");
+insert into teme.rols values(1,"admin"),(2,"cliente"),(3,"proveedor");
 
 /*************************usuario*****************************************/
-drop table `teme`.`usuario`;
+
 CREATE TABLE `teme`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(20) NULL,

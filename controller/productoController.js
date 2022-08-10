@@ -17,8 +17,7 @@ const productoController ={
     // Mostrar un producto HOME
     detail: async(req, res) => { 
         try{
-            let producto= await db.Producto.findByPk(req.params.id,{include:[{associate: "categoria" }]});
-            console.log("estoy editando producto");            
+            let producto= await db.Producto.findByPk(req.params.id,{include:[{associate: "categoria" }]});                       
             res.render("./productos/productoDetalle",{producto:producto}); 
          }catch(error){
             console.error("detail error ---> " + error);
@@ -30,7 +29,6 @@ const productoController ={
         res.render("./productos/productosCategoria", {
             products: products.filter((p) => p.category == req.params.category),
         });
-        
     },
 
     /*** Combo para la vists de crear producto**/
@@ -44,7 +42,7 @@ const productoController ={
     },
 
     /****Guarda nuevo producto***/    
-    store: (req, res) => {
+    store: async(req, res) => {
         try{
             let archivo=null;
             if (req.file){
@@ -52,7 +50,7 @@ const productoController ={
             }else{
                 archivo="faltaimg.jpg";
             }
-            db.Producto.create({
+            await db.Producto.create({
                 name:req.body.name,
                 price: req.body.price,
                 description:req.body.description,
@@ -69,8 +67,7 @@ const productoController ={
     edit: async(req, res) => {       
         try{ 
             const producto= await db.Producto.findByPk(req.params.id,{include:["categoria"]});
-            const categorias= await db.Categoria.findAll();      
-            console.log(producto); 
+            const categorias= await db.Categoria.findAll();    
             res.render("./productos/productEdit",{producto:producto, categorias:categorias}); 
          }catch(error){
             console.error("edit error ---> " + error);
@@ -78,7 +75,7 @@ const productoController ={
     },
     
     /** Editar y actualizar un producto **/
-    update: (req, res) => { 
+    update: async(req, res) => { 
         try{
             let archivo=null;
             if (req.file){
@@ -86,7 +83,7 @@ const productoController ={
             }else{
                 archivo="faltaimg.jpg";
             }
-            db.Producto.update({
+           await db.Producto.update({
                 name:req.body.name,
                 price: req.body.price,
                 description:req.body.description,
@@ -119,7 +116,6 @@ const productoController ={
             const products= await db.Producto.findAll();
             for (var i=0; i < products.length; i++){            
                 if (products[i].name.includes(req.query.search)) {
-                    console.log('entre a la validacion');
                     searchedProducts.push(products[i]);
                 }
             };            

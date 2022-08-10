@@ -7,8 +7,7 @@
 
             <form class="p-20 text-center" action="/productos/search" method="GET">
                 <input  class="p-10 m-8 products-search" type="text" name="search" placeholder="Buscar un producto">
-                <button type="submit"><i class="fas fa-search products-search-button"></i></button>
-            </form>
+                <button type="submit"><i class="fas fa-search products-search-button"></i></button></form>
 
         <% products.forEach(producto => { %>
             <h3 class="text-center p-20 font-black bg-orange"><%= producto.name%></h3>

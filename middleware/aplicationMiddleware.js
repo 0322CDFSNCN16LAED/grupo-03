@@ -5,7 +5,7 @@ function aplicationMiddleware(req,res,next){
 
     const emailCookie= req.cookies.infoEmail;
     const userFromCookie= db.findByEmail('email', emailCookie);
-    console.log(userFromCookie);
+    
     if (userFromCookie){
         req.session.loggedUser= userFromCookie;
     }

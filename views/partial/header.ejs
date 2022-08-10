@@ -63,8 +63,6 @@
                 <li class=""> <i class="fas fa-user-circle font-cream icon-header"></i> </li>
                     <div class="desplegable2">
                         <% if (locals.isLogger){%>
-                           <a href="/user/login">Iniciar sesión</a>
-                           <a href="/user/register">Registrarse</a>
                            <a href="#">Mi Perfil</a> 
                            <a href="/user/logout">Cerrar Sesion</a>
                         <%}else{%>
@@ -87,7 +85,7 @@
                     </div> 
                 <%}%>    
             </div>
-            <% if (locals.isLogger==false){%>  
+            <% if (locals.isLogger){%>  
                 <div class="menu-desplegable">
                     <li class=""> <i class="fas fa-cog font-cream icon-header"></i> </li>                                        
                         <div class="desplegable2">
@@ -95,8 +93,7 @@
                             <a href="/productos">Editar un producto</a>
                         </div>                    
                 </div>
-            <%}%>   
-
+            <%}%> 
         </ul>
     </div>               
     

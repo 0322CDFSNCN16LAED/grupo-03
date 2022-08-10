@@ -23,10 +23,7 @@ module.exports=(sequelize, dataTypes) =>{
         },      
         imagen:{
             type: dataTypes.STRING
-        },        
-        rol_id: {
-            type: dataTypes.INTEGER
-        }         
+        }      
     };       
  
     /***3.- configuracion***************************************/

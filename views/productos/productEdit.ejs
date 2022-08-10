@@ -21,10 +21,14 @@
             <label for="image" class="font-bold w-70 mt-8 p-8">Cambio de Imagen:</label>
             <input class="w-70 mb-10" type="file" name="image" id="image">
 
-            <label for="category" class="font-bold w-70 pt-40 p-8">Categoría actual del producto:</label>
-            <input class="login-forms mb-10" type="text" name="category" id="category" value="<%=producto.categoria.category%>"> 
+            <label for="category" class="font-bold w-70 pt-40 p-8">Categoría actual del producto:</label>             
             <select name="category_id" class="font-bold w-70 p-8">
                 <%for (let i=0; i < categorias.length; i++){ %>
+                    <% if (producto.categoria.id==categorias[i].id){%> 
+                        <option value="<%=categorias[i].id%>" selected>
+                            <%=categorias[i].category%>
+                         </option>
+                    <%}%>    
                     <option value="<%=categorias[i].id%>">
                        <%=categorias[i].category%>
                     </option>
