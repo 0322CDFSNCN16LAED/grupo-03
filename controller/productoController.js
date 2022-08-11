@@ -10,13 +10,12 @@ const productoController ={
           const products = await db.Producto.findAll();          
           res.render("./productos/productosListado",{products:products});
        }catch(error){
-          console.error("listado error ---> " + error);
+         return res.redirect("error",error);
        }   
     },    
     
     // Mostrar un producto HOME
     detail: async(req, res) => { 
-        
         try{
             let producto= await db.Producto.findByPk(req.params.id,{include:[{associate: "categoria" }]});                       
             res.render("./productos/productoDetalle",{producto:producto}); 
@@ -39,7 +38,7 @@ const productoController ={
             const categorias= await db.Categoria.findAll();
             res.render("./productos/productAdd", {categorias: categorias}); 
          }catch(error){
-            console.error("create error ---> " + error);
+            return res.redirect("error",error);
          }   
     },
 
@@ -61,7 +60,7 @@ const productoController ={
             });
             res.redirect("/productos");
          }catch(error){
-            console.error("store error ---> " + error);
+            return res.redirect("error",error);
          } 
     },
 
@@ -72,7 +71,7 @@ const productoController ={
             const categorias= await db.Categoria.findAll();    
             res.render("./productos/productEdit",{producto:producto, categorias:categorias}); 
          }catch(error){
-            console.error("edit error ---> " + error);
+            return res.redirect("error",error);
          }      
     },
     
@@ -96,7 +95,7 @@ const productoController ={
             });
             res.redirect("/productos");
          }catch(error){
-            console.error("update error ---> " + error);
+            return res.redirect("error",error);
          } 
     },
 
@@ -107,7 +106,7 @@ const productoController ={
             const productos= await db.Producto.destroy({where: {id: req.params.id}});
             res.redirect("/productos");
          }catch(error){
-            console.error("destroy error ---> " + error);
+            return res.redirect("error",error);
          }
     },
 
@@ -123,7 +122,7 @@ const productoController ={
             };            
             res.render("./productos/productosListado", {products: searchedProducts});
          }catch(error){
-            console.error("search error ---> " + error);
+            return res.redirect("error",error);
          }
     }
 
