@@ -14,18 +14,28 @@ const productoController ={
        }   
     },    
     
-    // Mostrar un producto HOME
+    /***** Mostrar edit de producto *************/
     detail: async(req, res) => { 
         try{
             let producto= await db.Producto.findByPk(req.params.id,{include:[{associate: "categoria" }]});                       
             res.render("./productos/productoDetalle",{producto:producto}); 
+         }catch(error){
+            return res.redirect("error",error);
+         }   
+    },
+
+    // Mostrar un producto HOME
+    consult: async(req, res) => { 
+        try{
+            let producto= await db.Producto.findByPk({where: {id: req.params.id}});                       
+            res.render("./productos/productoConsulta",{producto:producto}); 
          }catch(error){
             console.log(req.params.id);
             console.error("detail error ---> " + error);
             return;
          }   
     },
-    
+
     /**** Categoria de Home **************************/
     category: async(req,res) =>{    
         const productos= await db.Producto.findAll({where: {categoria_id: req.params.id}});      

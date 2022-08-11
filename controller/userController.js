@@ -49,9 +49,9 @@ const userController ={
     ingreso : async(req,res)=>{
         try{            
             const errors = validationResult(req); 
-            const usuario= await db.Usuario.findOne({where: { email : req.body.email }},{include:[{associate: "rol" }]})
+            const usuario= await db.Usuario.findOne({where: { email : req.body.email }},{include:["rol"]})
             
-            if (usuario==undefined){
+            if (!usuario){
                 return res.render("./usuario/login",{
                     errors: {email: { msg: 'Este usuario no esta registrado'}}, old : req.body});
             }  
@@ -59,11 +59,12 @@ const userController ={
             let valiPaswor= bcrypt.compareSync(req.body.password, usuario.password);
 
             if (valiPaswor){
-                req.session.loggedUser = req.body.email;
+                req.session.loggedUser = usuario;
                 if (req.body.recordarUsuario){
                     res.cookie('infoEmail',req.body.email, { maxAge: (1000 * 60) * 60 });/*****guardo en email en cookies*****/
                 }                
-                return res.render("./usuario/perfil",{user:usuario});         
+                //return res.render("./usuario/perfil",{user:usuario}); 
+                return res.redirect("/user/perfil");        
             }
 
             return res.render("./usuario/login",{
