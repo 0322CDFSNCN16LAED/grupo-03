@@ -33,7 +33,7 @@ router.post('/guardar', fileUpload.single('image'),  productoController.store);
 router.get('/:id', productoController.detail);
  
 /*obtener productos por categoria*/
-router.get('/by-category/:category', productoController.category);
+router.get('/by-category/:id', productoController.category);
 
 /*editar, actualizar y eliminar un producto*/ 
 router.get("/edit/:id", productoController.edit);

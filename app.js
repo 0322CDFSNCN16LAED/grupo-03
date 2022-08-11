@@ -7,7 +7,7 @@ const aplicationMiddleware = require("./middleware/aplicationMiddleware");
 const sessionActiva = require("./middleware/sessionActiva");
 
 
-const PUERTO=3000;
+const PUERTO=3001;
 
 app.set('view engine', 'ejs'); /* para utilizar plantillas ejs   */
 

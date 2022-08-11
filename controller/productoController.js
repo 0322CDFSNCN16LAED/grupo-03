@@ -16,19 +16,21 @@ const productoController ={
     
     // Mostrar un producto HOME
     detail: async(req, res) => { 
+        
         try{
             let producto= await db.Producto.findByPk(req.params.id,{include:[{associate: "categoria" }]});                       
             res.render("./productos/productoDetalle",{producto:producto}); 
          }catch(error){
+            console.log(req.params.id);
             console.error("detail error ---> " + error);
+            return;
          }   
     },
     
-     // Cambiar el ciclo del MENU para buscar por id HOME
-    category:(req,res) =>{        
-        res.render("./productos/productosCategoria", {
-            products: products.filter((p) => p.category == req.params.category),
-        });
+    /**** Categoria de Home **************************/
+    category: async(req,res) =>{    
+        const productos= await db.Producto.findAll({where: {categoria_id: req.params.id}});      
+        res.render("./productos/productosCategoria", {products: productos});
     },
 
     /*** Combo para la vists de crear producto**/
