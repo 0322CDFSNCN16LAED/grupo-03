@@ -24,15 +24,13 @@ const productoController ={
          }   
     },
 
-    // Mostrar un producto HOME
+    /****Consulta Home de productos */
     consult: async(req, res) => { 
-        try{
-            let producto= await db.Producto.findByPk({where: {id: req.params.id}});                       
+        try{                  
+            let producto= await db.Producto.findByPk(req.params.id);                  
             res.render("./productos/productoConsulta",{producto:producto}); 
          }catch(error){
-            console.log(req.params.id);
-            console.error("detail error ---> " + error);
-            return;
+            return res.redirect("error",error);
          }   
     },
 

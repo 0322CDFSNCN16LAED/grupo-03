@@ -31,7 +31,7 @@ router.post('/guardar', fileUpload.single('image'),  productoController.store);
 
 /*obtener un solo producto*/
 router.get('/:id', productoController.detail);
-///router.get('/consult/:id', productoController.consult);
+router.get('/consult/:id', productoController.consult);
  
 /*obtener productos por categoria*/
 router.get('/by-category/:id', productoController.category);

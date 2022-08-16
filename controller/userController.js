@@ -49,7 +49,7 @@ const userController ={
     ingreso : async(req,res)=>{
         try{            
             const errors = validationResult(req); 
-            const usuario= await db.Usuario.findOne({where: { email : req.body.email }},{include:["rol"]})
+            const usuario= await db.Usuario.findOne({where: { email : req.body.email },include:["rol"]})
             
             if (!usuario){
                 return res.render("./usuario/login",{
@@ -83,7 +83,7 @@ const userController ={
     
     logout: (req, res)=>{
         res.clearCookie("infoEmail");
-        req.session.destroy;        
+        req.session.destroy();        
         return res.redirect("/");
     } 
 }

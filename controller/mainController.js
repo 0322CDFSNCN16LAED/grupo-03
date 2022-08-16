@@ -1,9 +1,17 @@
-const db = require("../data/db");
-const products = db.getAll();
+const db = require("../database/models");
+const sequelize = db.sequelize;
 
 const mainController ={
-    home: (req, res)=>{
-        res.render('home');
+    home: async(req, res)=>{
+        try{          
+            const products = await db.Producto.findAll();      
+            res.render('home',{products:products});
+         }catch(error){
+           return res.redirect("error",error);
+         }   
+
+
+        
     }   
     
 }

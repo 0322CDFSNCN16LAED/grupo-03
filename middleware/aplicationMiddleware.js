@@ -5,7 +5,7 @@ async function aplicationMiddleware(req,res,next){
 
     const emailCookie= req.cookies.infoEmail;    
     if (emailCookie){
-        const userFromCookie= await db.Usuario.findOne({where: { email : emailCookie }});
+        const userFromCookie= await db.Usuario.findOne({where: { email : emailCookie },include:["rol"]});
 
         if (userFromCookie){
             req.session.loggedUser= userFromCookie;
