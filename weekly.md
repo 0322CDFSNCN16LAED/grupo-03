@@ -55,3 +55,18 @@ Sprint #6
 26/07: ● Qué hicimos la semana pasada: Terminar detalles del Sprint anterior.- ● Si se encontró con algún impedimento: ninguno. ● Qué va a hacer hoy: DER, organizacion para el nuevo Sprint ● Proxima reunion: 06/08.-
 
 06/08: ● Qué hicimos la semana pasada:Se corrigieron las validaciones. ● Si se encontró con algún impedimento: Error en . ● Qué va a hacer hoy: CRUD, Excel para base de datos y DER. ● Proxima reunion: .-
+
+Sprint #7
+
+15/08 
+● Qué hicimos la semana pasada: Terminar detalles del Sprint anterior.- 
+● Si se encontró con algún impedimento: ninguno. 
+● Qué va a hacer hoy: organizarnos para el nuevo Sprint 
+● Proxima reunion: 18/08.-
+
+18/08: ● Qué hicimos la semana pasada:Nos dividimos las actividades para este Sprint.
+● Si se encontró con algún impedimento: Hacer correr la base de datos (solucionado). 
+● Qué va a hacer hoy: Empezar con las validaciones en el Front. 
+● Proxima reunion: .-
+
+
