@@ -746,3 +746,14 @@ margin-bottom: 15px;
     cursor: pointer;
 }
 
+/*VALIDACION EN EL FRONT*/
+.is-invalid {
+    border-color: red
+}
+
+.is-valid {
+border-color: green
+}
+
+
+
