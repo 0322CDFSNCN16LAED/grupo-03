@@ -59,24 +59,28 @@
             <a href="/">
                 <li class=""> <i class="fas fa-home font-cream icon-header"></i></li>
             </a> 
-            <div class="menu-desplegable">
-                <li class=""> <i class="fas fa-user-circle font-cream icon-header"></i> </li>
+            <div class="menu-desplegable" style="align-self:center">
+             <% if (locals.isLogger){%>   
+                <img src="/imagenes/<%=locals.loggedUser.imagen%>"
+                style="height:30px; width:30px; border-radius:50%;">
                     <div class="desplegable2">
-                        <% if (locals.isLogger){%>
                            <a href="#">Mi Perfil</a> 
                            <a href="/user/logout">Cerrar Sesion</a>
-                        <%}else{%>
+                    </div> 
+             <%}else{%>
+                <li class=""> <i class="fas fa-user-circle font-cream icon-header"></i> </li>
+                    <div class="desplegable2">
                             <a href="/user/login">Iniciar sesión</a>
-                            <a href="/user/register">Registrarse</a>                            
-                        <%}%>     
-                    </div>
+                            <a href="/user/register">Registrarse</a>   
+                    </div>                         
+            <%}%>     
             </div> 
 
             <div class="menu-desplegable">
                 <li class=""> <i class="fas fa-shopping-bag font-cream icon-header"></i></li>
                 <% if (locals.isLogger){%>
                     <div class="desplegable2">
-                        <a href="/ventas/carrito">Comprar</a>
+                        <a href="/ventas/carrito">Carrito</a>
                         <a href="#">Historial de Compras</a>
                     </div> 
                 <%}else{%>
