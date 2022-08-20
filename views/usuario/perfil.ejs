@@ -7,14 +7,28 @@
     <%-include ("../partial/header")%>         
     <main> 
         <div class="container" style="margin-top: 40px;">
-           <div class="row">
+   
                <div class="col-sm-6 col-md-4">
-                  <h4 class="h3_letra">Bienvenido <%= user.name %> a nuestro sistema</h4> 
-                </div>    
-               <div class="col-sm-6 col-md-4">                                                               
-                  <img style="width: 250px;margin-left: 30px;" src="/imagenes/<%=user.imagen%>">                    
+                  <h4 class="h3_letra">Bienvenido <strong class="font-blue"><%=user.name%></strong> a nuestro sistema</h4> 
+                </div>   
+
+               <div class="row fx fx-wrap p-20">
+                  <div class="col-auto" style="width:300px">                                                               
+                     <img style="margin-left: 30px;" src="/imagenes/<%=user.imagen%>" class="img-perfil">                    
+                  </div>
+
+                  <div class="col-auto p-8 w-20" style="align-self: center">                                                               
+                  <p class="m-8 p-8"> <strong>Nombre:</strong> <%=user.name%> </p>
+                  <p class="m-8 p-8"> <strong>Usuario:</strong> <%=user.user%> </p> 
+                  <p class="m-8 p-8"> <strong>Email:</strong> <%=user.email%> </p>
+                  </div>
+
+                  <div class="col-auto p-8 w-20">                                                               
+                     <p class= "mt-30 p-8">
+                       <a href="#" class= "mt-30 p-8 links underline font-blue">Ver mi historial de compras</a>
+                     </p>
+                     </div>
                </div>
-           </div>
         </div>
 
     </main>

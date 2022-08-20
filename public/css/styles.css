@@ -80,6 +80,7 @@ body {
 .mt-8 {margin-top: 8px}
 .mb-10 {margin-bottom: 10px}
 .mt-15 {margin-top: 15px}
+.mt-30 {margin-top: 30px}
 .mb-30 {margin-bottom: 30px}
 
 .rad-10 {border-radius: 10%;}
@@ -746,14 +747,21 @@ margin-bottom: 15px;
     cursor: pointer;
 }
 
-/*VALIDACION EN EL FRONT*/
-.is-invalid {
-    border-color: red
-}
+.img-perfil {
+    background:  50% 50% no-repeat; 
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    }
 
-.is-valid {
-border-color: green
-}
+    .img-perfil {
+        background:  50% 50% no-repeat; 
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        }
+
+
 
 
 
