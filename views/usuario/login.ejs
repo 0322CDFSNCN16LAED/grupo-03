@@ -6,6 +6,7 @@
 <body> 
     <%-include ("../partial/header")%>  
     <main>
+        <script src="/js/jsLogin.js"></script>
             <h3 class="text-center font-black bg-orange">
                 <nav class="fx fx-wrap justify-center">
                     <a href="/user/login" class="links">
@@ -16,9 +17,12 @@
                         <p class="text-center p-20 font-grey" id="link">Registrarse</p>
                     </a>
                 </nav>
-            </h3>    
+            </h3>   
+            <div class="errores">
+                <ul></ul>
+            </div> 
     
-            <form class="fx fx-wrap justify-center" action="/user/login" method="POST">  
+            <form name="forLogin" id="forLogin"class="fx fx-wrap justify-center" action="/user/login" method="POST">  
                 <p class="font-bold m-8 w-70 pt-40">Email:</p>   
                <input class="login-forms m-8" type="email" name="email" id="email" placeholder="Escriba su email">
                <%if (locals.errors && errors.email){%>
