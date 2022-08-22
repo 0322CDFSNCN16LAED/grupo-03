@@ -21,8 +21,8 @@
                 </a>
             </nav>
         </h3>  
-        <div class="errores">
-            <ul></ul>
+        <!--<div class="errores"> 
+            <ul class="c-red"></ul> -->
         </div>
         <form name="forRegistro" id="forRegistro" enctype="multipart/form-data" class="fx fx-wrap justify-center" action="/user/register" method="POST">
             <label for="foto" class="font-bold w-70 pt-40">Foto:</label>
@@ -30,31 +30,34 @@
             
             <label class="font-bold m-8 w-70">Nombre y apellido:</label>   
             <input class="login-forms m-8" type="text" name="name" id="name" placeholder="Escriba su nombre" value="<%=locals.old && old.name ? old.name: '' %>" >
+        <span class="errorname c-red mb-8 w-70 "></span>
             <%if (locals.errors && errors.name){%>
                 <label class="font-bold m-8 w-70 c-red"><%=errors.name.msg%></label>   
             <%}%>  
                         
             <label class="font-bold m-8 w-70">Nombre de usuario:</label>   
             <input class="login-forms m-8" type="text" name="user" id="user" placeholder="Escriba un nomrbre de usuario" value="<%=locals.old && old.user ? old.user: '' %>">
+         <span class="erroruser c-red mb-8 w-70 "></span>
             <%if (locals.errors && errors.user){%>
                 <label class="font-bold m-8 w-70 c-red"><%=errors.user.msg%></label>   
             <%}%>   
 
             <label class="font-bold m-8 w-70">Mail:</label>   
             <input class="login-forms m-8" type="email" name="email" id="email" placeholder="Escriba su mail" value="<%=locals.old && old.mail ? old.email: '' %>">   
+        <span class="erroremail c-red mb-8 w-70 "></span>
             <%if (locals.errors && errors.email){%>
                 <label class="font-bold m-8 w-70 c-red"><%=errors.email.msg%></label>   
             <%}%>
 
             <label class="font-bold m-8 w-70">Contraseña:</label>    
             <input class="login-forms m-8" type="password" name="password" id="password" placeholder="Escriba una contraseña" value="<%=locals.old && old.password ? old.password: '' %>"> 
+        <span class="errorpassword c-red mb-8 w-70 "></span>
             <%if (locals.errors && errors.password){%>
                 <label class="font-bold m-8 w-70 c-red"><%=errors.password.msg%></label>   
             <%}%>  
 
             <label class="font-bold m-8 w-70">Confirmar contraseña:</label>   
             <input class="login-forms m-8" type="password" name="confirmar" id="confirmar" placeholder="Repita la contraseña" >   
-            
             <%if (locals.errors && errors.confirmar){%>
                 <label class="font-bold m-8 w-70 c-red"><%=errors.confirmar.msg%></label>   
             <%}%>  
