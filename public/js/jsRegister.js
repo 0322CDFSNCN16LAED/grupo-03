@@ -58,6 +58,13 @@ window.addEventListener("load", function () {
       formulario.querySelector(".errorpassword").innerHTML = ""
     }
 
+    //validación confirmar contraseña
+    if (formulario.confirmar.value != formulario.password.value) {
+      errores.push('Las contraseñas no coinciden');
+      formulario.querySelector(".errorconfirmar").innerHTML = "Las contraseñas no coinciden"
+    }else {
+    }
+
      // SI NO HAY ERRORES 
     if (errores.length == 0) {
       formulario.submit();

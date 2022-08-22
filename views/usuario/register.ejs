@@ -58,6 +58,7 @@
 
             <label class="font-bold m-8 w-70">Confirmar contraseña:</label>   
             <input class="login-forms m-8" type="password" name="confirmar" id="confirmar" placeholder="Repita la contraseña" >   
+            <span class="errorconfirmar c-red mb-8 w-70 "></span>
             <%if (locals.errors && errors.confirmar){%>
                 <label class="font-bold m-8 w-70 c-red"><%=errors.confirmar.msg%></label>   
             <%}%>  
