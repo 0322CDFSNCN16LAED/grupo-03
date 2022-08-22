@@ -6,9 +6,14 @@
 <body>
     <%-include ("../partial/header")%>    
     <main>
-        <h3 class="text-center p-20 font-black bg-orange">Agregar un producto</h3>       
+        <script src="/js/jsProductAdd.js"></script>
+        <h3 class="text-center p-20 font-black bg-orange">Agregar un producto</h3> 
         
-        <form class="fx fx-wrap justify-center" action="/productos/guardar/" method="POST" enctype="multipart/form-data">                 
+        <div class="errores">
+            <ul></ul>
+        </div>
+        
+        <form name="forProductAdd" id="forProductAdd"class="fx fx-wrap justify-center" action="/productos/guardar/" method="POST" enctype="multipart/form-data">                 
             <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
             <input class="login-forms mb-10" type="text" name="name" id="name" placeholder="Bicicleta Cortina">
 
