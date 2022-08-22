@@ -24,8 +24,15 @@ window.addEventListener("load", function () {
     if (campoPrecio.value == "") {
     errores.push('El precio no puede estar vacio');
     }
-     
-//validacion extencion imagen FALTA
+    
+        //validacion imagen
+    function imageChange(campoImagen) {
+
+        if (!campoImagen.target.files[0].type.split("/")[0] === "image") {
+          errores.push("Archivos permitidos: JPG, JPEG, PNG o GIF.");
+          formulario.querySelector(".errorimage").innerHTML = "Archivos permitidos: JPG, JPEG, PNG o GIF."
+        }
+      }
     
 //validacion Descripcion 
     if (campoDescripcion.value == "") {

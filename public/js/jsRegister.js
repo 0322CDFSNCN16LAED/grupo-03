@@ -6,17 +6,15 @@ window.addEventListener("load", function () {
   formulario.addEventListener("submit", function (event) {
     event.preventDefault();
     let errores = [];
-    /*let campoNombre = document.querySelector('#name');
+    let campoNombre = document.querySelector('#name');
     let campoNombreUsuario = document.querySelector('#user');
     let campoEmail = document.querySelector('#email');
     let campoContraseña = document.querySelector('#password');
-    let campoImagen = document.querySelector('#image');*/
+    let campoImagen = document.querySelector('#image');
 
-    //VALIDACIONES    
+    //VALIDACIONES
 
-    //validación imagen 
     //PROBLEMA: no toma los archivos correctos como correctos (tira siempre error)
-
     /*var extensionesPermitidas = ["JPG", "JPEG", "PNG", "GIF"]
     var extension = formulario.image.value.split(".").pop();
     if (extension != extensionesPermitidas){
@@ -25,6 +23,16 @@ window.addEventListener("load", function () {
    } else {
     formulario.querySelector(".errorimage").innerHTML = ""
     }*/
+    
+    //validación imagen 
+    
+    function imageChange(campoImagen) {
+
+      if (!campoImagen.target.files[0].type.split("/")[0] === "image") {
+        errores.push("Archivos permitidos: JPG, JPEG, PNG o GIF.");
+        formulario.querySelector(".errorimage").innerHTML = "Archivos permitidos: JPG, JPEG, PNG o GIF."
+      }
+    }
 
     //validacion nombre
     if (formulario.name.value == "") {
