@@ -14,6 +14,18 @@ window.addEventListener("load", function () {
 
     //VALIDACIONES    
 
+    //validación imagen 
+    //PROBLEMA: no toma los archivos correctos como correctos (tira siempre error)
+
+    /*var extensionesPermitidas = ["JPG", "JPEG", "PNG", "GIF"]
+    var extension = formulario.image.value.split(".").pop();
+    if (extension != extensionesPermitidas){
+    errores.push("Archivos permitidos: JPG, JPEG, PNG o GIF.");
+    formulario.querySelector(".errorimage").innerHTML = "Archivos permitidos: JPG, JPEG, PNG o GIF."
+   } else {
+    formulario.querySelector(".errorimage").innerHTML = ""
+    }*/
+
     //validacion nombre
     if (formulario.name.value == "") {
       errores.push('El nombre no puede estar vacio');
@@ -37,10 +49,12 @@ window.addEventListener("load", function () {
     }
 
     //validacion mail (cuando pongo un mail no valido no aparecen los errores)
+    var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
    if (formulario.email.value == "") {
       errores.push('El email no puede estar vacio');
       formulario.querySelector(".erroremail").innerHTML = "El email no puede estar vacio"
-    } else if (formulario.email.value.isEmail == false) {
+    } //else if (formulario.email.body.isEmail == false) {
+      else if(!filter.test(formulario.email.value)) {
       errores.push('Debes ingresar un email valido');
       formulario.querySelector(".erroremail").innerHTML = "Debes ingresar un email válido"
     } else {
@@ -63,6 +77,7 @@ window.addEventListener("load", function () {
       errores.push('Las contraseñas no coinciden');
       formulario.querySelector(".errorconfirmar").innerHTML = "Las contraseñas no coinciden"
     }else {
+      formulario.querySelector(".errorconfirmar").innerHTML = ""
     }
 
      // SI NO HAY ERRORES 
