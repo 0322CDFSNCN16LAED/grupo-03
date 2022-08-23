@@ -9,9 +9,6 @@
         <script src="/js/jsProductAdd.js"></script>
         <h3 class="text-center p-20 font-black bg-orange">Agregar un producto</h3> 
         
-        <div class="errores">
-            <ul></ul>
-        </div> 
         
         <form name="forProductAdd" id="forProductAdd"class="fx fx-wrap justify-center" action="/productos/guardar/" method="POST" enctype="multipart/form-data">                 
             <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
@@ -31,9 +28,8 @@
                 <%}%>
             </select>       
             <label for="name" class="font-bold w-70 pt-40 p-8">Imagen:</label>
-            <span class="errorimage c-red mb-8 w-70 "></span>
             <input class="w-70 mb-10" type="file" name="image" id="image">
-            
+            <span class="errorimage c-red mb-8 w-70 "></span>
                      
             <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
             <textarea class="textarea mb-10" type="text" name="description" id="description"></textarea>

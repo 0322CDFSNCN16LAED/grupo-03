@@ -8,6 +8,7 @@ window.addEventListener("load", function () {
     let errores = [];
 
     //VALIDACIONES
+    // validacion imagen
     var filename = formulario.image.value
     var extension = filename.substring(filename.lastIndexOf(".")+1).toLowerCase()
     if (extension=="jpg"|| extension=="jpeg" || extension=="png" || extension=="gif" || filename == ""){
