@@ -64,9 +64,14 @@ Sprint #7
 ● Qué va a hacer hoy: organizarnos para el nuevo Sprint 
 ● Proxima reunion: 18/08.-
 
-18/08: ● Qué hicimos la semana pasada:Nos dividimos las actividades para este Sprint.
+20/08: ● Qué hicimos la semana pasada:Nos dividimos las actividades para este Sprint.
 ● Si se encontró con algún impedimento: Hacer correr la base de datos (solucionado). 
 ● Qué va a hacer hoy: Empezar con las validaciones en el Front. 
+● Proxima reunion: 22/08.-
+
+22/08: ● Qué hicimos la semana pasada:Validaciones en el front y back.
+● Si se encontró con algún impedimento: Validar formato de imagen. 
+● Qué va a hacer hoy: Ponerle estilo al mensaje de error. 
 ● Proxima reunion: .-
 
 
