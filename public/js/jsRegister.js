@@ -6,33 +6,24 @@ window.addEventListener("load", function () {
   formulario.addEventListener("submit", function (event) {
     event.preventDefault();
     let errores = [];
-    let campoNombre = document.querySelector('#name');
-    let campoNombreUsuario = document.querySelector('#user');
-    let campoEmail = document.querySelector('#email');
-    let campoContraseña = document.querySelector('#password');
-    let campoImagen = document.querySelector('#image');
 
     //VALIDACIONES
-
-    //PROBLEMA: no toma los archivos correctos como correctos (tira siempre error)
-    /*var extensionesPermitidas = ["JPG", "JPEG", "PNG", "GIF"]
-    var extension = formulario.image.value.split(".").pop();
-    if (extension != extensionesPermitidas){
-    errores.push("Archivos permitidos: JPG, JPEG, PNG o GIF.");
-    formulario.querySelector(".errorimage").innerHTML = "Archivos permitidos: JPG, JPEG, PNG o GIF."
-   } else {
+    var filename = formulario.image.value
+    var extension = filename.substring(filename.lastIndexOf(".")+1).toLowerCase()
+    if (extension=="jpg"|| extension=="jpeg" || extension=="png" || extension=="gif" || filename == ""){
     formulario.querySelector(".errorimage").innerHTML = ""
-    }*/
-    
-    //validación imagen 
-    
-    function imageChange(campoImagen) {
-
+   } else {
+    errores.push("No se admiten archivos de extensión " + "'" + extension.toUpperCase() + "'." + " Archivos permitidos: JPG, JPEG, PNG o GIF.");
+    formulario.querySelector(".errorimage").innerHTML = "No se admiten archivos de extensión " + "'" + extension.toUpperCase() + "'." + " Archivos permitidos: JPG, JPEG, PNG o GIF."
+    }
+      
+    /*function imageChange() {
+      var campoImagen = formulario.image;
       if (!campoImagen.target.files[0].type.split("/")[0] === "image") {
         errores.push("Archivos permitidos: JPG, JPEG, PNG o GIF.");
         formulario.querySelector(".errorimage").innerHTML = "Archivos permitidos: JPG, JPEG, PNG o GIF."
       }
-    }
+    }*/
     
 
     //validacion nombre
@@ -92,6 +83,8 @@ window.addEventListener("load", function () {
     // SI NO HAY ERRORES 
     if (errores.length == 0) {
       formulario.submit();
+    } else {
+      console.log(errores)
     }
   
   })
