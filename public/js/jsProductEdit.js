@@ -36,13 +36,14 @@ window.addEventListener("load", function () {
         formulario.querySelector(".errorprice").innerHTML = ""
       };
       
-      //validacion Imagen (se envia igual el formulario si agrego otro archivo)       
-      function imageChange(campoImagen) {
-  
-        if (!campoImagen.target.files[0].type.split("/")[0] === "image") {
-          errores.push("Archivos permitidos: JPG, JPEG, PNG o GIF.");
-          formulario.querySelector(".errorimage").innerHTML = "Archivos permitidos: JPG, JPEG, PNG o GIF."
-        }
+      //validacion Imagen 
+      var filename = formulario.image.value
+      var extension = filename.substring(filename.lastIndexOf(".")+1).toLowerCase()
+      if (extension=="jpg"|| extension=="jpeg" || extension=="png" || extension=="gif"){
+      formulario.querySelector(".errorimage").innerHTML = ""
+     } else {
+      errores.push("No se admiten archivos de extensión " + "'" + extension.toUpperCase() + "'." + " Archivos permitidos: JPG, JPEG, PNG o GIF.");
+      formulario.querySelector(".errorimage").innerHTML = "No se admiten archivos de extensión " + "'" + extension.toUpperCase() + "'." + " Archivos permitidos: JPG, JPEG, PNG o GIF."
       }
       
       //validacion Descripcion 
