@@ -25,12 +25,14 @@
             <form name="forLogin" id="forLogin"class="fx fx-wrap justify-center" action="/user/login" method="POST">  
                 <p class="font-bold m-8 w-70 pt-40">Email:</p>   
                <input class="login-forms m-8" type="email" name="email" id="email" placeholder="Escriba su email">
+               <span class="erroremail c-red mb-8 w-70 "></span>
                <%if (locals.errors && errors.email){%>
                   <label class="font-bold m-8 w-70 c-red"><%=errors.email.msg%></label>   
                <%}%> 
                               
                <p class="font-bold m-8 w-70">Contraseña:</p>   
                <input class="login-forms m-8" type="password" name="password" id="password" placeholder="Escriba su contraseña">
+               <span class="errorpassword c-red mb-8 w-70 "></span>
                <%if (locals.errors && errors.password){%>
                    <label class="font-bold m-8 w-70 c-red"><%=errors.password.msg%></label>   
                <%}%> 

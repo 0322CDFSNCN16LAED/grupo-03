@@ -33,6 +33,7 @@ window.addEventListener("load", function () {
         formulario.querySelector(".errorimage").innerHTML = "Archivos permitidos: JPG, JPEG, PNG o GIF."
       }
     }
+    
 
     //validacion nombre
     if (formulario.name.value == "") {
@@ -42,7 +43,7 @@ window.addEventListener("load", function () {
       errores.push('El nombre debe tener al menos dos caracteres');
       formulario.querySelector(".errorname").innerHTML = "El nombre debe tener al menos dos caracteres"
     } else {
-    formulario.querySelector(".errorname").innerHTML = ""
+      formulario.querySelector(".errorname").innerHTML = ""
     };
 
     //validacion nombre usuario
@@ -56,21 +57,21 @@ window.addEventListener("load", function () {
       formulario.querySelector(".erroruser").innerHTML = ""
     }
 
-    //validacion mail (cuando pongo un mail no valido no aparecen los errores)
+    //validacion mail 
     var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   if (formulario.email.value == "") {
+    if (formulario.email.value == "") {
       errores.push('El email no puede estar vacio');
       formulario.querySelector(".erroremail").innerHTML = "El email no puede estar vacio"
     } //else if (formulario.email.body.isEmail == false) {
-      else if(!filter.test(formulario.email.value)) {
+    else if (!filter.test(formulario.email.value)) {
       errores.push('Debes ingresar un email valido');
       formulario.querySelector(".erroremail").innerHTML = "Debes ingresar un email válido"
     } else {
       formulario.querySelector(".erroremail").innerHTML = ""
-    }    
+    }
 
-     //validacion contraseña
-   if (formulario.password.value == "") {
+    //validacion contraseña
+    if (formulario.password.value == "") {
       errores.push('Debes ingresar una contraseña');
       formulario.querySelector(".errorpassword").innerHTML = "Debes ingresar una contraseña"
     } else if (formulario.password.value.length < 8) {
@@ -84,19 +85,14 @@ window.addEventListener("load", function () {
     if (formulario.confirmar.value != formulario.password.value) {
       errores.push('Las contraseñas no coinciden');
       formulario.querySelector(".errorconfirmar").innerHTML = "Las contraseñas no coinciden"
-    }else {
+    } else {
       formulario.querySelector(".errorconfirmar").innerHTML = ""
     }
 
-     // SI NO HAY ERRORES 
+    // SI NO HAY ERRORES 
     if (errores.length == 0) {
       formulario.submit();
-    } else { console.log(errores)
-      /*let ulErrores = document.querySelector("div.errores ul");
-      for (let i = 0; i < errores.length; i++){
-        ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-      }
     }
-	
+  
   })
-})*/ }})})
+})
