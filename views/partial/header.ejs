@@ -1,13 +1,58 @@
-<header class="bg-black">        
+<header class="bg-black"> 
+<main class="container">    
     <div class="fx fx-wrap fx-space-between align-center p-20">
-            <div class="menu-hamburguesa p-10 hide-laptop">
-                <i class="fas fa-bars"></i>
+        
+        <!-- Solo se verá en mobile -->
+        <div class="menu-hamburguesa p-10 hide-laptop">
+            <div id="menumobile">
+                    <ul>
+                     <li class="categories"><i class="fas fa-chevron-left"></i></li>
+                      <li class="categories" id="categ">BICICLETAS ELÉCTRICAS</li>
+                            <div id="submenu">
+                                <li><a href="/productos/by-category/1" style="text-decoration:none; color:#ff9830"><em>Mostrar todos</em></a></li>
+                                <li><a href="/productos/consult/1" style="text-decoration:none; color:#f5f5dc">Bicicleta Cortina</a></li>
+                                <li><a href="/productos/consult/2" style="text-decoration:none; color:#f5f5dc">Bicicleta Montañera</a></li>
+                                <li><a href="/productos/consult/3" style="text-decoration:none; color:#f5f5dc">Bicicleta Tourism</a></li>
+                            </div>
+                      <li class="categories"  id="categ">MONOPATINES</li>
+                            <div id="submenu">
+                                <li><a href="/productos/by-category/2" style="text-decoration:none; color:#ff9830"><em>Mostrar todos</em></a></li>
+                                <li><a href="/productos/consult/7" style="text-decoration:none; color:#f5f5dc">Monopatín Uno</a></li>
+                                <li><a href="/productos/consult/8" style="text-decoration:none; color:#f5f5dc">Monopatín Blanco</a></li>
+                                <li><a href="/productos/consult/9" style="text-decoration:none; color:#f5f5dc">Monopatín Infantil</a></li>
+                            </div>
+                      <li class="categories"  id="categ">SKATEBOARDS</li>
+                            <div id="submenu">
+                                <li><a href="/productos/by-category/3" style="text-decoration:none; color:#ff9830"><em>Mostrar todos</em></a></li>
+                                <li><a href="/productos/consult/10" style="text-decoration:none; color:#f5f5dc">Skateboard #1</a></li>
+                                <li><a href="/productos/consult/11" style="text-decoration:none; color:#f5f5dc">Skateboard #2</a></li>
+                                <li><a href="/productos/consult/12" style="text-decoration:none; color:#f5f5dc">Skateboard #3</a></li>
+                            </div>
+                      <li class="categories" id="categ">HOVERBOARDS</li>
+                            <div id="submenu">
+                                <li><a href="/productos/by-category/4" style="text-decoration:none; color:#ff9830"><em>Mostrar todos</em></a></li>
+                                <li><a href="/productos/consult/1" style="text-decoration:none; color:#f5f5dc">Hoverboard</a></li>
+                                <li><a href="/productos/consult/2" style="text-decoration:none; color:#f5f5dc">Hoverboard Verde</a></li>
+                                <li><a href="/productos/consult/3" style="text-decoration:none; color:#f5f5dc">Hoverboard KANY</a></li>
+                            </div>
+                      <li class="categories" id="categ">ACCESORIOS</li>
+                            <div id="submenu">
+                                <li><a href="/productos/by-category/5" style="text-decoration:none; color:#ff9830"><em>Mostrar todos</em></a></li>
+                                <li><a href="/productos/consult/1" style="text-decoration:none; color:#f5f5dc">Ruedas</a></li>
+                                <li><a href="/productos/consult/2" style="text-decoration:none; color:#f5f5dc">Rulemanes</a></li>
+                                <li><a href="/productos/consult/3" style="text-decoration:none; color:#f5f5dc">Kit de Protección</a></li>
+                            </div>
+                    </ul>
             </div>
+            <i class="fas fa-bars" id="burgermenu"></i>
+        </div>
+
         <h1 class="text-center w-20 w-15-laptop">
             <a href="/">
                <img class="w-75 w-60-laptop" src="/imagenes/logo-teme.png" alt="Logo Teme"/>
             </a>
         </h1>
+
         <!-- Solo se verá en laptop -->
         <nav class="fx fx-wrap hide-tab-mobile">
             <ul type="none" class="fx fx-wrap">
@@ -99,5 +144,7 @@
                 </div>
                 <%}%>         
         </ul>
-    </div> 
-</header>   
+    </div>
+</main> 
+<script src="/js/jsHeader.js"></script>   
+</header> 
