@@ -28,8 +28,11 @@
                     </option>
                 <%}%>
             </select>       
-            <label for="name" class="font-bold w-70 pt-40 p-8">Imagen:</label>
-            <input class="w-70 mb-10" type="file" name="image" id="image">
+            <label for="avatar" class="font-bold w-70 pt-40 p-8">Imagen:</label>
+            <input class="w-70 mb-10" type="file" name="avatar" id="avatar">
+            <%if (locals.errors && errors.avatar){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.avatar.msg%></label>   
+            <%}%>
                      
             <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
             <textarea class="textarea mb-10" type="text" name="description" id="description"></textarea>

@@ -25,8 +25,11 @@
             <ul></ul>
         </div>
         <form name="forRegistro" id="forRegistro" enctype="multipart/form-data" class="fx fx-wrap justify-center" action="/user/register" method="POST">
-            <label for="foto" class="font-bold w-70 pt-40">Foto:</label>
-            <input class="w-70 mb-10" type="file" name="image" id="image"> 
+            <label for="Foto" class="font-bold w-70 pt-40">Foto:</label>
+            <input class="w-70 mb-10"   type="file" id="avatar" name="avatar">
+            <%if (locals.errors && errors.avatar){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.avatar.msg%></label>   
+            <%}%> 
             
             <label class="font-bold m-8 w-70">Nombre y apellido:</label>   
             <input class="login-forms m-8" type="text" name="name" id="name" placeholder="Escriba su nombre" value="<%=locals.old && old.name ? old.name: '' %>" >

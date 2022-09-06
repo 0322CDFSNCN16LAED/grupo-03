@@ -23,8 +23,11 @@
             <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
             <input class="login-forms mb-10" type="number" name="price" id="price" value="<%=producto.price%>">
               
-            <label for="image" class="font-bold w-70 mt-8 p-8">Cambio de Imagen:</label>
-            <input class="w-70 mb-10" type="file" name="image" id="image">
+            <label for="avatar" class="font-bold w-70 mt-8 p-8">Cambio de Imagen:</label>
+            <input class="w-70 mb-10" type="file" name="avatar" id="avatar">
+            <%if (locals.errors && errors.avatar){%>
+                <label class="font-bold m-8 w-70 c-red"><%=errors.avatar.msg%></label>   
+            <%}%>
 
             <label for="category" class="font-bold w-70 pt-40 p-8">Categoría actual del producto:</label>             
             <select name="category_id" class="font-bold w-70 p-8">

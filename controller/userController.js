@@ -30,7 +30,7 @@ const userController ={
                     user:req.body.user,
                     email:req.body.email,       
                     password:bcrypt.hashSync(req.body.password,10),
-                    imagen:archivo,
+                    avatar:archivo,
                     rol_id:"2"
                 });           
                 return res.redirect("/user/login");
