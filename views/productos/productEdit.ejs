@@ -16,18 +16,20 @@
             <div>
                 <img class=" img p-8 img2_detalle" src="/imagenes/<%=producto.image%>" alt="<%= producto.name%>"/>
             </div>
-
+            
             <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
             <input class="login-forms mb-10" type="text" name="name" id="name" value="<%=producto.name%>">
+            <span class="errorname c-red mb-8 w-70 "></span>
 
             <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
             <input class="login-forms mb-10" type="number" name="price" id="price" value="<%=producto.price%>">
+            <span class="errorprice c-red mb-8 w-70 "></span>
               
-            <label for="avatar" class="font-bold w-70 mt-8 p-8">Cambio de Imagen:</label>
-            <input class="w-70 mb-10" type="file" name="avatar" id="avatar">
-            <%if (locals.errors && errors.avatar){%>
-                <label class="font-bold m-8 w-70 c-red"><%=errors.avatar.msg%></label>   
-            <%}%>
+
+            <label for="image" class="font-bold w-70 mt-8 p-8">Cambio de Imagen:</label>
+            <input class="w-70 mb-10" type="file" name="image" id="image">
+            <span class="errorimage c-red mb-8 w-70 "></span>
+
 
             <label for="category" class="font-bold w-70 pt-40 p-8">Categoría actual del producto:</label>             
             <select name="category_id" class="font-bold w-70 p-8">
@@ -44,7 +46,7 @@
             </select>       
             <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
             <textarea class="textarea mb-10" type="text" name="description" id="description"><%=producto.description%></textarea>
-    
+            <span class="errordescription c-red mb-8 w-70 "></span>
             <button class="align-self-center update-buttons mt-15 m-8 w-45" id="update" type="submit" >Guardar modificaciones</button>
         </form>
 

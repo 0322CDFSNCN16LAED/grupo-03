@@ -15,7 +15,7 @@ const validationFormularioRegistro= [
     body("user").notEmpty().withMessage('Debe ingresar el usuario'),
     body("email").isEmail().withMessage('Debe ingresar un email valido'),
     body("password").isLength({min: 8}).withMessage('Debes ingresar un password de 8 digitos'),
-    body("avatar").custom((value, { req }) => {
+    body("image").custom((value, { req }) => {
         const file = req.file;
         const acceptedExtensions = [".gif", ".png", ".jpeg", ".jpg"];
         console.log(file);
@@ -64,7 +64,7 @@ const fileUpload= multer({storage: multerDiskStorage});
 
 /*registrar un usuario*/ 
 router.get('/register', guestMiddleware, userController.register);
-router.post('/register', fileUpload.single('avatar'), validationFormularioRegistro, userController.store);
+router.post('/register', fileUpload.single('image'), validationFormularioRegistro, userController.store);
 
 router.get("/login", guestMiddleware, userController.login);
 router.post("/login", validationFormularioIngreso, userController.ingreso);

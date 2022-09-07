@@ -61,3 +61,13 @@ Sprint #5
 
 4.- Hacer menos: reunirnos con poca frecuencia. 
 
+Sprint #6
+
+1.-Comenzar Hacer: Division de tareas.-
+
+2.- Hacer más: Contacto permanente con los integrantes del grupo.
+
+3.- Continuar haciendo: Llevar al dia las entregas.
+
+4.- Hacer menos: recargar a algunos integrantes con mucha responsabilidad. 
+

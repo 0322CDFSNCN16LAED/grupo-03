@@ -11,7 +11,7 @@ const validationFormProductoCreate= [
     body("name").notEmpty().isLength({min: 5}).withMessage('Se necesita nombre par poder subir producto'),
     body("precio").notEmpty().isNumeric({Min: 1}).withMessage("Se necesita precio para subir producto"),
     body('descripcion').notEmpty().isLength({min: 20}).withMessage("Se necesita descripcion para poder subir producto"),
-    body("avatar").custom((value, { req }) => {
+    body("image").custom((value, { req }) => {
       const file = req.file;
       const acceptedExtensions = [".gif", ".png", ".jpeg", ".jpg"];
       console.log(file);
@@ -36,7 +36,7 @@ const validationFormProductoEdit= [
     body("name").notEmpty().isLength({min: 5}).withMessage('Se necesita nombre par poder editar y subir producto'),
     body("precio").notEmpty().isNumeric({min: 1}).withMessage("Se necesita precio para editar y subir producto"),
     body('descripcion').notEmpty().isLength({min: 20}).withMessage("Se necesita descripcion para poder editar y subir producto"),
-    body("avatar").custom((value, { req }) => {
+    body("image").custom((value, { req }) => {
       const file = req.file;
       const acceptedExtensions = [".gif", ".png", ".jpeg", ".jpg"];
       console.log(file);
@@ -93,7 +93,7 @@ router.get("/search", productoController.search);
 
 /*crear un producto*/ 
 router.get('/create', productoController.create); 
-router.post('/guardar', fileUpload.single('avatar'), validationFormProductoCreate, productoController.store);
+router.post('/guardar', fileUpload.single('image'), validationFormProductoCreate, productoController.store);
 
 /*obtener un solo producto*/
 router.get('/:id', productoController.detail);
@@ -104,7 +104,7 @@ router.get('/by-category/:id', productoController.category);
 
 /*editar, actualizar y eliminar un producto*/ 
 router.get("/edit/:id", productoController.edit);
-router.put("/update/:id", fileUpload.single('avatar'), validationFormProductoEdit, productoController.update);
+router.put("/update/:id", fileUpload.single('image'), validationFormProductoEdit, productoController.update);
 router.delete("/delete/:id", productoController.destroy);
 
 module.exports=router;

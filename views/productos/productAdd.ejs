@@ -9,16 +9,15 @@
         <script src="/js/jsProductAdd.js"></script>
         <h3 class="text-center p-20 font-black bg-orange">Agregar un producto</h3> 
         
-        <div class="errores">
-            <ul></ul>
-        </div>
         
         <form name="forProductAdd" id="forProductAdd"class="fx fx-wrap justify-center" action="/productos/guardar/" method="POST" enctype="multipart/form-data">                 
             <label for="name" class="font-bold w-70 mt-8 p-8">Nombre:</label>
             <input class="login-forms mb-10" type="text" name="name" id="name" placeholder="Bicicleta Cortina">
+            <span class="errorname c-red mb-8 w-70 "></span>
 
             <label for="price" class="font-bold w-70 mt-8 p-8">Precio:</label>
             <input class="login-forms mb-10" type="number" name="price" id="price" placeholder="40000">
+            <span class="errorprice c-red mb-8 w-70 "></span>
              
             <label for="category" class="font-bold w-70 p-8">Categoría del producto:</label>
             <select name="category" class="font-bold w-70 p-8">
@@ -28,14 +27,15 @@
                     </option>
                 <%}%>
             </select>       
-            <label for="avatar" class="font-bold w-70 pt-40 p-8">Imagen:</label>
-            <input class="w-70 mb-10" type="file" name="avatar" id="avatar">
-            <%if (locals.errors && errors.avatar){%>
-                <label class="font-bold m-8 w-70 c-red"><%=errors.avatar.msg%></label>   
-            <%}%>
+
+            <label for="name" class="font-bold w-70 pt-40 p-8">Imagen:</label>
+            <input class="w-70 mb-10" type="file" name="image" id="image">
+            <span class="errorimage c-red mb-8 w-70 "></span>
+ 
                      
             <label for="description" class="font-bold w-70 mt-8 p-8">Descripcion:</label>
             <textarea class="textarea mb-10" type="text" name="description" id="description"></textarea>
+            <span class="errordescription c-red mb-8 w-70 "></span>
                 
             <div class="align-self-center text-center w-70 p-20 ">
                     <button class="update-buttons w-30 mb-30" type="submit" id="update">Agregar producto</button>

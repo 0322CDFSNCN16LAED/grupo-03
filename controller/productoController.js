@@ -63,7 +63,7 @@ const productoController ={
                 name:req.body.name,
                 price: req.body.price,
                 description:req.body.description,
-                avatar:archivo,
+                image:archivo,
                 categoria_id:req.body.category           
             });
             res.redirect("/productos");
@@ -96,7 +96,7 @@ const productoController ={
                 name:req.body.name,
                 price: req.body.price,
                 description:req.body.description,
-                avatar:archivo,
+                image:archivo,
                 categoria_id:req.body.category_id          
             },{
                 where: {id : req.params.id}
