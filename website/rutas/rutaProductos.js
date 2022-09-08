@@ -4,6 +4,7 @@ const router= express.Router();
 const multer= require('multer');/***********subir archivos */
 const path = require('path'); 
 const productoController= require("../controller/productoController");
+const productoControlerApi= require("../controller/api/productoController");
 
 const { body }= require("express-validator");
 
@@ -106,5 +107,10 @@ router.get('/by-category/:id', productoController.category);
 router.get("/edit/:id", productoController.edit);
 router.put("/update/:id", fileUpload.single('image'), validationFormProductoEdit, productoController.update);
 router.delete("/delete/:id", productoController.destroy);
+
+/*******************APIS***********************/
+router.get("/api/list", productoControlerApi.list);
+router.get("/api/detail/:id", productoControlerApi.detail);
+router.get("/api/category/:categoria_id", productoControlerApi.category);
 
 module.exports=router;

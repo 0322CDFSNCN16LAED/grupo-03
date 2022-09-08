@@ -45,4 +45,5 @@ app.use("/ventas",rutaCarrito);
 const rutaProductos= require("./rutas/rutaProductos");
 const { cookie } = require('express-validator');
 
+
 app.use("/productos",rutaProductos);

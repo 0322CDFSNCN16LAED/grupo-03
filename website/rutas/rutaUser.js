@@ -5,6 +5,7 @@ const path = require('path');
 const userController= require("../controller/userController");
 const guestMiddleware = require("../middleware/guestMiddleware");
 const authMiddleware = require("../middleware/authMiddleware");
+const controlerApi= require("../controller/api/userController");
 
 const {body}= require("express-validator");
 const { threadId } = require('worker_threads');
@@ -71,6 +72,11 @@ router.post("/login", validationFormularioIngreso, userController.ingreso);
 
 router.get("/perfil",authMiddleware, userController.perfil);
 router.get("/logout", userController.logout);
+
+/*****************APIS******************************/
+router.get("/api/detail/:id", controlerApi.detail);
+router.get("/api/list", controlerApi.list);
+router.get("/api/email/:email", controlerApi.email);
 
 module.exports=router;
 
