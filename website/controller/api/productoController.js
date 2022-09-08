@@ -20,8 +20,8 @@ const productoController ={
          .findAll()
          .then(productos=>{
             return res.status(200).json({
-               cantidad: productos.length,
-               data: productos, ///.map
+               canproductos: productos.length,
+               data: productos,
                status: 200
             })
          });                     
