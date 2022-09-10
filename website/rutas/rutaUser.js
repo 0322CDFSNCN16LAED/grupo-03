@@ -19,11 +19,11 @@ const validationFormularioRegistro= [
     body("image").custom((value, { req }) => {
         const file = req.file;
         const acceptedExtensions = [".gif", ".png", ".jpeg", ".jpg"];
-        console.log(file);
+        //console.log(file);
         if (!file) {
           throw new Error("Tenes que subir una imagen de perfil");
         } else {
-          const fileExtension = path.extname(file.originalname);
+          const fileExtension = path.extname(file.filename);
           
           if (!acceptedExtensions.includes(fileExtension)) {
             throw new Error(
@@ -77,6 +77,7 @@ router.get("/logout", userController.logout);
 router.get("/api/detail/:id", controlerApi.detail);
 router.get("/api/list", controlerApi.list);
 router.get("/api/email/:email", controlerApi.email);
+router.get("/api/imagen/:imagen", controlerApi.picture);
 
 module.exports=router;
 

@@ -18,19 +18,17 @@ const userController ={
                 return res.render("./usuario/register",{errors: {email: { msg: 'Este correo ya esta registrado'}}, old : req.body}); 
             }
         
-            if (errors.isEmpty()) {
-                let archivo=null;
-                if (req.file){
-                    archivo=req.file.filename; 
-                }else{
-                    archivo="faltaimg.jpg";
+            if (errors.isEmpty()) { 
+                let archivo=req.file.filename;
+                if (archivo===null){
+                    archivo="faltaimg.jpg";                      
                 }
                 await db.Usuario.create({
                     name:req.body.name,
                     user:req.body.user,
                     email:req.body.email,       
                     password:bcrypt.hashSync(req.body.password,10),
-                    image:archivo,
+                    imagen:archivo,
                     rol_id:"2"
                 });           
                 return res.redirect("/user/login");

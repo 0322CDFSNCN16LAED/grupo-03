@@ -2,62 +2,107 @@ const db = require("../../database/models");
 const sequelize = db.sequelize;
 
 
-const productoController ={    
-         /****Deberá devolver un objeto literal con la siguiente estructura:
-      ■ count → cantidad total de productos en la base.
-      ■ countByCategory → objeto literal con una propiedad por categoría
-      con el total de productos.
-      ■ products → array con la colección de productos, cada uno con:
-      ● id
-      ● name
-      ● description
-      ● un array con principal relación de uno a muchos (ej:
-      categories).
-      ● detail → URL para obtener el detalle.****/
-    list: (req,res)=>{      
+const productoController ={   
+    /*falta: countByCategory → objeto literal con una propiedad por categoría
+    con el total de productos*/ 
+    list: async(req,res)=>{      
       ///localhost:3002/productos/api/list
-      db.Producto
-         .findAll()
-         .then(productos=>{
-            return res.status(200).json({
-               canproductos: productos.length,
-               data: productos,
-               status: 200
-            })
-         });                     
-    },    
-     
-      /*****Deberá devolver un objeto literal con la siguiente estructura:
-   ■ una propiedad por cada campo en base.
-   ■ un array por cada relación de uno a muchos (categories, colors,
-   sizes, etc).
-   ■ Una URL para la imagen del producto (para mostrar la imagen). */
-    detail: (req, res) => {          
-         ///localhost:3002/productos/api/detail/1
-          db.Producto
-            .findByPk(req.params.id)
-            .then(producto=>{
-               return res.status(200).json({
-                  data: producto,
-                  status: 200})
-            });  
-    },
-   
+      try {            
+               const { rows, count } = await db.Producto.findAndCountAll({                  
+                  attributes: ["id", "name", "price", "description"],
+               });
+               res.status(200).json({
+                  meta: {
+                     status: 200,
+                     url: req.originalUrl,
+                     total: count,
+                  },
+                  data: rows.map(function(producto){
+                     return {
+                        id: producto.id,
+                        nombre: producto.name,
+                        price: producto.price,
+                        description: producto.descripcion,
+                        detail: "http://localhost:3002/productos/api/detail/"+producto.id,   
+                     }
+                  })
+               });            
+            } catch (error) {
+                  console.error(error);
+                  res.status(500).json({
+                     meta: {
+                        status: 500,
+                        url: req.originalUrl,
+                        errorName: error.name,
+                        errorMsg: error.msg,
+                     },
+                  });
+            }
+      },
+    
+    /*falta: un array por cada relación de uno a muchos (categories, colors,
+      sizes, etc).*/
+    detail : async(req,res)=>{      
+       ///localhost:3002/productos/api/detail/1
+      try {
+               const producto  = await db.Producto.findByPk(req.params.id);
+               res.status(200).json({               
+                        id: producto.id,
+                        name: producto.name,
+                        price: producto.price,
+                        detail: "http://localhost:3002/productos/api/imagenes/"+producto.image,
+                        status: 200,                    
+               });            
+            } catch (error) {
+                  console.error(error);
+                  res.status(500).json({
+                     meta: {
+                        status: 500,
+                        url: req.originalUrl,
+                        errorName: error.name,
+                        errorMsg: error.msg,
+                     },
+                  });
+            }   
+      },
 
-    /**** consulta por Categoria **************************/
-    category: (req,res) =>{ 
+    
+      category : async(req,res)=>{   
       //localhost:3002/productos/api/category/1
-        db.Producto
-         .findAll({where: {categoria_id: req.params.categoria_id}})
-         .then(productos=>{
-            return res.status(200).json({
-               cantidad: productos.length,
-               data: productos,
-               status: 200
-            })
-         }); 
+      try {            
+         const { rows, count } = await db.Producto.findAndCountAll({                  
+            where: {categoria_id: req.params.categoria_id},
+            attributes: ["id", "name", "price", "description", "categoria_id"]
+         });
+         res.status(200).json({               
+            data: rows.map(function(producto){
+               return {
+                  id: producto.id,
+                  name: producto.name,
+                  price: producto.price,
+                  category: producto.categoria_id,
+                  detail: "http://localhost:3002/productos/api/imagenes/"+producto.image,                     
+                  status: 200,
+                  url: req.originalUrl,
+               }
+            })               
+         });            
+      } catch (error) {
+            console.error(error);
+            res.status(500).json({
+               meta: {
+                  status: 500,
+                  url: req.originalUrl,
+                  errorName: error.name,
+                  errorMsg: error.msg,
+               },
+            });
+      }         
+    },
+    
+    picture: (req,res)=>{
+      console.log('aqui va la imagen')
     }
-
     
 }
 
