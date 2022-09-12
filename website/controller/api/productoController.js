@@ -11,18 +11,32 @@ const productoController ={
                const { rows, count } = await db.Producto.findAndCountAll({                  
                   attributes: ["id", "name", "price", "description"],
                });
+              
+               const { carows, cacount } = await db.Producto.findAndCountAll({                  
+                  where: {categoria_id: req.params.categoria_id}
+               });
+
                res.status(200).json({
                   meta: {
                      status: 200,
                      url: req.originalUrl,
-                     total: count,
+                     count: count,
+                     countByCategory: 0,
+                     totalByCategory : await Producto.findAll({
+                        group: ["Category.name"],
+                        attributes: [
+                          "Category.name",
+                          [sequelize.fn("COUNT", "Category.name"), "TotalCategory"],
+                        ],
+                        include: ["Category"],
+                      })
                   },
                   data: rows.map(function(producto){
                      return {
                         id: producto.id,
                         nombre: producto.name,
-                        price: producto.price,
                         description: producto.descripcion,
+                        category: producto.categoria_id,
                         detail: "http://localhost:3002/productos/api/detail/"+producto.id,   
                      }
                   })
@@ -74,16 +88,20 @@ const productoController ={
             where: {categoria_id: req.params.categoria_id},
             attributes: ["id", "name", "price", "description", "categoria_id"]
          });
-         res.status(200).json({               
+         res.status(200).json({ 
+            meta: {
+               status: 200,
+               url: req.originalUrl,
+               countByCategory: count
+            },             
             data: rows.map(function(producto){
                return {
                   id: producto.id,
                   name: producto.name,
-                  price: producto.price,
                   category: producto.categoria_id,
                   picture: "http://localhost:3002/imagenes/"+producto.image,                     
                   status: 200,
-                  url: req.originalUrl,
+                  url: req.originalUrl                  
                }
             })               
          });            
