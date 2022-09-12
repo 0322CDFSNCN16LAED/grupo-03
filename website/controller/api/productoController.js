@@ -40,8 +40,7 @@ const productoController ={
             }
       },
     
-    /*falta: un array por cada relación de uno a muchos (categories, colors,
-      sizes, etc).*/
+   
     detail : async(req,res)=>{      
        ///localhost:3002/productos/api/detail/1
       try {
@@ -50,7 +49,8 @@ const productoController ={
                         id: producto.id,
                         name: producto.name,
                         price: producto.price,
-                        detail: "http://localhost:3002/productos/api/imagenes/"+producto.image,
+                        category: producto.categoria_id,
+                        picture: "http://localhost:3002/imagenes/"+producto.image,
                         status: 200,                    
                });            
             } catch (error) {
@@ -81,7 +81,7 @@ const productoController ={
                   name: producto.name,
                   price: producto.price,
                   category: producto.categoria_id,
-                  detail: "http://localhost:3002/productos/api/imagenes/"+producto.image,                     
+                  picture: "http://localhost:3002/imagenes/"+producto.image,                     
                   status: 200,
                   url: req.originalUrl,
                }
@@ -100,9 +100,7 @@ const productoController ={
       }         
     },
     
-    picture: (req,res)=>{
-      console.log('aqui va la imagen')
-    }
+    
     
 }
 

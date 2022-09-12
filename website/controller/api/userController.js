@@ -14,9 +14,9 @@ const userController ={
             const usuario  = await db.Usuario.findByPk(req.params.id);
             res.status(200).json({               
                      id: usuario.id,
-                     nombre: usuario.name,
+                     nombre: usuario.name, 
                      email: usuario.email,
-                     detail: "http://localhost:3002/user/api/imagenes/"+usuario.imagen,
+                     picture: "http://localhost:3002/imagenes/"+usuario.imagen,
                      status: 200,                    
             });            
          } catch (error) {
@@ -44,7 +44,7 @@ const userController ={
                      id: usuario.id,
                      nombre: usuario.name,
                      email: usuario.email,
-                     detail: "http://localhost:3002/user/api/detail/"+usuario.id,                     
+                     picture: "http://localhost:3002/imagenes/"+usuario.imagen,                     
                      status: 200,
                      url: req.originalUrl,
                   }
@@ -78,7 +78,7 @@ const userController ={
                   data: rows.map(function(usuario){
                      return {
                         id: usuario.id,
-                        nombre: usuario.name,
+                        name: usuario.name,
                         email: usuario.email,
                         detail: "http://localhost:3002/user/api/detail/"+usuario.id,   
                      }
@@ -95,28 +95,8 @@ const userController ={
                   },
                });
          }
-   },
+   }   
    
-   picture : (req,res)=>{
-      //localhost:3002/user/api/imagenes/Falta_imagen.jpg
-      const path= path.resolver(__dirname, "../../public/imagenes/${image}");
-      try {
-         //res.sendFile(path);         
-         res.status(200).json({                
-            detail: "http://localhost:3002/user/api/imagen/"+req.params.imagen, 
-         });           
-      } catch (error) {
-            console.error(error);
-            res.status(500).json({
-               meta: {
-                  status: 500,
-                  url: req.originalUrl,
-                  errorName: error.name,
-                  errorMsg: error.msg,
-               },
-            });
-      }  
-    }
 }
 
 module.exports=userController;
