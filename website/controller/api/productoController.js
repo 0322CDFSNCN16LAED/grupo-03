@@ -11,27 +11,34 @@ const productoController ={
                const { rows, count } = await db.Producto.findAndCountAll({                  
                   attributes: ["id", "name", "price", "description"],
                });
-              
+          
                const { carows, cacount } = await db.Producto.findAndCountAll({                  
                   where: {categoria_id: req.params.categoria_id}
                });
 
                res.status(200).json({
-                  meta: {
+                  count: {
+                     total: count,
                      status: 200,
-                     url: req.originalUrl,
-                     count: count,
-                     countByCategory: 0,
-                     totalByCategory : await Producto.findAll({
-                        group: ["Category.name"],
-                        attributes: [
-                          "Category.name",
-                          [sequelize.fn("COUNT", "Category.name"), "TotalCategory"],
-                        ],
-                        include: ["Category"],
-                      })
+                     url: req.originalUrl
                   },
-                  data: rows.map(function(producto){
+                  /*
+                  countByCategory: {
+                     total: total de productos por categoria
+                  },
+
+               /*SELECT category, COUNT(*)
+               FROM productos
+               INNER JOIN categorias ON categoria_id = categorias.id
+               GROUP BY category*/
+
+               /* 
+               const result = {}
+               for(db.Categoria.id){
+               result[db.Producto.categoria_id] += 1
+               } */
+                   
+                  products: rows.map(function(producto){
                      return {
                         id: producto.id,
                         nombre: producto.name,
@@ -59,11 +66,13 @@ const productoController ={
        ///localhost:3002/productos/api/detail/1
       try {
                const producto  = await db.Producto.findByPk(req.params.id);
+               const categoria = await db.Categoria.findByPk(producto.categoria_id)
                res.status(200).json({               
                         id: producto.id,
                         name: producto.name,
                         price: producto.price,
-                        category: producto.categoria_id,
+                        category_name: categoria.category, 
+                        category_number: producto.categoria_id,
                         picture: "http://localhost:3002/imagenes/"+producto.image,
                         status: 200,                    
                });            
@@ -116,9 +125,7 @@ const productoController ={
                },
             });
       }         
-    },
-    
-    
+    }   
     
 }
 
