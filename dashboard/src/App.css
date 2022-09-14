@@ -536,8 +536,6 @@ pre code {
 .panel {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -60.00rem;
-  margin-left: -0.75rem;
 }
 .no-gutters {
   margin-right: 0;

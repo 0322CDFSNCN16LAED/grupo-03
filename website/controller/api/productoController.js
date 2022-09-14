@@ -16,8 +16,9 @@ const productoController ={
                      group: ["Categoria.id"],
                      attributes: ["Categoria.id",[sequelize.fn("COUNT", "Categoria.id"), "TotalByCategory"]],
                      include: ["categoria"]
-                   });                  
-                  
+                   });   
+                   
+                                     
                   res.status(200).json({
                      meta: {                        
                         status: 200,
@@ -79,7 +80,7 @@ const productoController ={
 
       categories: async (req, res) => { 
             const { rows, count } = await db.Categoria.findAndCountAll({
-               attributes: ["id", "category"]
+               attributes: ["id", "category"], include: ["productos"],
             });
             res.status(200).json({
                meta: {
