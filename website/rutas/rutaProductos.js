@@ -112,7 +112,7 @@ router.delete("/delete/:id", productoController.destroy);
 router.get("/api/list", productoControlerApi.list);
 router.get("/api/detail/:id", productoControlerApi.detail);
 router.get("/api/categorias", productoControlerApi.categories);
-router.get("/api/category/:categoria_id", productoControlerApi.category);
+router.get("/api/category", productoControlerApi.category);
 
 
 module.exports=router;

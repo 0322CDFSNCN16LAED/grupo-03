@@ -94,20 +94,25 @@ const { rows, count } = await db.Categoria.findAndCountAll({
     
       category : async(req,res)=>{   
       //localhost:3002/productos/api/category/1
-      try {            
-         const { rows, count } = await db.Producto.findAndCountAll({                  
+         try {   
+            const {rows,count} = await db.Producto.findAll({                     
+               group: ["Categoria.id"],
+               attributes: ["Categoria.id",[sequelize.fn("COUNT", "Categoria.id"), "TotalCategory"]],
+               include: ["categoria"]
+             });    
+         /* const { rows, count } = await db.Producto.findAndCountAll({                  
             where: {categoria_id: req.params.categoria_id},
             attributes: ["id", "name", "price", "description", "categoria_id"]
-         });
+         }); */
 
          
          res.status(200).json({ 
             meta: {
                status: 200,
                url: req.originalUrl,
-               countByCategory: count
+               count: count
             },             
-            data: rows.map(function(producto){
+           /*  data: rows.map(function(producto){
                return {
                   id: producto.id,
                   name: producto.name,
@@ -116,7 +121,8 @@ const { rows, count } = await db.Categoria.findAndCountAll({
                   status: 200,
                   url: req.originalUrl                  
                }
-            })               
+            })  */
+            data: rows
          });            
       } catch (error) {
             console.error(error);
