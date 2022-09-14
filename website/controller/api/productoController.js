@@ -2,9 +2,7 @@ const db = require("../../database/models");
 const sequelize = db.sequelize;
 
 
-const productoController ={   
-    /*falta: countByCategory → objeto literal con una propiedad por categoría
-    con el total de productos*/ 
+const productoController ={  
    list: async(req,res)=>{
          ///localhost:3002/productos/api/list
          try {
@@ -79,18 +77,33 @@ const productoController ={
       },
 
       categories: async (req, res) => { 
-            const { rows, count } = await db.Categoria.findAndCountAll({
-               attributes: ["id", "category"], include: ["productos"],
-            });
-            res.status(200).json({
-               meta: {
-                  status: 200,
-                  url: req.originalUrl,
-                  countByCategory: count
-               },
-               data: rows
-            })
+         ///localhost:3002/productos/api/categorias
+         try{
+               db.Categoria.findAll({ include: ["productos"] }).then((categorias)=>{
+               let respuesta= {
+                     meta: {
+                        status: 200,
+                        url: "productos/api/categorias",               
+                        countByCategory: categorias.length
+                     },
+                     data: categorias,
+                  };
+                  res.json(respuesta); 
+                  });
+            } catch (error) {
+               console.error(error);
+               res.status(500).json({
+                  meta: {
+                     status: 500,
+                     url: req.originalUrl,
+                     errorName: error.name,
+                     errorMsg: error.msg,
+                  },
+               });
+         }       
       },
+            
+      
     
       category : async(req,res)=>{   
       //localhost:3002/productos/api/category
