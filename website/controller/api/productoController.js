@@ -77,6 +77,20 @@ const productoController ={
             }   
       },
 
+   categories: async (req, res) => { 
+const { rows, count } = await db.Categoria.findAndCountAll({                  
+   
+   attributes: ["id", "category"]
+});
+      res.status(200).json({
+         meta: {
+            status: 200,
+            url: req.originalUrl,
+            countByCategory: count
+         },
+         data: rows
+      })
+},
     
       category : async(req,res)=>{   
       //localhost:3002/productos/api/category/1

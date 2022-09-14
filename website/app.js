@@ -6,6 +6,9 @@ const path = require('path');
 const aplicationMiddleware = require("./middleware/aplicationMiddleware");
 const sessionActiva = require("./middleware/sessionActiva");
 
+const cors = require("cors");
+
+app.use(cors(["localhost:3000"]));
 
 const PUERTO=3002;
 
@@ -46,4 +49,7 @@ const rutaProductos= require("./rutas/rutaProductos");
 const { cookie } = require('express-validator');
 
 
-app.use("/productos",rutaProductos);
+app.use("/productos", rutaProductos);
+
+
+

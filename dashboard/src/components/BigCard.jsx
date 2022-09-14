@@ -1,3 +1,5 @@
+import bicicleta from "../assets/images/bici-electrica-cortina.jpg"
+
 export default function BigCard({ title, children }) {
     return (
         <div className="col-lg-6 mb-4">

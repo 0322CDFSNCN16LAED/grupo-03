@@ -111,6 +111,7 @@ router.delete("/delete/:id", productoController.destroy);
 /*******************APIS***********************/
 router.get("/api/list", productoControlerApi.list);
 router.get("/api/detail/:id", productoControlerApi.detail);
+router.get("/api/categorias", productoControlerApi.categories);
 router.get("/api/category/:categoria_id", productoControlerApi.category);
 
 
