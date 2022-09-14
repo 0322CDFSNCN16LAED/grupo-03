@@ -14,7 +14,7 @@ export default class ProductosInDB extends Component {
     async componentDidMount() {
         const result = await fetch(`${EXPRESS_HOST}/productos/api/list`);
         const productosResult = await result.json();
-        const newProductos = productosResult.data;
+        const newProductos = productosResult.data.productos;
         this.setState({
             productos: newProductos,
         });
@@ -25,7 +25,7 @@ export default class ProductosInDB extends Component {
             <React.Fragment>
                 {/*<!-- PRODUCTS LIST -->*/}
                 <h1 className="h3 mb-2 text-gray-800">
-                    All the movies in the Database
+                    Tabla de Productos
                 </h1>
 
                 {/*<!-- DataTales Example -->*/}
@@ -36,25 +36,18 @@ export default class ProductosInDB extends Component {
                                 className="table table-bordered"
                                 id="dataTable"
                                 width="100%"
-                                cellSpacing="0"
-                            >
+                                cellSpacing="0"> 
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Nombre</th>                                        
+                                        <th>Nombre</th> 
+                                        <th>Descripcion</th>   
+                                        <th>Detalle</th>                                      
                                     </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th>id</th>
-                                        <th>nombre</th>                                        
-                                    </tr>
-                                </tfoot>
-                                <tbody>
+                                </thead>                               
+                                <tbody>                                    
                                     {this.state.productos.map((producto) => {
-                                        return (
-                                            <Producto {...producto} key={producto.id} />
-                                        );
+                                        return <Producto {...producto} key={producto.id} />;
                                     })}
                                 </tbody>
                             </table>

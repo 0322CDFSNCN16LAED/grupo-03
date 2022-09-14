@@ -6,7 +6,7 @@ import MiniCard from './components/MiniCard';
 import Sidebar from './components/Sidebar';
 import CategoriasInDB from './components/category/CategoriasInDB';
 import UsuarioInDB from './components/usuarios/UsuarioInDB';
-//import ProductoInDB from './components/productos/ProductoInDB';
+import ProductoInDB from './components/productos/ProductoInDB';
 import { EXPRESS_HOST } from './components/host';
 
 
@@ -104,9 +104,9 @@ function App() {
                             {/* <!-- End content row last categorias in Data Base */}
                             <BigCard><UsuarioInDB/></BigCard>
                             {/* <!-- Productos in DB */}
-                        </div>  
-                                            
+                        </div>             
                     </div>
+                    <ProductoInDB/>
                     {/* <!--End Content Row Top*/}
                 </div>
                 {/* <!-- End of MainContent */}
