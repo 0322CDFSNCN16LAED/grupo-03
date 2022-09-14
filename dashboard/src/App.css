@@ -536,6 +536,7 @@ pre code {
 .panel {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .no-gutters {
   margin-right: 0;
@@ -1072,7 +1073,7 @@ pre code {
   }
   .col-lg-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 100%;
   }
   .col-lg-7 {
     flex: 0 0 58.33333%;
@@ -4009,6 +4010,7 @@ input[type="submit"].btn-block {
 .card-body {
   flex: 1 1 auto;
   padding: 1.25rem;
+  
 }
 .card-title {
   margin-bottom: 0.75rem;
@@ -8831,13 +8833,15 @@ a:focus {
   animation-timing-function: opacity cubic-bezier(0, 1, 0.4, 1);
 }
 .bg-gradient-primary {
-  background-color: #4e73df;
-  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-color: #18181c;
+  background-image: linear-gradient(180deg, #18181c 10%, #18181c 100%);
   background-size: cover;
 }
+.strong { font-weight: bold;}
+
 .bg-gradient-secondary {
-  background-color: #858796;
-  background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
+  background-color: #18181c;
+  background-image: linear-gradient(180deg, #18181c 10%, #18181c 100%);
   background-size: cover;
 }
 .bg-gradient-success {
