@@ -73,10 +73,12 @@ const userController ={
                   meta: {
                       status: 200,
                       url: req.originalUrl,
-                      total: count,
+                      totalusuarios: count
                   },
                   data: rows.map(function(usuario){
+                     
                      return {
+                        
                         id: usuario.id,
                         name: usuario.name,
                         email: usuario.email,

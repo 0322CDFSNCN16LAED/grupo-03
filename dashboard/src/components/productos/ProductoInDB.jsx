@@ -1,23 +1,22 @@
 import React from "react";
 import { Component } from "react";
-import Movie from "./Movie";
-
+import Producto from "./Producto";
 const EXPRESS_HOST = "http://localhost:3002";
 
-export default class MoviesList extends Component {
+export default class ProductosInDB extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            movies: [],
+            productos: [],
         };
     }
 
     async componentDidMount() {
-        const result = await fetch(`${EXPRESS_HOST}/api/movies`);
-        const moviesResult = await result.json();
-        const newMovies = moviesResult.data;
+        const result = await fetch(`${EXPRESS_HOST}/productos/api/list`);
+        const productosResult = await result.json();
+        const newProductos = productosResult.data;
         this.setState({
-            movies: newMovies,
+            productos: newProductos,
         });
     }
 
@@ -42,27 +41,19 @@ export default class MoviesList extends Component {
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Titulo</th>
-                                        <th>Genero</th>
-                                        <th>Calificación</th>
-                                        <th>Premios</th>
-                                        <th>Duración</th>
+                                        <th>Nombre</th>                                        
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Titulo</th>
-                                        <th>Genero</th>
-                                        <th>Calificación</th>
-                                        <th>Premios</th>
-                                        <th>Duración</th>
+                                        <th>id</th>
+                                        <th>nombre</th>                                        
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    {this.state.movies.map((movie) => {
+                                    {this.state.productos.map((producto) => {
                                         return (
-                                            <Movie {...movie} key={movie.id} />
+                                            <Producto {...producto} key={producto.id} />
                                         );
                                     })}
                                 </tbody>

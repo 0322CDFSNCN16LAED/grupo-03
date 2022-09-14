@@ -14,17 +14,17 @@ const productoController ={
                   
                   const totalByCategory = await db.Producto.findAll({                     
                      group: ["Categoria.id"],
-                     attributes: ["Categoria.id",[sequelize.fn("COUNT", "Categoria.id"), "TotalCategory"]],
+                     attributes: ["Categoria.id",[sequelize.fn("COUNT", "Categoria.id"), "TotalByCategory"]],
                      include: ["categoria"]
                    });                  
                   
                   res.status(200).json({
                      meta: {                        
                         status: 200,
-                        url: req.originalUrl,                                               
+                        url: req.originalUrl, 
+                        totalproductos: count,                                               
                      },
-                     data: {
-                           count: count,        
+                     data: {     
                            totalByCategory,
                            productos: rows.map(function(producto){
                               return {                                 
@@ -77,65 +77,57 @@ const productoController ={
             }   
       },
 
-   categories: async (req, res) => { 
-const { rows, count } = await db.Categoria.findAndCountAll({                  
-   
-   attributes: ["id", "category"]
-});
-      res.status(200).json({
-         meta: {
-            status: 200,
-            url: req.originalUrl,
-            countByCategory: count
-         },
-         data: rows
-      })
-},
+      categories: async (req, res) => { 
+            const { rows, count } = await db.Categoria.findAndCountAll({
+               attributes: ["id", "category"]
+            });
+            res.status(200).json({
+               meta: {
+                  status: 200,
+                  url: req.originalUrl,
+                  countByCategory: count
+               },
+               data: rows
+            })
+      },
     
       category : async(req,res)=>{   
-      //localhost:3002/productos/api/category/1
-         try {   
-            const {rows,count} = await db.Producto.findAll({                     
+      //localhost:3002/productos/api/category
+         try {
+            const { rows, count } = await db.Producto.findAndCountAll({
+               attributes: ["id", "name", "description", "categoria_id"],
+            });
+            
+            const categorias = await db.Producto.findAll({                     
                group: ["Categoria.id"],
                attributes: ["Categoria.id",[sequelize.fn("COUNT", "Categoria.id"), "TotalCategory"]],
                include: ["categoria"]
-             });    
-         /* const { rows, count } = await db.Producto.findAndCountAll({                  
-            where: {categoria_id: req.params.categoria_id},
-            attributes: ["id", "name", "price", "description", "categoria_id"]
-         }); */
-
-         
-         res.status(200).json({ 
-            meta: {
-               status: 200,
-               url: req.originalUrl,
-               count: count
-            },             
-           /*  data: rows.map(function(producto){
-               return {
-                  id: producto.id,
-                  name: producto.name,
-                  category: producto.categoria_id,
-                  picture: "http://localhost:3002/imagenes/"+producto.image,                     
+             });                  
+            
+            res.status(200).json({
+               meta: {                        
                   status: 200,
-                  url: req.originalUrl                  
-               }
-            })  */
-            data: rows
-         });            
-      } catch (error) {
-            console.error(error);
-            res.status(500).json({
-               meta: {
-                  status: 500,
-                  url: req.originalUrl,
-                  errorName: error.name,
-                  errorMsg: error.msg,
+                  url: req.originalUrl,                                               
                },
+               data: {
+                     totalproductos: count,        
+                     categorias                     
+               }
             });
-      }         
-    }   
+                     
+         } catch (error) {
+               console.error(error);
+               res.status(500).json({
+                  meta: {
+                     status: 500,
+                     url: req.originalUrl,
+                     errorName: error.name,
+                     errorMsg: error.msg,
+                  },
+               });
+         }   
+      }
+
     
 }
 
