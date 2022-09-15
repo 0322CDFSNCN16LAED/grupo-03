@@ -10,7 +10,7 @@ const { body }= require("express-validator");
 
 const validationFormProductoCreate= [
     body("name").notEmpty().isLength({min: 5}).withMessage('Se necesita nombre par poder subir producto'),
-    body("precio").notEmpty().isNumeric({Min: 1}).withMessage("Se necesita precio para subir producto"),
+    body("precio").notEmpty().isNumeric({min: 1}).withMessage("Se necesita precio para subir producto"),
     body('descripcion').notEmpty().isLength({min: 20}).withMessage("Se necesita descripcion para poder subir producto"),
     body("image").custom((value, { req }) => {
       const file = req.file;
