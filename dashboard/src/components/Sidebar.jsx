@@ -5,7 +5,7 @@ import logo from "../assets/images/logo-teme.png"
 function Sidebar() {
     return (
         
-        <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion"
+        <ul className="navbar-nav pt-1 bg-gradient-secondary sidebar sidebar-dark accordion"
             id="accordionSidebar">
             {/* <!-- Sidebar - Brand */}
             <a

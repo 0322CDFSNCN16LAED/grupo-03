@@ -24,28 +24,28 @@ export default class ProductosInDB extends Component {
         return (
             <React.Fragment>
                 {/*<!-- PRODUCTS LIST -->*/}
-                <h1 className="h3 mb-2 text-gray-800">
+                <h5 className="pl-2 mb-2 m-0 font-weight-bold text-gray-800">
                     Tabla de Productos
-                </h1>
+                </h5>
 
                 {/*<!-- DataTales Example -->*/}
-                <div className="card shadow mb-4">
-                    <div className="card-body">
+                <div className="card shadow mb-4 p-extra">
+                    <div className="card-body p-extra2">
                         <div className="table-responsive">
                             <table
-                                className="table table-bordered"
+                                className="table table-bordered w-100vw"
                                 id="dataTable"
                                 width="100%"
                                 cellSpacing="0"> 
                                 <thead>
-                                    <tr>
+                                    <tr className="text-gray-900">
                                         <th>Id</th>
                                         <th>Nombre</th> 
                                         <th>Descripcion</th>   
                                         <th>Detalle</th>                                      
                                     </tr>
                                 </thead>                               
-                                <tbody>                                    
+                                <tbody className="text-gray-600">                                    
                                     {this.state.productos.map((producto) => {
                                         return <Producto {...producto} key={producto.id} />;
                                     })}

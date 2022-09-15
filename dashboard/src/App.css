@@ -401,6 +401,11 @@ small {
   font-size: 80%;
   font-weight: 400;
 }
+
+.minicardd:hover .bigger {
+  font-size: 2em;
+  transition: 0.3s
+}
 .mark,
 mark {
   padding: 0.2em;
@@ -4031,7 +4036,7 @@ input[type="submit"].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #f8f9fc;
+  background-color: #f9f8fc;
   border-bottom: 1px solid #e3e6f0;
 }
 .card-header:first-child {
@@ -5716,7 +5721,7 @@ button.bg-light:hover {
   background-color: #d4daed !important;
 }
 .bg-dark {
-  background-color: #5a5c69 !important;
+  background-color: #3b3a40 !important;
 }
 a.bg-dark:focus,
 a.bg-dark:hover,
@@ -6877,11 +6882,16 @@ button.bg-dark:hover {
 }
 .pt-1,
 .py-1 {
-  padding-top: 0.25rem !important;
+  padding-top: 18px !important;
 }
 .pr-1,
 .px-1 {
   padding-right: 0.25rem !important;
+}
+
+
+.w-100vw {
+  width: 100vw
 }
 .pb-1,
 .py-1 {
@@ -8754,6 +8764,7 @@ a:focus {
 .container-fluid {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background-color: #fcf5f0;
 }
 .scroll-to-top {
   position: fixed;
@@ -8874,6 +8885,9 @@ a:focus {
   background-image: linear-gradient(180deg, #5a5c69 10%, #373840 100%);
   background-size: cover;
 }
+.bg-black {
+  background-color: #18181c;
+}
 .bg-gray-100 {
   background-color: #f8f9fc !important;
 }
@@ -8910,6 +8924,12 @@ a:focus {
 .text-lg {
   font-size: 1.2rem;
 }
+.text-cream {
+  color: #f7eae4
+}
+.bg-cream {
+  background-color: #fcf5f0;
+}
 .text-gray-100 {
   color: #f8f9fc !important;
 }
@@ -8917,7 +8937,7 @@ a:focus {
   color: #eaecf4 !important;
 }
 .text-gray-300 {
-  color: #dddfeb !important;
+  color: #e4ddeb !important;
 }
 .text-gray-400 {
   color: #d1d3e2 !important;
@@ -8936,6 +8956,9 @@ a:focus {
 }
 .text-gray-900 {
   color: #3a3b45 !important;
+}
+.text-black{
+  color: #18181c
 }
 .icon-circle {
   height: 2.5rem;

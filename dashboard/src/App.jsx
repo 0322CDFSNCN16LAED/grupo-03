@@ -98,21 +98,22 @@ function App() {
                         {/* <!-- Content Row Last Movie in Data Base */}
                         <div className="panel">
                             {/* <!-- Last Categorias in DB */}
-                            <BigCard><CategoriasInDB/></BigCard>
+                            <BigCard><UsuarioInDB/></BigCard>
                             {/* <!-- End content row last categorias in Data Base */}                            
                                                 
                             {/* <!-- End content row last categorias in Data Base */}
-                            <BigCard><UsuarioInDB/></BigCard>
+                            <BigCard><CategoriasInDB/></BigCard>
                             {/* <!-- Productos in DB */}
+                            <BigCard><ProductoInDB/></BigCard>
+
                         </div>             
                     </div>
-                    <ProductoInDB/>
-                    {/* <!--End Content Row Top*/}
+            
                 </div>
                 {/* <!-- End of MainContent */}
 
                 {/* <!-- Footer */}
-                <footer className="sticky-footer bg-white">
+                <footer className="sticky-footer bg-cream">
                     <div className="container my-auto">
                         <div className="copyright text-center my-auto">
                             <span>Copyright &copy; Dashboard 2021</span>

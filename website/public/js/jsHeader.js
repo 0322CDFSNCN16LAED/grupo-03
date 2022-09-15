@@ -22,4 +22,10 @@ window.addEventListener("load", function () {
 
         container.style.display = "block"
 
-  })
+        /*******FOOTER*******/
+    let button = document.querySelector(".elnewsletter")
+       button.addEventListener("click", function(){
+       alert("¡Gracias por suscribirte!");
+    });
+})
+  
