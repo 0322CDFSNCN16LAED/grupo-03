@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar';
 import CategoriasInDB from './components/category/CategoriasInDB';
 import UsuarioInDB from './components/usuarios/UsuarioInDB';
 import ProductoInDB from './components/productos/ProductoInDB';
+import UltimoProducto from './components/UltimoProducto'; 
 import { EXPRESS_HOST } from './components/host';
 
 
@@ -103,13 +104,27 @@ function App() {
                                                 
                             {/* <!-- End content row last categorias in Data Base */}
                             <BigCard><UsuarioInDB/></BigCard>
-                            {/* <!-- Productos in DB */}
-                        </div>             
+                          {/* <!-- Productos in DB */}
+
+                          
+                            
+                          </div>
+                                                    
+                      </div>    
+                      {/* <!-- Ultimo Producto */}
+                      <div className='panel'>
+                      {/* <UltimoProducto/> */}
+                          <BigCard><UltimoProducto /></BigCard>
+                          
+                       
                     </div>
-                    <ProductoInDB/>
+                  <ProductoInDB />
+                  
+                  
                     {/* <!--End Content Row Top*/}
                 </div>
-                {/* <!-- End of MainContent */}
+              {/* <!-- End of MainContent */}
+              
 
                 {/* <!-- Footer */}
                 <footer className="sticky-footer bg-white">
@@ -121,7 +136,7 @@ function App() {
                 </footer>
                 {/* <!-- End of Footer */}
         </div>
-        {/* {/* <!-- End of Content Wrapper */}
+       
     </div> 
   )
 }
