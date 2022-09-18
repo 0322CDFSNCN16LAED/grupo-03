@@ -1,6 +1,6 @@
 import React from 'react';
-
 import logo from "../assets/images/logo-teme.png"
+import { Link } from "react-router-dom";
 
 function Sidebar() {
     return (
@@ -26,10 +26,10 @@ function Sidebar() {
 
             {/* <!-- Nav Item - Dashboard */}
             <li className="nav-item active">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" to="/">
                     <i className="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard - Teme</span></a
-                >
+                    <span>Dashboard - Teme</span>
+                </Link>
             </li>
 
             {/* <!-- Divider */}
@@ -40,29 +40,20 @@ function Sidebar() {
 
             {/* <!-- Nav Item - Pages */}
             <li className="nav-item">
-                <a className="nav-link collapsed" href="/">
+                <Link className="nav-link collapsed" to="/lisproductos">
                     <i className="fas fa-fw fa-folder"></i>
                     <span>Productos</span>
-                </a>
+                </Link>
             </li>
 
-            {/* <!-- Nav Item - Charts */}
+            {/* <!-- Nav Item - Pages */}
             <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" to="/lisusuarios">
                     <i className="fas fa-fw fa-chart-area"></i>
-                    <span>Usuarios</span></a
-                >
+                    <span>Usuarios</span>
+                </Link>
             </li>
-
-            {/* <!-- Nav Item - Tables */}
-            <li className="nav-item">
-                <a className="nav-link" href="/">
-                    <i className="fas fa-fw fa-table"></i>
-                    <span>Categorias</span></a
-                >
-            </li>
-           
-
+            
             {/* <!-- Divider */}
             <hr className="sidebar-divider d-none d-md-block" />
         </ul>

@@ -25,7 +25,7 @@ export default class ProductosInDB extends Component {
             <React.Fragment>
                 {/*<!-- PRODUCTS LIST -->*/}
                 <h5 className="pl-2 mb-2 m-0 font-weight-bold text-gray-800">
-                    Tabla de Productos
+                    LISTA DE PRODUCTOS
                 </h5>
 
                 {/*<!-- DataTales Example -->*/}

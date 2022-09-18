@@ -536,7 +536,7 @@ pre code {
   display: flex;
   flex-wrap: wrap;
   margin-right: -0.75rem;
-  margin-left: -0.75rem;
+  margin-left: -1.75rem;
 }
 .panel {
   display: flex;

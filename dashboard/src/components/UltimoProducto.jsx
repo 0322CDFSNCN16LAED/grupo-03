@@ -1,9 +1,6 @@
 import BigCard from './BigCard';
 import bici from "../assets/images/bici-electrica-cortina.jpg";
 
-
-
-
 export default function UltimoProducto() {
     return (
         <BigCard title="Ultimo Producto en la base de datos">

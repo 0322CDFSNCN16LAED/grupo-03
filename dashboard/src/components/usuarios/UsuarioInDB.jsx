@@ -25,7 +25,7 @@ export default class UsuarioInDB extends Component {
 
     render() {
         return (
-            <BigCard title="Usuarios">
+            <BigCard title="LISTA DE USUARIOS">
                 <div className="row">
                     {this.state.usuarios ? this.state.usuarios.map((usuario) => {
                         return <Usuario usuario={usuario.name} key={usuario.id} />;

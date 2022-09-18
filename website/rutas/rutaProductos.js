@@ -113,6 +113,7 @@ router.get("/api/list", productoControlerApi.list);
 router.get("/api/detail/:id", productoControlerApi.detail);
 router.get("/api/categorias", productoControlerApi.categories);
 router.get("/api/category", productoControlerApi.category);
+router.get("/api/lastProduct", productoControlerApi.lastProduct);
 
 
 module.exports=router;

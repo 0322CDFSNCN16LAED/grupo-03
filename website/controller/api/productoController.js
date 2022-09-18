@@ -140,8 +140,43 @@ const productoController ={
                   },
                });
          }   
-      }
+      },
 
+      lastProduct: async (req, res) => {
+         //localhost:3002/productos/api/lastProduct
+         try {           
+           const productolast = await db.Producto.findAll({
+             limit: 1,
+             attributes: ["id","name","description","image"],
+             order: [["id", "DESC"]],
+           });
+          
+           res.status(200).json({
+               meta: {
+                  status: 200,
+                  url: req.originalUrl,
+               },
+
+               data: {
+                  id: productolast[0].id,
+                  name: productolast[0].name,
+                  description: productolast[0].description,  
+                  detail:  `http://localhost:3002/productos/api/detail/${productolast[0].id}`,      
+                  picture: `http://localhost:3002/imagenes/${productolast[0].image}`,          
+               },
+            });
+
+         } catch (error) {
+           res.status(500).json({
+             meta: {
+               status: 500,
+               url: req.originalUrl,
+               errorName: error.name,
+               errorMsg: error.msg,
+             },
+           });
+         }
+       }
     
 }
 
