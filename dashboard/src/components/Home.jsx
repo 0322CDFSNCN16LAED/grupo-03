@@ -1,11 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-
 import BigCard from '../components/BigCard';
 import MiniCard from '../components/MiniCard';
-import CategoriasInDB from '../components/category/CategoriasInDB';
-//import UltimoProducto from '../components/UltimoProducto'; 
 import ProductoLastId from '../components/productos/ProductoLastId'; 
+import UsuarioLastId from '../components/usuarios/UsuarioLastId'; 
 import { EXPRESS_HOST } from '../expressHost';
 
 //const EXPRESS_HOST = "http://localhost:3002";
@@ -85,8 +83,12 @@ return (
 
         {/* <!-- Content Row Last Movie in Data Base --> */}
         <div className="row">
-            <BigCard><ProductoLastId/></BigCard>            
-            <BigCard><CategoriasInDB/></BigCard>            
+            <BigCard title="Último Producto">
+                <ProductoLastId/>
+            </BigCard>    
+            <BigCard title="Último Usuario">
+                <UsuarioLastId/>
+            </BigCard>                   
         </div>
     </>
 );

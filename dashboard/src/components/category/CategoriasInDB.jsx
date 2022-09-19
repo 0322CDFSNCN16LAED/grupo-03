@@ -25,7 +25,7 @@ export default class CategoriasInDB extends Component {
 
     render() {
         return (
-            <BigCard title="Categorías">
+            <BigCard title="LISTA DE CATEGORIAS">
                 <div className="row">
                      {this.state.categorias.map((categoria) => {
                         return <Categoria {...categoria} key={categoria.id}/>;

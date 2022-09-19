@@ -49,8 +49,16 @@ function Sidebar() {
             {/* <!-- Nav Item - Pages */}
             <li className="nav-item">
                 <Link className="nav-link" to="/lisusuarios">
-                    <i className="fas fa-fw fa-chart-area"></i>
+                    <i className="fas fa-fw fa-folder"></i>
                     <span>Usuarios</span>
+                </Link>
+            </li>
+
+            {/* <!-- Nav Item - Pages */}
+            <li className="nav-item">
+                <Link className="nav-link" to="/liscategorias">
+                    <i className="fas fa-fw fa-folder"></i>
+                    <span>Categorias</span>
                 </Link>
             </li>
             

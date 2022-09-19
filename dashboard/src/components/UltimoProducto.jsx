@@ -3,7 +3,7 @@ import bici from "../assets/images/bici-electrica-cortina.jpg";
 
 export default function UltimoProducto() {
     return (
-        <BigCard title="Ultimo Producto en la base de datos">
+        <BigCard>
             <div className="text-center mb-3">
                 <img
                     className="img-fluid px-3 px-sm-4 mt-3 mb-5"

@@ -97,7 +97,43 @@ const userController ={
                   },
                });
          }
-   }   
+   },
+
+   lastUser: async (req, res) => {
+      //localhost:3002/user/api/lastUser
+      try {           
+        const usuariolast = await db.Usuario.findAll({
+          limit: 1,
+          attributes: ["id","name","imagen", "email"],
+          order: [["id", "DESC"]],
+        });
+        
+        res.status(200).json({
+            meta: {
+               status: 200,
+               url: req.originalUrl,
+            },
+            data: {
+               id: usuariolast[0].id,
+               name: usuariolast[0].name,   
+               email: usuariolast[0].email,               
+               detail:  `http://localhost:3002/user/api/detail/${usuariolast[0].id}`,      
+               picture: `http://localhost:3002/imagenes/${usuariolast[0].imagen}`,          
+            },
+            
+         });
+
+      } catch (error) {
+        res.status(500).json({
+          meta: {
+            status: 500,
+            url: req.originalUrl,
+            errorName: error.name,
+            errorMsg: error.msg,
+          },
+        });
+      }
+    }   
    
 }
 

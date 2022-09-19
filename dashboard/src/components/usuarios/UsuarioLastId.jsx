@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 
 const EXPRESS_HOST = "http://localhost:3002";
 
-export default function ProductoLastId () {   
+export default function UsuarioLastId () {   
     const [last, setLast] = useState(null);
 
     useEffect(() => {        
-        fetch(`${EXPRESS_HOST}/productos/api/lastProduct`)
+        fetch(`${EXPRESS_HOST}/user/api/lastUser`)
         .then((response) => response.json())
         .then((data) => {
             setLast(data);
@@ -18,7 +18,7 @@ export default function ProductoLastId () {
     }, []);
 
     useEffect(() => {
-        console.log("%actualizó el comp del ultimo producto", {
+        console.log("%cSe actualizó el comp ultimo usuario", {
         last,
         });
     }, [last]);
@@ -39,7 +39,7 @@ export default function ProductoLastId () {
                                 objectFit: "cover",
                             }}
                         />
-                        <p>{last.data.description}</p> 
+                        <p>{last.data.email}</p> 
                         <Link className="btn btn-danger" target="_blank" rel="nofollow" to={last.data.detail}>Detalle</Link>
                     </div>      
                 )}

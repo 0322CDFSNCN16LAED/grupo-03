@@ -77,7 +77,7 @@ router.get("/logout", userController.logout);
 router.get("/api/detail/:id", controlerApi.detail);
 router.get("/api/list", controlerApi.list);
 router.get("/api/email/:email", controlerApi.email);
-
+router.get("/api/lastUser", controlerApi.lastUser);
 
 module.exports=router;
 

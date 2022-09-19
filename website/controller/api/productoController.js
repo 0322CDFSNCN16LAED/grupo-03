@@ -150,7 +150,7 @@ const productoController ={
              attributes: ["id","name","description","image"],
              order: [["id", "DESC"]],
            });
-          
+           
            res.status(200).json({
                meta: {
                   status: 200,
@@ -164,6 +164,7 @@ const productoController ={
                   detail:  `http://localhost:3002/productos/api/detail/${productolast[0].id}`,      
                   picture: `http://localhost:3002/imagenes/${productolast[0].image}`,          
                },
+               
             });
 
          } catch (error) {

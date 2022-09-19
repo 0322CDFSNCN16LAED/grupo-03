@@ -3,6 +3,8 @@ import Sidebar from "./components/Sidebar";
 import Home from './components/Home'; 
 import ProductoPagina from './components/ProductoPagina'; 
 import UsuarioPagina from './components/UsuarioPagina'; 
+import CategoriaPagina from './components/CategoriaPagina'; 
+
 
 import { Route, Switch } from "react-router-dom";
 
@@ -22,7 +24,8 @@ function App() {
                         <Switch>                            
                             <Route path="/" component={Home} exact={true} />   
                             <Route path="/lisproductos" component={ProductoPagina} exact={true} />  
-                            <Route path="/lisusuarios" component={UsuarioPagina} exact={true} />                                                                 
+                            <Route path="/lisusuarios" component={UsuarioPagina} exact={true} /> 
+                            <Route path="/liscategorias" component={CategoriaPagina} exact={true} />                                                                 
                         </Switch>
                     </div>
                     {/* <!--End Content Row Top--> */}
