@@ -2,8 +2,8 @@ window.addEventListener("load", function () {
     let container = document.querySelector(".container");
     let menumobile = document.querySelector("#menumobile");
     let burgermenu = document.querySelector("#burgermenu");
-    let back1 = document.querySelector(".fa-chevron-left")
-  
+    let back1 = document.querySelector(".fa-chevron-left")    
+        
         burgermenu.addEventListener("click", function(){
             menumobile.classList.toggle("show");
         });
@@ -23,9 +23,9 @@ window.addEventListener("load", function () {
         container.style.display = "block"
 
         /*******FOOTER*******/
-    let button = document.querySelector(".elnewsletter")
+    /*let button = document.querySelector(".elnewsletter")
        button.addEventListener("click", function(){
        alert("¡Gracias por suscribirte!");
-    });
+    });*/
 })
   

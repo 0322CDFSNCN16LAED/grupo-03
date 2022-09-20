@@ -533,6 +533,16 @@ main section section article form button{
     margin: 0 auto;
     margin-top: 20px
     }
+
+.img3_detalle {
+    width: 40%;
+    border-radius: 20px; 
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    display: flex;
+    justify-content: center;
+    margin: 0vw 20vw 0vw 20vw;
+    margin-top: 20px
+    }
     
 .img3 {
         width: 30%;
