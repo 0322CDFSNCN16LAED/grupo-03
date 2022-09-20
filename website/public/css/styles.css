@@ -666,6 +666,7 @@ main section section article form button{
 
 
 .font-16 {font-size: 16px}
+.font-14 {font-size: 14px;}
 .font-10 {font-size: 10px}
 
 
@@ -706,7 +707,7 @@ main section section article form button{
 
 .boton_tarjetas{
     border: none;
-    background-color: #f5f5dc;
+    background-color: #fefefa;
     cursor: pointer;
 }
 
@@ -736,7 +737,102 @@ main section section article form button{
     margin-left: 120px;
 }
 
+/*carrito*/
+.cart-section{
+ padding-top: 40px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ align-items: center;
+}
+.cart-container{
+ width: 35%;
+ height: 350px;
+ background-color: #fff8f8fb;
+ border-radius: 20px;
+ box-shadow: 0px 25px 40px #3c3a3733;
+ justify-content: center;
+ align-items: center;
+}
+.cart-items{
+    margin: auto;
+    width: 85%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .cart-image{
+    width: 20%;
+    text-align: center;
+    margin-top: 10px
+   }
+ .cart-div {
+    display: flex;
+    text-align: center;
+    padding: 0px;
+    margin: 7px
+ }
+   .cart-text{
+    font-size: 16px;
+    font-weight: 500;
+   }
+   
+.cart-cantidad{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
 
+   .cart-signo{
+    color: #b0a9a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+   }
+   
+   .cart-price{
+    font-size: 18px;
+    font-weight: 700;
+    color: #107f3e;
+   }
+   .fa-times-circle{
+    color: #df2209
+   }
+   .cart-descuento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .cart-cupon{
+    padding: 4px;
+    margin-left: 8px;
+    text-align: center;
+    color: white;
+    background-color: #52504e;
+    font-size: 16px;
+   }
+   .cart-checkout{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    padding-right: 15px;
+   }
+   .cart-total{
+    padding: 8px;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow'
+   }
+
+   .payment-text{
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   
+   
 
 /********DATOS DE TARjETA*****/
 
